@@ -1,0 +1,44 @@
+---
+title: "Securing Enterprise Applications with Entra ID"
+date: "2024-12-15"
+excerpt: "A practical guide to implementing Zero Trust authentication and authorization patterns using Microsoft Entra ID for enterprise cloud applications."
+tags: ["Entra ID", "Azure", "Security", "Identity"]
+---
+
+## Why Entra ID Matters for Enterprise Security
+
+Microsoft Entra ID (formerly Azure AD) is the backbone of identity management in modern cloud architectures. With the shift to Zero Trust, every request must be authenticated, authorized, and encrypted — regardless of network location.
+
+## Key Implementation Patterns
+
+### 1. Conditional Access Policies
+
+Conditional Access is the Zero Trust engine of Entra ID. It evaluates signals like user identity, device state, location, and risk level before granting access.
+
+Best practices include:
+- Require MFA for all administrative access
+- Block legacy authentication protocols
+- Enforce compliant device requirements for sensitive data access
+- Use session controls to limit persistent access
+
+### 2. App Registration & Service Principals
+
+For application-to-application communication, use managed identities wherever possible. When external apps need access, configure app registrations with minimal API permissions following the principle of least privilege.
+
+### 3. Entra External ID for Customer-Facing Apps
+
+For B2C scenarios, Entra External ID provides customizable authentication flows. Key features include:
+- Branded sign-up/sign-in experiences
+- Social identity provider federation
+- Custom attributes and API connectors for workflow integration
+
+## Monitoring & Compliance
+
+Integrate Entra ID sign-in logs with Azure Monitor for real-time alerting on suspicious activities. Use KQL queries to detect:
+- Impossible travel scenarios
+- Token replay attacks
+- Privilege escalation attempts
+
+## Conclusion
+
+A well-implemented Entra ID strategy is the foundation of any secure cloud architecture. Start with strong authentication, layer conditional access policies, and continuously monitor for threats.

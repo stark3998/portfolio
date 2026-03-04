@@ -1,0 +1,55 @@
+---
+title: "Building AI-Powered Agents with MCP Servers"
+date: "2025-01-20"
+excerpt: "How Model Context Protocol (MCP) servers enable modular, secure AI agent architectures — and how to get started with Microsoft AI Foundry."
+tags: ["MCP", "AI Foundry", "Copilot Studio", "Azure"]
+---
+
+## What is the Model Context Protocol?
+
+The Model Context Protocol (MCP) is an open protocol that standardizes how AI models connect to external data sources and tools. Think of it as a USB-C port for AI — a universal interface that any model can plug into.
+
+## Why MCP Matters for Enterprise AI
+
+Traditional AI integrations require custom connectors for every data source. MCP changes this by providing:
+
+- **Standardized Communication** — One protocol for all tool interactions
+- **Security by Design** — Built-in authentication and authorization
+- **Modularity** — Swap models or tools without rewriting integration code
+- **Observability** — Structured logging and tracing across the agent pipeline
+
+## Getting Started with Microsoft AI Foundry
+
+Microsoft AI Foundry provides the infrastructure to build, deploy, and manage AI agents at scale. Here's a simplified workflow:
+
+### 1. Define Your Agent's Capabilities
+
+Start by mapping out the tools your agent needs access to — databases, APIs, document stores, etc.
+
+### 2. Set Up MCP Servers
+
+Each tool gets its own MCP server that handles:
+- Schema definition (what the tool can do)
+- Input validation
+- Execution and response formatting
+- Error handling
+
+### 3. Connect to Copilot Studio
+
+Copilot Studio provides the orchestration layer that routes user requests to the appropriate MCP servers. It handles:
+- Intent classification
+- Context management
+- Multi-turn conversations
+- Response synthesis
+
+## Security Considerations
+
+When deploying MCP servers in production:
+- Use managed identities for Azure resource access
+- Implement rate limiting and input sanitization
+- Enable audit logging for all tool invocations
+- Apply network restrictions with Azure Virtual Networks
+
+## Conclusion
+
+MCP servers represent a paradigm shift in how we build AI applications. Combined with Microsoft AI Foundry and Copilot Studio, they enable secure, scalable agent architectures that can evolve with your business needs.

@@ -1,0 +1,53 @@
+---
+title: "Azure CIS 1.5 Compliance: A Practical Assessment Guide"
+date: "2024-10-05"
+excerpt: "Lessons learned from assessing Azure environments against CIS 1.5 and Azure Security Benchmark v3 for Fortune 500 clients."
+tags: ["Azure", "CIS", "Security", "Compliance"]
+---
+
+## Understanding CIS Benchmarks for Azure
+
+The Center for Internet Security (CIS) Azure Foundations Benchmark provides prescriptive security configuration guidelines. Version 1.5 covers identity, networking, storage, databases, logging, and monitoring.
+
+## Assessment Methodology
+
+### Phase 1: Discovery
+
+Before assessing compliance, you need a complete inventory of Azure resources. Use Azure Resource Graph queries to catalog:
+- Subscriptions, resource groups, and resources
+- Role assignments and custom role definitions
+- Network topology and security group rules
+- Storage account configurations and access policies
+
+### Phase 2: Automated Scanning
+
+Build automated checks for each CIS control. Key areas include:
+
+**Identity & Access Management**
+- Ensure MFA is enabled for all privileged accounts
+- Verify no custom subscription owner roles exist
+- Check that guest user access is restricted
+
+**Security Center**
+- Validate Microsoft Defender for Cloud is enabled
+- Ensure security contact notifications are configured
+- Verify auto-provisioning of the Log Analytics agent
+
+**Networking**
+- Confirm no unrestricted inbound access on management ports (SSH, RDP)
+- Validate Network Watcher is enabled in all regions
+- Check NSG flow logs are configured
+
+### Phase 3: Remediation Planning
+
+Prioritize findings by risk severity and remediation effort. Create runbooks for common fixes and track progress with Azure Policy compliance dashboards.
+
+## Lessons Learned
+
+1. **Start with high-impact controls** — Identity and networking controls typically have the most critical findings
+2. **Automate everything** — Manual assessments don't scale. Use Azure Policy, custom scripts, and assessment tools
+3. **Continuous compliance** — Point-in-time assessments are insufficient. Implement desired-state configuration for ongoing monitoring
+
+## Conclusion
+
+CIS compliance is not a checkbox exercise — it's a continuous process. Building automated assessment tooling pays dividends in audit readiness and overall security posture.
