@@ -106,7 +106,7 @@ export default function Hero() {
             View My Work
           </a>
           <a
-            href="/Portfolio/contact"
+            href="/portfolio/contact"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/70 backdrop-blur text-slate-dark font-medium text-sm border border-azure/15 hover:border-azure/30 transition-colors"
           >
             Get in Touch
