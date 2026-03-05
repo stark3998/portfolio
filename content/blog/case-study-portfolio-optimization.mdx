@@ -1,0 +1,161 @@
+---
+title: "Case Study: How I Optimized My Portfolio Website End-to-End"
+date: "2026-03-05"
+excerpt: "A metrics-led optimization sprint that improved technical SEO, analytics visibility, and interaction quality in a Next.js portfolio."
+description: "A practical case study on optimizing a Next.js portfolio using Lighthouse baselines, technical SEO hardening, event analytics, and UX upgrades."
+author: "Jatin Madan"
+tags: ["Next.js", "SEO", "Analytics", "UX", "Performance"]
+keywords: ["Lighthouse", "LCP", "TBT", "GA4", "Clarity", "JSON-LD", "sitemap", "website optimization"]
+readingTime: 11
+---
+
+## Executive Summary
+
+This optimization sprint focused on one goal: turn a visually strong portfolio into a **searchable, measurable, and conversion-ready** website.
+
+I approached the work in phases: routing cleanup, SEO foundation, analytics instrumentation, project UX improvements, blog interactivity, and production hardening. The result was a stronger platform with clear measurement points and better user flow.
+
+## Baseline Metrics (Before the Sprint)
+
+From the Lighthouse report:
+
+- **Performance:** 56
+- **Accessibility:** 95
+- **Best Practices:** 96
+- **SEO:** 100
+
+Core metrics:
+
+- **FCP:** 1.1s
+- **LCP:** 23.9s
+- **Speed Index:** 4.0s
+- **TBT:** 710ms
+- **Max Potential FID:** 350ms
+- **CLS:** 0
+
+### What this baseline said
+
+- The page starts rendering quickly (**good FCP**).
+- Layout is stable (**excellent CLS**).
+- But the largest visible content appears too late (**very high LCP**).
+- Main thread blocking remains significant (**high TBT/FID**).
+
+In short: good structural foundation, but critical rendering and interactivity still needed work.
+
+## Optimization Strategy
+
+Instead of isolated tweaks, I used a phased execution model:
+
+1. Fix structural blockers first
+2. Strengthen discoverability and indexing
+3. Add behavior-level analytics
+4. Improve interaction flow for projects and content
+5. Validate for release readiness
+
+## What Changed (Implementation)
+
+### 1) Routing and deployment hygiene
+
+- Removed legacy path assumptions and normalized root routing.
+- Reduced fragility around canonical URLs and generated routes.
+
+### 2) SEO architecture hardening
+
+- Standardized page metadata across core routes.
+- Added crawl/index assets and feed discovery.
+- Implemented structured data for entity and article context.
+
+**SEO assets now in place:**
+
+- Sitemap
+- Robots policy
+- RSS feed
+- Open Graph + Twitter metadata
+- JSON-LD (Person, Website, Article)
+
+### 3) Analytics maturity
+
+Instrumentation moved from "basic tracking" to "decision-grade tracking."
+
+- Integrated GA4 + session analytics + web vitals telemetry
+- Built a consistent event taxonomy
+- Added custom events across CTAs, projects, sharing, filters, and section visibility
+
+**Tracking coverage:** 10+ custom event types across high-intent interactions.
+
+### 4) Project experience upgrades
+
+- Added clearer project discovery flow with filter/sort behavior
+- Improved card-to-detail interaction with richer modal context
+- Increased information density while keeping scanability
+
+### 5) Blog engagement upgrades
+
+- Added reading progress
+- Added in-page table of contents behavior
+- Added one-click sharing actions
+
+These changes target completion rate and distribution, not just visual polish.
+
+### 6) Release hardening
+
+- Added Open Graph image generation flow
+- Completed successful production build validation
+- Verified static route generation and output consistency
+
+## Issues Encountered and Resolved
+
+### Icon import mismatch during build
+
+A non-existent icon export caused a build failure.
+**Fix:** switched to a valid icon export and rebuilt successfully.
+
+### Static export edge cases
+
+Generated route/resource assumptions needed consistency for static output.
+**Fix:** aligned route generation and metadata/asset references with static export behavior.
+
+## Outcome Snapshot
+
+### Quality scorecard
+
+- **SEO:** perfect category score maintained at 100.
+- **Accessibility/Best Practices:** high and stable (95/96).
+- **Performance:** key opportunity identified and narrowed to specific bottlenecks (LCP + TBT).
+
+### Product outcomes
+
+- Stronger machine readability and indexing trust signals
+- Better analytics observability for real behavior
+- Improved project browsing depth and content interaction flow
+- Cleaner deployment confidence with reproducible build output
+
+## Why This Matters
+
+For a portfolio, optimization is not just speed tuning. It directly affects:
+
+- **Discovery** (search and social visibility)
+- **Credibility** (structured, consistent metadata)
+- **Engagement** (project exploration, article completion)
+- **Iteration speed** (analytics that reveals what to improve next)
+
+## Next Performance Sprint (Metrics-Driven)
+
+The next pass is performance-specific and focused on two KPIs:
+
+1. **LCP reduction** (critical rendering path, hero payload, large content timing)
+2. **TBT reduction** (main thread pressure, deferred non-critical JS, script loading discipline)
+
+### Target direction
+
+- Bring LCP from "critical" to "acceptable/good" ranges
+- Cut blocking time substantially below current 710ms baseline
+- Preserve current CLS stability and SEO strength while improving speed
+
+## Final Takeaway
+
+This sprint proved that the highest ROI comes from sequencing:
+
+**Foundation → Discoverability → Observability → UX → Hardening**
+
+That order made the work lower-risk, easier to validate, and easier to explain with metrics.
