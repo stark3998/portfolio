@@ -5,6 +5,7 @@ import { HiOutlineShieldCheck } from "react-icons/hi2";
 import { GoLock } from "react-icons/go";
 import { VscAzure } from "react-icons/vsc";
 import { HiOutlineAcademicCap } from "react-icons/hi2";
+import { useScrollTracking } from "@/hooks/useScrollTracking";
 
 const stats = [
   { label: "Microsoft Certifications", value: "11", icon: VscAzure },
@@ -41,6 +42,8 @@ const techAreas = [
 ];
 
 export default function About() {
+  useScrollTracking("about", "about");
+
   return (
     <SectionWrapper id="about">
       <h2 className="font-heading font-bold text-3xl md:text-4xl text-slate-dark section-heading">

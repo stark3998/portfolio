@@ -1,11 +1,39 @@
 import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
 import { HiOutlineCalendar, HiOutlineTag } from "react-icons/hi2";
+import { Metadata } from "next";
 
-export const metadata = {
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://jatinmadan.com";
+
+export const metadata: Metadata = {
   title: "Blog — Jatin Madan",
   description:
     "Insights on Azure cloud architecture, identity security, AI platforms, and DevSecOps.",
+  alternates: {
+    canonical: `${baseUrl}/blog`,
+  },
+  openGraph: {
+    title: "Blog — Jatin Madan",
+    description:
+      "Insights on Azure cloud architecture, identity security, AI platforms, and DevSecOps.",
+    url: `${baseUrl}/blog`,
+    type: "website",
+    images: [
+      {
+        url: `${baseUrl}/og-image.svg`,
+        width: 1200,
+        height: 630,
+        alt: "Jatin Madan - Blog",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog — Jatin Madan",
+    description:
+      "Insights on Azure cloud architecture, identity security, AI platforms, and DevSecOps.",
+    images: [`${baseUrl}/og-image.svg`],
+  },
 };
 
 export default function BlogPage() {

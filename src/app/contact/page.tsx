@@ -7,9 +7,34 @@ import {
 } from "react-icons/fa6";
 import { HiOutlineEnvelope, HiOutlineShieldCheck } from "react-icons/hi2";
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://jatinmadan.com";
+
 export const metadata: Metadata = {
   title: "Contact — Jatin Madan",
   description: "Get in touch with Jatin Madan for Azure cloud architecture, security consulting, and collaboration.",
+  alternates: {
+    canonical: `${baseUrl}/contact`,
+  },
+  openGraph: {
+    title: "Contact — Jatin Madan",
+    description: "Get in touch with Jatin Madan for Azure cloud architecture, security consulting, and collaboration.",
+    url: `${baseUrl}/contact`,
+    type: "website",
+    images: [
+      {
+        url: `${baseUrl}/og-image.svg`,
+        width: 1200,
+        height: 630,
+        alt: "Jatin Madan - Contact",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact — Jatin Madan",
+    description: "Get in touch with Jatin Madan for Azure cloud architecture, security consulting, and collaboration.",
+    images: [`${baseUrl}/og-image.svg`],
+  },
 };
 
 const socials = [

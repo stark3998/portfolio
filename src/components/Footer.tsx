@@ -7,6 +7,7 @@ import {
   FaXTwitter,
   FaGithub,
 } from "react-icons/fa6";
+import { trackSocialClick } from "@/lib/analytics";
 
 const socials = [
   { href: "https://www.linkedin.com/in/jatin39/", icon: FaLinkedinIn, label: "LinkedIn" },
@@ -36,6 +37,7 @@ export default function Footer() {
                 href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackSocialClick(s.label.toLowerCase(), "footer")}
                 className="w-9 h-9 flex items-center justify-center rounded-lg bg-azure-light/50 text-azure hover:bg-azure hover:text-white transition-all"
                 aria-label={s.label}
               >

@@ -5,6 +5,7 @@ import { HiOutlineShieldCheck, HiArrowDown } from "react-icons/hi2";
 import { VscAzure } from "react-icons/vsc";
 import { GoLock } from "react-icons/go";
 import ParticleBackground from "./ParticleBackground";
+import { trackCTAClick } from "@/lib/analytics";
 
 const titles = [
   "Azure Cloud Solutions Architect",
@@ -101,12 +102,14 @@ export default function Hero() {
         >
           <a
             href="#projects"
+            onClick={() => trackCTAClick("hero", "view_work")}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-azure text-white font-medium text-sm hover:bg-azure-dark transition-colors shadow-lg shadow-azure/20"
           >
             View My Work
           </a>
           <a
-            href="/portfolio/contact"
+            href="/contact"
+            onClick={() => trackCTAClick("hero", "contact")}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/70 backdrop-blur text-slate-dark font-medium text-sm border border-azure/15 hover:border-azure/30 transition-colors"
           >
             Get in Touch

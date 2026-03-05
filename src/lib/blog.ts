@@ -11,7 +11,12 @@ export interface BlogPost {
   title: string;
   date: string;
   excerpt: string;
+  description?: string;
+  author?: string;
   tags: string[];
+  keywords?: string[];
+  ogImage?: string;
+  readingTime?: number;
   content: string;
 }
 
@@ -32,7 +37,12 @@ export function getAllPosts(): Omit<BlogPost, "content">[] {
         title: data.title || slug,
         date: data.date || "",
         excerpt: data.excerpt || "",
+        description: data.description,
+        author: data.author,
         tags: data.tags || [],
+        keywords: data.keywords,
+        ogImage: data.ogImage,
+        readingTime: data.readingTime,
       };
     });
 
@@ -59,7 +69,12 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     title: data.title || slug,
     date: data.date || "",
     excerpt: data.excerpt || "",
+    description: data.description,
+    author: data.author,
     tags: data.tags || [],
+    keywords: data.keywords,
+    ogImage: data.ogImage,
+    readingTime: data.readingTime,
     content,
   };
 }
