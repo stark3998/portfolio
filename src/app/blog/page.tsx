@@ -3,8 +3,6 @@ import { getAllPosts } from "@/lib/blog";
 import { HiOutlineCalendar } from "react-icons/hi2";
 import { Metadata } from "next";
 
-export const dynamic = "force-dynamic";
-
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://jatinmadan.com";
 
 export const metadata: Metadata = {

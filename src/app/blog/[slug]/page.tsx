@@ -1,4 +1,4 @@
-import { getPostBySlug } from "@/lib/blog";
+import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { HiArrowLeft, HiOutlineCalendar } from "react-icons/hi2";
@@ -9,9 +9,12 @@ import { ReadingProgress } from "@/components/ReadingProgress";
 import { ShareButtons } from "@/components/ShareButtons";
 import { TableOfContents } from "@/components/TableOfContents";
 
-export const dynamic = "force-dynamic";
-
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://jatinmadan.com";
+
+export async function generateStaticParams() {
+  const posts = await getAllPosts();
+  return posts.map((post) => ({ slug: post.slug }));
+}
 
 export async function generateMetadata({
   params,
