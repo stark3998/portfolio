@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
-import { HiOutlineCalendar, HiOutlineTag } from "react-icons/hi2";
+import { HiOutlineCalendar } from "react-icons/hi2";
 import { Metadata } from "next";
+
+export const dynamic = "force-dynamic";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://jatinmadan.com";
 
@@ -36,8 +38,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BlogPage() {
-  const posts = getAllPosts();
+export default async function BlogPage() {
+  const posts = await getAllPosts();
 
   return (
     <div className="min-h-screen pt-24 pb-16">
@@ -63,25 +65,16 @@ export default function BlogPage() {
                 className="block glass-card p-6 group hover:border-azure/25"
               >
                 <div className="flex flex-wrap items-center gap-3 mb-2">
-                  {post.date && (
+                  {post.publishedAt && (
                     <span className="flex items-center gap-1.5 text-xs text-slate-mid/60">
                       <HiOutlineCalendar className="w-3.5 h-3.5" />
-                      {new Date(post.date).toLocaleDateString("en-US", {
+                      {new Date(post.publishedAt).toLocaleDateString("en-US", {
                         year: "numeric",
                         month: "long",
                         day: "numeric",
                       })}
                     </span>
                   )}
-                  {post.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="flex items-center gap-1 text-[11px] px-2 py-0.5 rounded-full bg-azure-light/60 text-azure/80 font-medium"
-                    >
-                      <HiOutlineTag className="w-3 h-3" />
-                      {tag}
-                    </span>
-                  ))}
                 </div>
 
                 <h2 className="font-heading font-semibold text-xl text-slate-dark group-hover:text-azure transition-colors">

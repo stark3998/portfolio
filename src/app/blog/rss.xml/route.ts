@@ -1,32 +1,11 @@
 import { NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+import { getAllPosts } from "@/lib/blog";
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
 export async function GET() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://jatinmadan.com";
-  const blogDir = path.join(process.cwd(), "content/blog");
-  const files = fs.readdirSync(blogDir).filter((file) => file.endsWith(".mdx"));
-
-  const posts = files
-    .map((file) => {
-      const filePath = path.join(blogDir, file);
-      const content = fs.readFileSync(filePath, "utf-8");
-      const { data, content: bodyContent } = matter(content);
-      const slug = file.replace(/\.mdx$/, "");
-
-      return {
-        slug,
-        title: data.title,
-        description: data.excerpt || data.description,
-        date: data.date,
-        author: data.author || "Jatin Madan",
-        content: bodyContent.substring(0, 200),
-      };
-    })
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const posts = await getAllPosts();
 
   const rssContent = `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
@@ -40,13 +19,12 @@ export async function GET() {
       .map(
         (post) => `
     <item>
-      <title>${post.title}</title>
+      <title>${escapeXml(post.title)}</title>
       <link>${baseUrl}/blog/${post.slug}</link>
       <guid isPermaLink="false">${baseUrl}/blog/${post.slug}</guid>
-      <pubDate>${new Date(post.date).toUTCString()}</pubDate>
-      <author>${post.author}</author>
-      <description>${post.description}</description>
-      <content:encoded><![CDATA[${post.content}...]]></content:encoded>
+      <pubDate>${new Date(post.publishedAt).toUTCString()}</pubDate>
+      <author>Jatin Madan</author>
+      <description>${escapeXml(post.excerpt)}</description>
     </item>
     `
       )
@@ -60,4 +38,13 @@ export async function GET() {
       "cache-control": "public, s-maxage=3600, stale-while-revalidate=86400",
     },
   });
+}
+
+function escapeXml(str: string): string {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
 }

@@ -152,3 +152,124 @@ body {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+/* Blog HTML content styles (Cosmos DB rendered HTML) */
+.blog-content {
+  line-height: 1.7;
+}
+
+.blog-content h1,
+.blog-content h2,
+.blog-content h3 {
+  font-family: var(--font-heading), monospace;
+  color: #0f172a;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+  font-weight: 600;
+}
+
+.blog-content h1 { font-size: 1.75em; }
+.blog-content h2 { font-size: 1.5em; }
+.blog-content h3 { font-size: 1.25em; }
+
+.blog-content p {
+  line-height: 1.8;
+  color: #334155;
+  margin-bottom: 1.25em;
+}
+
+.blog-content pre {
+  background: #1e1e2e;
+  color: #cdd6f4;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1.5em 0;
+  font-size: 0.9em;
+}
+
+.blog-content pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}
+
+.blog-content code {
+  background: #E8F4FD;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #0078D4;
+}
+
+.blog-content blockquote {
+  border-left: 4px solid #0078D4;
+  padding: 0.5rem 1rem;
+  background: #f8f9ff;
+  margin: 1.5em 0;
+  color: #334155;
+}
+
+.blog-content blockquote p {
+  margin-bottom: 0;
+}
+
+.blog-content img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 1.5em 0;
+}
+
+.blog-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  font-size: 0.95em;
+}
+
+.blog-content th,
+.blog-content td {
+  border: 1px solid #e2e8f0;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+
+.blog-content th {
+  background: #f1f5f9;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.blog-content ul,
+.blog-content ol {
+  padding-left: 1.5em;
+  margin: 1em 0;
+  color: #334155;
+}
+
+.blog-content li {
+  margin-bottom: 0.4em;
+  line-height: 1.7;
+}
+
+.blog-content a {
+  color: #0078D4;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.blog-content strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.blog-content .frontmatter {
+  display: none;
+}
+
+.blog-content hr {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 2em 0;
+}

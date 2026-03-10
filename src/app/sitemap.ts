@@ -1,9 +1,7 @@
 import { MetadataRoute } from "next";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+import { getAllPosts } from "@/lib/blog";
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://jatinmadan.com";
@@ -15,22 +13,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: "/contact", changeFrequency: "monthly" as const, priority: 0.7 },
   ];
 
-  // Dynamic blog pages
-  const blogDir = path.join(process.cwd(), "content/blog");
-  const blogFiles = fs.readdirSync(blogDir).filter((file) => file.endsWith(".mdx"));
+  // Dynamic blog pages from Cosmos DB
+  const posts = await getAllPosts();
 
-  const blogPages = blogFiles.map((file) => {
-    const filePath = path.join(blogDir, file);
-    const fileContent = fs.readFileSync(filePath, "utf-8");
-    const { data } = matter(fileContent);
-
-    return {
-      url: `/blog/${file.replace(/\.mdx$/, "")}`,
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-      lastModified: data.date ? new Date(data.date) : new Date(),
-    };
-  });
+  const blogPages = posts.map((post) => ({
+    url: `/blog/${post.slug}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+    lastModified: post.updatedAt
+      ? new Date(post.updatedAt)
+      : new Date(post.publishedAt),
+  }));
 
   return [
     ...staticPages.map((page) => ({

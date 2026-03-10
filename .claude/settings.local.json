@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm uninstall:*)",
+      "WebFetch(domain:localhost)",
+      "Bash(curl -s http://localhost:3000/portfolio/blog/blog-1773177587633)"
+    ]
+  }
+}
