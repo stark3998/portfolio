@@ -1,82 +1,92 @@
-# Portfolio
+# Jatin Madan — Portfolio
 
-A personal portfolio built with Next.js 16, TypeScript, Tailwind CSS, and MDX blog content.
+Personal portfolio and blog built with **Next.js 16**, **React 19**, **TypeScript**, **Tailwind CSS 4**, and **Framer Motion**. Statically exported and deployed to **GitHub Pages**.
 
-## Overview
+## Pages & Sections
 
-This project includes:
-- A marketing-style homepage with sections for experience, projects, certifications, and research.
-- An MDX-powered blog (`content/blog/*.mdx`) with static generation.
-- Technical SEO foundations (metadata, sitemap, robots, RSS, structured data).
-- Analytics instrumentation for user behavior and click tracking.
-- Static export build output (`out/`) for GitHub Pages deployment.
+### Homepage (`/`)
+- **Hero** — Animated intro with particle background, floating security icons, and role titles (Azure Cloud Solutions Architect, Identity & AI Platform Engineer, 11x Microsoft Certified)
+- **About** — Overview with stats (11 certifications, 5+ years experience, 5 research publications, CIS/NIST frameworks) and four focus areas: Cloud Architecture, Identity & Security, AI & Copilot, DevSecOps
+- **Tech Stack** — Categorized skill grid: Languages (Python, C#, PowerShell, JavaScript, Java, SQL), Cloud & IaC (Azure, Terraform, Kubernetes, Docker), Identity (Entra ID, Entra External ID), AI & Copilot (AI Foundry, Copilot Studio, MCP Servers), DevSecOps (Azure DevOps, Git, Jenkins), Data & ML (Pandas, Scikit-Learn, Power BI), Frameworks (Django, ASP.NET, Selenium)
+- **Experience** — Interactive timeline of roles at Deloitte USI, IIT Bombay, Delhi Government, and HPCL-Mittal Energy
+- **Projects** — Filterable/sortable project cards with detail modals
+- **Certifications** — 11 Microsoft certifications displayed as badge cards (Expert, Associate, Specialty, Fundamentals) linked to Credly
+- **Research & Publications** — 5 published papers across Springer, IEEE, and CRC Press covering cryptography, digital forensics, NLP, cloud computing, and IoT
 
-## Features
-
-- Next.js App Router (`src/app`)
-- Static export configured in `next.config.ts`
-- Dynamic blog routes via `src/app/blog/[slug]/page.tsx`
+### Blog (`/blog`)
+- Dynamic blog powered by **Azure Cosmos DB**
+- Individual post pages with reading progress bar, table of contents sidebar, and share buttons
 - RSS feed at `/blog/rss.xml`
-- Sitemap at `/sitemap.xml` and robots at `/robots.txt`
-- Open Graph/Twitter metadata + JSON-LD structured data
-- Enhanced project section (filtering/sorting/modal)
-- Blog interactivity (reading progress, table of contents, share buttons)
 
-## Analytics
+### Contact (`/contact`)
+- Social links (LinkedIn, GitHub, YouTube, X/Twitter) and email contact card
 
-Analytics are initialized globally and tracked through reusable utilities:
+## Tech Stack
 
-- **Google Analytics 4 (GA4)**
-- **Microsoft Clarity**
-- **Vercel Analytics**
+| Category | Technologies |
+|---|---|
+| Framework | Next.js 16 (App Router, static export) |
+| Language | TypeScript, React 19 |
+| Styling | Tailwind CSS 4, Framer Motion |
+| Blog Backend | Azure Cosmos DB |
+| Analytics | Google Analytics 4, Microsoft Clarity, Vercel Analytics |
+| Deployment | GitHub Actions → GitHub Pages |
+| Particles | tsparticles |
 
-Key files:
-- `src/components/AnalyticsProvider.tsx` – loads GA4 script and Vercel analytics.
-- `src/lib/analytics.ts` – shared event helpers (CTA clicks, project views, social clicks, shares, filters, section views).
-- `src/app/layout.tsx` – includes analytics provider and Clarity script bootstrapping.
+## Project Structure
 
-### Example tracked events
-
-- `cta_click`
-- `project_view`
-- `project_detail_view`
-- `blog_read`
-- `blog_shared`
-- `social_click`
-- `filter_used`
-- `section_view`
-
-### Troubleshooting Analytics
-
-**Events not appearing in GA4 or Clarity?**
-
-1. **Check environment variables**: Verify `NEXT_PUBLIC_GA_MEASUREMENT_ID` and `NEXT_PUBLIC_CLARITY_PROJECT_ID` are set in `.env.local` (local) or Vercel environment settings (production).
-
-2. **Verify script loading**: Open browser DevTools → Network tab. Confirm requests to:
-   - `https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX` (GA4)
-   - `https://www.clarity.ms/tag/` (Clarity)
-
-3. **Test events in real-time**: In GA4, use **Realtime** report → Events. For Clarity, use **Recordings** → filter by session. Events may take 5–10 seconds to appear.
-
-4. **Check browser console**: Look for errors in DevTools Console. Analytics scripts fail silently if blocked by ad blockers or privacy extensions.
-
-5. **Disable ad blockers**: Extensions like uBlock Origin and Brave Shields block analytics. Test in Incognito mode or with extensions disabled.
-
-6. **Verify event syntax**: Ensure `trackEvent()` calls in `src/lib/analytics.ts` use correct GA4 event naming (lowercase, underscores).
+```
+src/
+  app/
+    page.tsx              # Homepage
+    blog/
+      page.tsx            # Blog listing
+      [slug]/page.tsx     # Blog post (SSG via generateStaticParams)
+      rss.xml/route.ts    # RSS feed
+    contact/page.tsx      # Contact page
+    sitemap.ts            # Dynamic sitemap
+    robots.ts             # Robots.txt
+    layout.tsx            # Root layout with analytics
+  components/
+    Hero.tsx              # Animated hero with particles
+    About.tsx             # About section with stats
+    TechStack.tsx         # Categorized skill grid
+    Experience.tsx        # Timeline component
+    Projects.tsx          # Filterable project grid
+    ProjectCard.tsx       # Project card component
+    ProjectModal.tsx      # Project detail modal
+    Certifications.tsx    # Certification badge grid
+    Research.tsx          # Publications list
+    Navbar.tsx            # Navigation bar
+    Footer.tsx            # Site footer
+    ReadingProgress.tsx   # Blog reading progress bar
+    TableOfContents.tsx   # Blog sidebar TOC
+    ShareButtons.tsx      # Social share buttons
+    ParticleBackground.tsx # tsparticles background
+    AnalyticsProvider.tsx # GA4 + Vercel analytics
+    SectionWrapper.tsx    # Reusable section container
+  lib/
+    blog.ts               # Cosmos DB blog queries
+    cosmos.ts             # Cosmos DB client
+    analytics.ts          # Shared event tracking helpers
+    structuredData.ts     # JSON-LD schema generators
+  hooks/
+    useScrollTracking.ts  # Intersection observer for section tracking
+public/                   # Static assets (images, og-image)
+```
 
 ## Environment Variables
 
-Create `.env.local` using `.env.local.example` as reference:
-
 | Variable | Required | Description |
 |---|---|---|
-| `NEXT_PUBLIC_SITE_URL` | Yes | Canonical site URL used in metadata/sitemap/schema |
-| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Optional | GA4 Measurement ID (format: `G-XXXXXXXXXX`) |
+| `COSMOS_ENDPOINT` | Yes (build) | Azure Cosmos DB endpoint |
+| `COSMOS_KEY` | Yes (build) | Azure Cosmos DB access key |
+| `COSMOS_DATABASE` | Yes (build) | Cosmos DB database name |
+| `NEXT_PUBLIC_SITE_URL` | Yes | Canonical site URL for metadata/sitemap |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Optional | Google Analytics 4 Measurement ID |
 | `NEXT_PUBLIC_CLARITY_PROJECT_ID` | Optional | Microsoft Clarity project ID |
 
-Notes:
-- Variables are `NEXT_PUBLIC_*` and exposed client-side by design.
-- If GA4/Clarity IDs are missing, related tracking gracefully degrades.
+Server-side variables (`COSMOS_*`) are only used at build time and are **never** exposed to the browser. Only `NEXT_PUBLIC_*` variables are bundled client-side.
 
 ## Local Development
 
@@ -85,70 +95,47 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:3000`.
+Open `http://localhost:3000/portfolio`.
 
-Other useful commands:
-
-```bash
-npm run lint
-npm run build
-```
-
-## Build & Static Export
-
-Production build:
+## Build & Deploy
 
 ```bash
-npm run build
+npm run build   # Generates static site in out/
 ```
 
-This project is configured with `output: "export"` and generates static files to `out/`.
-
-## Deployment
-
-Deployment is automated via GitHub Actions workflow:
-- `.github/workflows/deploy.yml`
-
-On push to `main`, the workflow:
+Deployment is automated via GitHub Actions (`.github/workflows/deploy.yml`). On push to `master`:
 1. Installs dependencies
-2. Runs `npm run build`
-3. Uploads `out/`
+2. Builds with Cosmos DB secrets from GitHub Actions secrets
+3. Uploads the `out/` directory
 4. Deploys to GitHub Pages
 
-## Content Authoring (Blog)
+## Analytics
 
-Blog posts live in `content/blog/*.mdx`.
+Analytics are initialized globally via `AnalyticsProvider` and tracked through `src/lib/analytics.ts`:
 
-Recommended frontmatter fields:
+- **Google Analytics 4 (GA4)**
+- **Microsoft Clarity**
+- **Vercel Analytics**
 
-```md
----
-title: "Post title"
-date: "YYYY-MM-DD"
-excerpt: "Short summary"
-description: "SEO description"
-author: "Jatin Madan"
-tags: ["Tag1", "Tag2"]
-keywords: ["keyword1", "keyword2"]
-readingTime: 8
----
-```
+**Tracked events:** `cta_click`, `project_view`, `project_detail_view`, `blog_read`, `blog_shared`, `social_click`, `filter_used`, `section_view`
 
-## Project Structure
+### Troubleshooting Analytics
 
-```text
-src/
-  app/
-  components/
-  lib/
-content/
-  blog/
-public/
-```
+1. **Check environment variables**: Verify `NEXT_PUBLIC_GA_MEASUREMENT_ID` and `NEXT_PUBLIC_CLARITY_PROJECT_ID` are set in `.env` (local) or GitHub Actions secrets (production).
+2. **Verify script loading**: Open DevTools → Network tab. Confirm requests to `googletagmanager.com` (GA4) and `clarity.ms` (Clarity).
+3. **Test events in real-time**: GA4 Realtime report → Events. Clarity Recordings → filter by session.
+4. **Disable ad blockers**: Extensions like uBlock Origin block analytics. Test in Incognito mode.
+
+## SEO
+
+- Open Graph + Twitter Card metadata on all pages
+- JSON-LD structured data for blog articles
+- Dynamic sitemap generated from Cosmos DB blog posts
+- RSS feed for blog subscribers
+- Canonical URLs and robots.txt
 
 ## Configuration Files
 
-- `next.config.ts` – Next.js static export configuration
-- `.env.local.example` – required runtime configuration template
-- `eslint.config.mjs` – lint configuration
-- `tsconfig.json` – TypeScript configuration
+- `next.config.ts` — Static export with `/portfolio` base path
+- `eslint.config.mjs` — ESLint configuration
+- `tsconfig.json` — TypeScript configuration
