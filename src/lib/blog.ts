@@ -1,4 +1,4 @@
-import { getContainer } from "./cosmos";
+import { getContainer, hasCosmosConfig } from "./cosmos";
 
 export interface BlogPostMeta {
   id: string;
@@ -41,7 +41,16 @@ function isNotFoundError(err: unknown): boolean {
   return code === 404 || code === "NotFound";
 }
 
+function isMissingCosmosConfigError(err: unknown): boolean {
+  if (!(err instanceof Error)) return false;
+  return err.message.includes("COSMOS_ENDPOINT") || err.message.includes("COSMOS_KEY");
+}
+
 export async function getAllPosts(): Promise<BlogPostMeta[]> {
+  if (!hasCosmosConfig()) {
+    return [];
+  }
+
   try {
     const container = getContainer();
     const { resources } = await container.items
@@ -53,7 +62,7 @@ export async function getAllPosts(): Promise<BlogPostMeta[]> {
 
     return resources;
   } catch (err: unknown) {
-    if (isNotFoundError(err)) {
+    if (isNotFoundError(err) || isMissingCosmosConfigError(err)) {
       return [];
     }
     throw err;
@@ -63,6 +72,10 @@ export async function getAllPosts(): Promise<BlogPostMeta[]> {
 export async function getPostBySlug(
   slug: string
 ): Promise<BlogPost | null> {
+  if (!hasCosmosConfig()) {
+    return null;
+  }
+
   try {
     const container = getContainer();
     const { resource } = await container.item(slug, slug).read<BlogPost>();
@@ -70,7 +83,7 @@ export async function getPostBySlug(
     resource.htmlContent = extractBodyContent(resource.htmlContent);
     return resource;
   } catch (err: unknown) {
-    if (isNotFoundError(err)) {
+    if (isNotFoundError(err) || isMissingCosmosConfigError(err)) {
       return null;
     }
     throw err;

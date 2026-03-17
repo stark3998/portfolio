@@ -2,6 +2,10 @@ import { CosmosClient, Container } from "@azure/cosmos";
 
 let _client: CosmosClient | null = null;
 
+export function hasCosmosConfig(): boolean {
+  return Boolean(process.env.COSMOS_ENDPOINT && process.env.COSMOS_KEY);
+}
+
 function getClient(): CosmosClient {
   if (_client) return _client;
 

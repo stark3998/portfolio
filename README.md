@@ -2,6 +2,8 @@
 
 Personal portfolio and blog built with **Next.js 16**, **React 19**, **TypeScript**, **Tailwind CSS 4**, and **Framer Motion**. Statically exported and deployed to **GitHub Pages**.
 
+Production domain: **https://jatinmadan.com**
+
 ## Pages & Sections
 
 ### Homepage (`/`)
@@ -95,7 +97,7 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:3000/portfolio`.
+Open `http://localhost:3000`.
 
 ## Build & Deploy
 
@@ -105,7 +107,7 @@ npm run build   # Generates static site in out/
 
 Deployment is automated via GitHub Actions (`.github/workflows/deploy.yml`). On push to `master`:
 1. Installs dependencies
-2. Builds with Cosmos DB secrets from GitHub Actions secrets
+2. Builds with Cosmos DB secrets and `NEXT_PUBLIC_SITE_URL=https://jatinmadan.com`
 3. Uploads the `out/` directory
 4. Deploys to GitHub Pages
 
@@ -136,6 +138,6 @@ Analytics are initialized globally via `AnalyticsProvider` and tracked through `
 
 ## Configuration Files
 
-- `next.config.ts` — Static export with `/portfolio` base path
+- `next.config.ts` — Static export configuration for GitHub Pages custom-domain deployment
 - `eslint.config.mjs` — ESLint configuration
 - `tsconfig.json` — TypeScript configuration

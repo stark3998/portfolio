@@ -1,4 +1,5 @@
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
+import { hasCosmosConfig } from "@/lib/cosmos";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { HiArrowLeft, HiOutlineCalendar } from "react-icons/hi2";
@@ -10,9 +11,14 @@ import { ShareButtons } from "@/components/ShareButtons";
 import { TableOfContents } from "@/components/TableOfContents";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://jatinmadan.com";
+const localFallbackSlug = "__build-fallback__";
 
 export async function generateStaticParams() {
   const posts = await getAllPosts();
+  if (posts.length === 0) {
+    return [{ slug: localFallbackSlug }];
+  }
+
   return posts.map((post) => ({ slug: post.slug }));
 }
 
@@ -22,6 +28,21 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
+  if (slug === localFallbackSlug && !hasCosmosConfig()) {
+    return {
+      title: "Blog Preview Unavailable",
+      description:
+        "Blog content is not available in this local build because Azure Cosmos DB environment variables are not configured.",
+      alternates: {
+        canonical: `${baseUrl}/blog`,
+      },
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
+  }
+
   const post = await getPostBySlug(slug);
   if (!post) return { title: "Post Not Found" };
 
@@ -66,6 +87,41 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+
+  if (slug === localFallbackSlug && !hasCosmosConfig()) {
+    return (
+      <div className="min-h-screen pt-24 pb-16">
+        <Script
+          id="local-blog-fallback-redirect"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: 'window.location.replace("/blog")',
+          }}
+        />
+        <div className="max-w-3xl mx-auto px-6 md:px-12 lg:px-20">
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-1.5 text-sm text-azure hover:text-azure-dark transition-colors mb-8"
+          >
+            <HiArrowLeft className="w-4 h-4" />
+            Back to Blog
+          </Link>
+
+          <div className="glass-card p-8">
+            <h1 className="font-heading font-bold text-3xl text-slate-dark">
+              Blog Preview Unavailable
+            </h1>
+            <p className="mt-4 text-slate-mid leading-relaxed">
+              Redirecting to the blog index. Configure `COSMOS_ENDPOINT`,
+              `COSMOS_KEY`, and `COSMOS_DATABASE` to generate blog pages from
+              published content during local builds.
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   const post = await getPostBySlug(slug);
 
   if (!post) {
