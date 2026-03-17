@@ -29,54 +29,83 @@ interface TechCategory {
 
 const stack: TechCategory[] = [
   {
-    name: "Languages",
+    name: "Identity Platforms",
     items: [
-      { name: "Python", icon: SiPython },
-      { name: "C#", icon: HiOutlineCodeBracket },
-      { name: "PowerShell", icon: HiOutlineCommandLine },
-      { name: "JavaScript", icon: SiJavascript },
-      { name: "Java", icon: SiOpenjdk },
-      { name: "SQL", icon: SiPostgresql },
+      { name: "Entra ID", icon: HiOutlineShieldCheck },
+      { name: "Entra External ID", icon: GoLock },
+      { name: "Okta", icon: GoLock },
+      { name: "Application Proxy", icon: GoLock },
+      { name: "Entra ID Connect", icon: HiOutlineShieldCheck },
+      { name: "SAML / OIDC", icon: HiOutlineCodeBracket },
+      { name: "Home Realm Discovery", icon: HiOutlineCommandLine },
     ],
   },
   {
-    name: "Cloud & IaC",
+    name: "Security & Governance",
+    items: [
+      { name: "Azure Policy", icon: HiOutlineShieldCheck },
+      { name: "CIS", icon: GoLock },
+      { name: "MCSB", icon: HiOutlineShieldCheck },
+      { name: "CISA", icon: GoLock },
+      { name: "MFA Policies", icon: HiOutlineShieldCheck },
+      { name: "WAF", icon: GoLock },
+      { name: "RBAC", icon: HiOutlineShieldCheck },
+      { name: "Purview", icon: HiOutlineChartBar },
+    ],
+  },
+  {
+    name: "AI Platforms",
+    items: [
+      { name: "Copilot Studio", icon: VscAzure },
+      { name: "Microsoft Foundry", icon: VscAzure },
+      { name: "Agent365", icon: HiOutlineCommandLine },
+      { name: "Agent ID", icon: HiOutlineShieldCheck },
+      { name: "Agentic Workflows", icon: HiOutlineCodeBracket },
+    ],
+  },
+  {
+    name: "Cloud & Infrastructure",
     items: [
       { name: "Azure", icon: VscAzure },
       { name: "Terraform", icon: SiTerraform },
       { name: "Kubernetes", icon: SiKubernetes },
       { name: "Docker", icon: SiDocker },
+      { name: "F5 Load Balancer", icon: HiOutlineCommandLine },
+      { name: "DNS Routing", icon: HiOutlineCodeBracket },
     ],
   },
   {
-    name: "Identity",
+    name: "Data & Reporting",
     items: [
-      { name: "Entra ID", icon: HiOutlineShieldCheck },
-      { name: "Entra External ID", icon: GoLock },
+      { name: "Power BI", icon: HiOutlineChartBar },
+      { name: "Azure Data Factory", icon: VscAzure },
+      { name: "Databricks", icon: VscAzure },
+      { name: "Data Lake", icon: HiOutlineChartBar },
+      { name: "SharePoint", icon: HiOutlineChartBar },
+      { name: "Azure SQL", icon: SiPostgresql },
     ],
   },
   {
-    name: "AI & Copilot",
-    items: [
-      { name: "AI Foundry", icon: VscAzure },
-      { name: "Copilot Studio", icon: VscAzure },
-      { name: "MCP Servers", icon: VscAzure },
-    ],
-  },
-  {
-    name: "DevSecOps",
+    name: "DevSecOps & Automation",
     items: [
       { name: "Azure DevOps", icon: VscAzureDevops },
       { name: "Git", icon: SiGit },
       { name: "Jenkins", icon: SiJenkins },
+      { name: "Python", icon: SiPython },
+      { name: "PowerShell", icon: HiOutlineCommandLine },
+      { name: "Security Automation", icon: HiOutlineShieldCheck },
+      { name: "Teams Automation", icon: HiOutlineCommandLine },
+      { name: "Outlook Automation", icon: HiOutlineCommandLine },
     ],
   },
   {
-    name: "Data & ML",
+    name: "Languages",
     items: [
-      { name: "Pandas", icon: SiPandas },
-      { name: "Scikit-Learn", icon: SiScikitlearn },
-      { name: "Power BI", icon: HiOutlineChartBar },
+      { name: "Python", icon: SiPython },
+      { name: "C#", icon: HiOutlineCodeBracket },
+      { name: "JavaScript", icon: SiJavascript },
+      { name: "Java", icon: SiOpenjdk },
+      { name: "SQL", icon: SiPostgresql },
     ],
   },
   {
@@ -85,6 +114,8 @@ const stack: TechCategory[] = [
       { name: "Django", icon: SiDjango },
       { name: "ASP.NET", icon: SiDotnet },
       { name: "Selenium", icon: SiSelenium },
+      { name: "Pandas", icon: SiPandas },
+      { name: "Scikit-Learn", icon: SiScikitlearn },
     ],
   },
 ];
@@ -95,6 +126,12 @@ export default function TechStack() {
       <h2 className="font-heading font-bold text-3xl md:text-4xl text-slate-dark section-heading">
         Tech Stack
       </h2>
+
+      <p className="mt-4 text-slate-mid max-w-2xl">
+        My stack is centered on identity modernization, enterprise AI
+        governance, hybrid access, and the automation layers that make cloud
+        security and agentic delivery programs operationally sustainable.
+      </p>
 
       <div className="mt-10 space-y-6">
         {stack.map((category, catIndex) => (

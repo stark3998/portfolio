@@ -23,26 +23,32 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Jatin Madan — Azure Cloud Solutions Architect",
+  title: "Jatin Madan — Cloud Security Senior Consultant",
   description:
-    "Portfolio of Jatin Madan — Azure Cloud Solutions Architect, Identity & AI Platform Engineer, 11x Microsoft Certified. Building secure cloud-native architectures at Deloitte.",
+    "Portfolio of Jatin Madan — Cloud Security Senior Consultant specializing in Microsoft Entra, enterprise AI security governance, hybrid identity, and Azure security architecture.",
   keywords: [
     "Azure",
-    "Cloud Architect",
+    "Cloud Security",
     "Entra ID",
+    "External ID",
+    "Identity Modernization",
+    "Azure Policy",
+    "Copilot Studio",
+    "Microsoft Foundry",
+    "Purview",
+    "Agentic AI",
     "Microsoft Certified",
     "DevSecOps",
-    "AI Foundry",
-    "Copilot Studio",
+    "MFA",
   ],
   metadataBase: new URL(baseUrl),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Jatin Madan — Azure Cloud Solutions Architect",
+    title: "Jatin Madan — Cloud Security Senior Consultant",
     description:
-      "Portfolio of Jatin Madan — Azure Cloud Solutions Architect, Identity & AI Platform Engineer, 11x Microsoft Certified.",
+      "Portfolio of Jatin Madan — Cloud Security Senior Consultant specializing in Microsoft Entra, enterprise AI security governance, hybrid identity, and Azure security architecture.",
     url: baseUrl,
     siteName: "Jatin Madan",
     images: [
@@ -50,16 +56,16 @@ export const metadata: Metadata = {
         url: ogImageUrl,
         width: 1200,
         height: 630,
-        alt: "Jatin Madan - Azure Cloud Solutions Architect",
+        alt: "Jatin Madan - Cloud Security Senior Consultant",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jatin Madan — Azure Cloud Solutions Architect",
+    title: "Jatin Madan — Cloud Security Senior Consultant",
     description:
-      "Portfolio of Jatin Madan — Azure Cloud Solutions Architect, Identity & AI Platform Engineer, 11x Microsoft Certified.",
+      "Portfolio of Jatin Madan — Cloud Security Senior Consultant specializing in Microsoft Entra, enterprise AI security governance, hybrid identity, and Azure security architecture.",
     images: [ogImageUrl],
     creator: "@jatinmadan",
   },

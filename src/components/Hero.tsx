@@ -8,8 +8,8 @@ import ParticleBackground from "./ParticleBackground";
 import { trackCTAClick } from "@/lib/analytics";
 
 const titles = [
-  "Azure Cloud Solutions Architect",
-  "Identity & AI Platform Engineer",
+  "Cloud Security Senior Consultant",
+  "Enterprise AI Security & Identity Governance",
   "11x Microsoft Certified",
 ];
 
@@ -51,7 +51,7 @@ export default function Hero() {
         >
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-azure-light/60 text-azure text-sm font-medium border border-azure/15">
             <HiOutlineShieldCheck className="w-4 h-4" />
-            Secure · Cloud-Native · Scalable
+            Identity · Security · Azure
           </span>
         </motion.div>
 
@@ -89,9 +89,9 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-8 text-base md:text-lg text-slate-mid/80 max-w-xl mx-auto leading-relaxed"
         >
-          Building secure cloud architectures with Entra&nbsp;ID, Azure&nbsp;PaaS/SaaS,
-          Microsoft AI&nbsp;Foundry &amp; Copilot&nbsp;Studio for Fortune&nbsp;500 clients
-          at Deloitte.
+          Leading Entra ID modernization, enterprise AI security governance,
+          and agentic solution delivery across Azure, Copilot Studio,
+          Microsoft Foundry, and hybrid identity programs at Deloitte.
         </motion.p>
 
         <motion.div

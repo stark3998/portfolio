@@ -9,34 +9,34 @@ import { useScrollTracking } from "@/hooks/useScrollTracking";
 
 const stats = [
   { label: "Microsoft Certifications", value: "11", icon: VscAzure },
-  { label: "Years Experience", value: "5+", icon: HiOutlineShieldCheck },
+  { label: "Years Experience", value: "7+", icon: HiOutlineShieldCheck },
   { label: "Research Publications", value: "5", icon: HiOutlineAcademicCap },
-  { label: "Security Frameworks", value: "CIS · NIST", icon: GoLock },
+  { label: "Security Frameworks", value: "CIS · MCSB · CISA", icon: GoLock },
 ];
 
 const techAreas = [
   {
-    title: "Cloud Architecture",
+    title: "Cloud Security Architecture",
     description:
-      "Designing and deploying scalable Azure solutions — App Services, Functions, Container Apps, Kubernetes, and multi-region architectures.",
+      "Designing secure Azure and hybrid architectures with strong tenant controls, secure ingress, network boundaries, and resilient identity-aware access.",
     color: "azure",
   },
   {
-    title: "Identity & Security",
+    title: "Identity Modernization",
     description:
-      "Implementing Zero Trust with Entra ID, Entra External ID, Conditional Access, RBAC, and compliance frameworks (CIS, NIST).",
+      "Migrating enterprise applications from Okta to Entra ID and Entra External ID with SSO, MFA, HRD, JIT user migration, hybrid identity patterns, and accelerator-led onboarding.",
     color: "teal",
   },
   {
-    title: "AI & Copilot",
+    title: "AI Security & Governance",
     description:
-      "Building intelligent solutions with Microsoft AI Foundry, Copilot Studio, and MCP Servers for enterprise automation.",
+      "Building Azure Policy and AI configuration controls for Copilot Studio, Microsoft Foundry, Purview, Agent365, and Agent ID to strengthen enterprise AI governance.",
     color: "azure",
   },
   {
-    title: "DevSecOps",
+    title: "Automation & Reporting",
     description:
-      "CI/CD pipelines with Azure DevOps, Terraform IaC, Docker containers, security automation, and desired-state configuration.",
+      "Deploying agentic solutions for client communication workflows, executive reporting, remediation tracking, and operational coordination across Teams and Outlook.",
     color: "teal",
   },
 ];
@@ -51,10 +51,11 @@ export default function About() {
       </h2>
 
       <p className="mt-8 text-lg text-slate-mid leading-relaxed max-w-2xl">
-        Azure Cloud Solutions Architect at Deloitte, specializing in secure
-        cloud-native architectures for Fortune 500 clients. I bridge the gap
-        between identity management, AI platforms, and enterprise cloud
-        infrastructure.
+        Cloud Security Senior Consultant at Deloitte, specializing in identity
+        modernization, enterprise AI security governance, and Microsoft Entra
+        ID and External ID. I work across large-scale migration accelerators,
+        hybrid identity architecture, AI control design, and agentic automation
+        for complex Azure estates.
       </p>
 
       {/* Stats row */}

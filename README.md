@@ -5,11 +5,11 @@ Personal portfolio and blog built with **Next.js 16**, **React 19**, **TypeScrip
 ## Pages & Sections
 
 ### Homepage (`/`)
-- **Hero** — Animated intro with particle background, floating security icons, and role titles (Azure Cloud Solutions Architect, Identity & AI Platform Engineer, 11x Microsoft Certified)
-- **About** — Overview with stats (11 certifications, 5+ years experience, 5 research publications, CIS/NIST frameworks) and four focus areas: Cloud Architecture, Identity & Security, AI & Copilot, DevSecOps
-- **Tech Stack** — Categorized skill grid: Languages (Python, C#, PowerShell, JavaScript, Java, SQL), Cloud & IaC (Azure, Terraform, Kubernetes, Docker), Identity (Entra ID, Entra External ID), AI & Copilot (AI Foundry, Copilot Studio, MCP Servers), DevSecOps (Azure DevOps, Git, Jenkins), Data & ML (Pandas, Scikit-Learn, Power BI), Frameworks (Django, ASP.NET, Selenium)
-- **Experience** — Interactive timeline of roles at Deloitte USI, IIT Bombay, Delhi Government, and HPCL-Mittal Energy
-- **Projects** — Filterable/sortable project cards with detail modals
+- **Hero** — Animated intro with particle background, floating security icons, and role titles (Cloud Security Senior Consultant, Entra ID & External ID Specialist, 11x Microsoft Certified)
+- **About** — Overview with stats (11 certifications, 7+ years experience, 5 research publications, CIS/MCSB/CISA frameworks) and four focus areas: Cloud Security Architecture, Identity Modernization, Data & Reporting, DevSecOps & Compliance
+- **Tech Stack** — Categorized skill grid centered on identity platforms, security governance, cloud infrastructure, data/reporting, and DevSecOps automation
+- **Experience** — Interactive timeline covering Deloitte, UC Irvine, ZS, IIT Bombay, Aam Aadmi Party, and HPCL-Mittal Energy roles
+- **Projects** — Filterable/sortable project cards focused on identity modernization, hybrid access, security assessments, IAM automation, and remediation reporting
 - **Certifications** — 11 Microsoft certifications displayed as badge cards (Expert, Associate, Specialty, Fundamentals) linked to Credly
 - **Research & Publications** — 5 published papers across Springer, IEEE, and CRC Press covering cryptography, digital forensics, NLP, cloud computing, and IoT
 

@@ -11,13 +11,13 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://jatinmadan.com";
 
 export const metadata: Metadata = {
   title: "Contact — Jatin Madan",
-  description: "Get in touch with Jatin Madan for Azure cloud architecture, security consulting, and collaboration.",
+  description: "Get in touch with Jatin Madan for cloud security, identity modernization, Azure platform consulting, and collaboration.",
   alternates: {
     canonical: `${baseUrl}/contact`,
   },
   openGraph: {
     title: "Contact — Jatin Madan",
-    description: "Get in touch with Jatin Madan for Azure cloud architecture, security consulting, and collaboration.",
+    description: "Get in touch with Jatin Madan for cloud security, identity modernization, Azure platform consulting, and collaboration.",
     url: `${baseUrl}/contact`,
     type: "website",
     images: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Contact — Jatin Madan",
-    description: "Get in touch with Jatin Madan for Azure cloud architecture, security consulting, and collaboration.",
+    description: "Get in touch with Jatin Madan for cloud security, identity modernization, Azure platform consulting, and collaboration.",
     images: [`${baseUrl}/og-image.svg`],
   },
 };
@@ -78,8 +78,8 @@ export default function ContactPage() {
             Get in Touch
           </h1>
           <p className="mt-6 text-lg text-slate-mid leading-relaxed">
-            Interested in cloud architecture, identity security, or AI platform
-            engineering? Let&apos;s connect.
+            Interested in cloud security, identity modernization, or Azure
+            platform engineering? Let&apos;s connect.
           </p>
         </div>
 
@@ -146,11 +146,11 @@ export default function ContactPage() {
               <div className="space-y-2 text-sm text-slate-mid">
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-azure" />
-                  Based in India
+                  Based in Seattle, Washington
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-teal" />
-                  Working at Deloitte USI
+                  Cloud Security Senior Consultant at Deloitte
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-azure" />

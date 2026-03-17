@@ -63,23 +63,30 @@ export function getPersonSchema(
     name: "Jatin Madan",
     url: baseUrl,
     image: ogImageUrl,
-    jobTitle: "Cloud Solutions Architect",
+    jobTitle: "Cloud Security Senior Consultant",
     sameAs: [
-      "https://github.com/jatinmadan",
-      "https://linkedin.com/in/jatinmadan",
-      "https://twitter.com/jatinmadan",
+      "https://github.com/stark3998",
+      "https://www.linkedin.com/in/jatin39/",
+      "https://twitter.com/jatumadan",
     ],
     description:
-      "Azure Cloud Solutions Architect specializing in enterprise security, cloud infrastructure, and AI/ML solutions",
+      "Cloud Security Senior Consultant specializing in Microsoft Entra, enterprise AI security governance, hybrid identity, Azure security architecture, and migration accelerators",
     skills: [
       "Azure",
-      "Cloud Architecture",
+      "Cloud Security",
       "Entra ID",
-      "Security",
-      "Azure Functions",
-      "AI/ML",
-      "Kubernetes",
-      "DevOps",
+      "Entra External ID",
+      "Identity Modernization",
+      "Okta Migration",
+      "Azure Policy",
+      "Copilot Studio",
+      "Microsoft Foundry",
+      "Purview",
+      "Agentic AI",
+      "Hybrid Identity",
+      "Power BI",
+      "DevSecOps",
+      "Compliance",
     ],
   };
 }
@@ -88,10 +95,10 @@ export function getWebsiteSchema(baseUrl: string): WebsiteSchema {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Jatin Madan - Cloud Solutions Architect",
+    name: "Jatin Madan - Cloud Security Portfolio",
     url: baseUrl,
     description:
-      "Portfolio of Jatin Madan, Azure Cloud Solutions Architect",
+      "Portfolio of Jatin Madan, Cloud Security Senior Consultant focused on identity modernization, enterprise AI governance, and Azure security engineering",
     potentialAction: {
       "@type": "SearchAction",
       target: {
