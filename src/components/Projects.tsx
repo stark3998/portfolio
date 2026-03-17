@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import SectionWrapper from "./SectionWrapper";
 import { HiOutlineShieldCheck, HiArrowTopRightOnSquare } from "react-icons/hi2";
 import { GoLock } from "react-icons/go";
-import { SiTerraform, SiPython } from "react-icons/si";
+import { SiTerraform, SiPython, SiTensorflow } from "react-icons/si";
 import { VscAzure, VscAzureDevops } from "react-icons/vsc";
 import { useScrollTracking } from "@/hooks/useScrollTracking";
 import { trackProjectView, trackFilter } from "@/lib/analytics";
@@ -229,6 +229,30 @@ const projects: Project[] = [
       "Azure SQL",
       "Python",
       "Executive Reporting",
+    ],
+  },
+  {
+    id: "emergency-response-assist",
+    title: "Emergency Response Assist (ERA)",
+    description:
+      "Developed an audio detection system using MFCC Feature Extraction and LSTM/CNN models, achieving 95.6% accuracy in identifying gunshot sounds for real-time emergency response.",
+    detailedDescription:
+      "Built an end-to-end audio classification pipeline for detecting gunshot sounds in real-time environments. The system used Mel-Frequency Cepstral Coefficient (MFCC) feature extraction combined with LSTM and CNN deep learning models to classify audio signals with 95.6% accuracy. Designed to enhance emergency response capabilities by enabling faster detection and alerting in critical situations.",
+    tags: ["Deep Learning", "LSTM", "CNN", "Python"],
+    icon: SiTensorflow,
+    color: "teal",
+    metrics: {
+      impact: "95.6% detection accuracy",
+      performance: "Real-time audio classification",
+      scale: "MFCC + LSTM/CNN pipeline",
+    },
+    fullTechStack: [
+      "Python",
+      "MFCC Feature Extraction",
+      "LSTM",
+      "CNN",
+      "NumPy",
+      "Audio Signal Processing",
     ],
   },
 ];

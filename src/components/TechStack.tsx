@@ -17,6 +17,12 @@ import {
   SiSelenium,
   SiPandas,
   SiScikitlearn,
+  SiApachespark,
+  SiAmazonwebservices,
+  SiOpencv,
+  SiNumpy,
+  SiGnubash,
+  SiHtml5,
 } from "react-icons/si";
 import { VscAzure, VscAzureDevops } from "react-icons/vsc";
 import { HiOutlineShieldCheck, HiOutlineCodeBracket, HiOutlineCommandLine, HiOutlineChartBar } from "react-icons/hi2";
@@ -67,6 +73,7 @@ const stack: TechCategory[] = [
     name: "Cloud & Infrastructure",
     items: [
       { name: "Azure", icon: VscAzure },
+      { name: "AWS (S3, Lambda)", icon: SiAmazonwebservices },
       { name: "Terraform", icon: SiTerraform },
       { name: "Kubernetes", icon: SiKubernetes },
       { name: "Docker", icon: SiDocker },
@@ -80,7 +87,11 @@ const stack: TechCategory[] = [
       { name: "Power BI", icon: HiOutlineChartBar },
       { name: "Azure Data Factory", icon: VscAzure },
       { name: "Databricks", icon: VscAzure },
+      { name: "PySpark", icon: SiApachespark },
+      { name: "Azure Synapse", icon: VscAzure },
       { name: "Data Lake", icon: HiOutlineChartBar },
+      { name: "Cosmos DB", icon: VscAzure },
+      { name: "Redis Cache", icon: HiOutlineCommandLine },
       { name: "SharePoint", icon: HiOutlineChartBar },
       { name: "Azure SQL", icon: SiPostgresql },
     ],
@@ -106,16 +117,22 @@ const stack: TechCategory[] = [
       { name: "JavaScript", icon: SiJavascript },
       { name: "Java", icon: SiOpenjdk },
       { name: "SQL", icon: SiPostgresql },
+      { name: "Bash", icon: SiGnubash },
+      { name: "HTML", icon: SiHtml5 },
+      { name: "YAML", icon: HiOutlineCodeBracket },
     ],
   },
   {
-    name: "Frameworks",
+    name: "Frameworks & Libraries",
     items: [
       { name: "Django", icon: SiDjango },
       { name: "ASP.NET", icon: SiDotnet },
       { name: "Selenium", icon: SiSelenium },
       { name: "Pandas", icon: SiPandas },
+      { name: "NumPy", icon: SiNumpy },
+      { name: "OpenCV", icon: SiOpencv },
       { name: "Scikit-Learn", icon: SiScikitlearn },
+      { name: "NLTK", icon: SiPython },
     ],
   },
 ];

@@ -54,11 +54,11 @@ const timeline: TimelineItem[] = [
     description:
       "Designed Azure data engineering foundations for scalable ETL, analytics, governance, and secrets management.",
     highlights: [
+      "Converted 3,000 Parquet tables to Delta tables using Apache Spark and Databricks, leveraging Delta's ACID transactions and scalable metadata handling to enhance data management efficiency",
+      "Built a custom Docker image for Databricks clusters with preinstalled packages, reducing cluster run time by 14% by eliminating runtime installations",
       "Established Azure Data Lake foundations that gave the client a secure and scalable storage layer for analytics workloads",
       "Built Azure Data Factory pipelines that reduced manual data movement and improved the consistency of transformation workflows",
-      "Used Databricks to support large-scale processing and analytics for high-volume data use cases",
       "Implemented Unity Catalog and Azure Key Vault to strengthen governance, secrets management, and audit readiness",
-      "Partnered with analysts and data scientists to deliver reliable data products aligned to business reporting needs",
     ],
     status: "completed",
   },

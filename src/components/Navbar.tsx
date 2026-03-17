@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { HiOutlineShieldCheck } from "react-icons/hi2";
+import { HiOutlineShieldCheck, HiArrowDownTray } from "react-icons/hi2";
 import { HiBars3, HiXMark } from "react-icons/hi2";
 
 const navLinks = [
@@ -55,6 +55,15 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-2 inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-lg bg-azure text-white hover:bg-azure-dark transition-colors"
+            >
+              <HiArrowDownTray className="w-4 h-4" />
+              Resume
+            </a>
           </div>
 
           {/* Mobile toggle */}
@@ -92,6 +101,15 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-azure hover:bg-azure-light/50 rounded-lg transition-colors"
+              >
+                <HiArrowDownTray className="w-4 h-4" />
+                Resume
+              </a>
             </div>
           </motion.div>
         )}
