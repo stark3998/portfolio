@@ -5,7 +5,10 @@
       "Bash(npm uninstall:*)",
       "WebFetch(domain:localhost)",
       "Bash(curl -s http://localhost:3000/portfolio/blog/blog-1773177587633)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "WebFetch(domain:api.github.com)",
+      "Bash(curl -s \"https://api.github.com/users/stark3998/repos?per_page=100&sort=updated\")",
+      "Bash(python -c \":*)"
     ]
   }
 }

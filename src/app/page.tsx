@@ -3,6 +3,7 @@ import About from "@/components/About";
 import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
+import GitHubProjects from "@/components/GitHubProjects";
 import TechStack from "@/components/TechStack";
 import Certifications from "@/components/Certifications";
 import Research from "@/components/Research";
@@ -16,6 +17,7 @@ export default function Home() {
       <TechStack />
       <Experience />
       <Projects />
+      <GitHubProjects />
       <Certifications />
       <Research />
     </>
