@@ -18,12 +18,12 @@ import {
   SiPandas,
   SiScikitlearn,
   SiApachespark,
-  SiAmazonwebservices,
   SiOpencv,
   SiNumpy,
   SiGnubash,
   SiHtml5,
 } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
 import { VscAzure, VscAzureDevops } from "react-icons/vsc";
 import { HiOutlineShieldCheck, HiOutlineCodeBracket, HiOutlineCommandLine, HiOutlineChartBar } from "react-icons/hi2";
 import { GoLock } from "react-icons/go";
@@ -73,7 +73,7 @@ const stack: TechCategory[] = [
     name: "Cloud & Infrastructure",
     items: [
       { name: "Azure", icon: VscAzure },
-      { name: "AWS (S3, Lambda)", icon: SiAmazonwebservices },
+      { name: "AWS (S3, Lambda)", icon: FaAws },
       { name: "Terraform", icon: SiTerraform },
       { name: "Kubernetes", icon: SiKubernetes },
       { name: "Docker", icon: SiDocker },
