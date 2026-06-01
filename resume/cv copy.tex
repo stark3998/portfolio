@@ -1,0 +1,396 @@
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,3pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.95]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+% longtable environment
+\usepackage{longtable}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{ifsym}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{0pt}{6pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.5}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+    \Huge{Jatin Madan}                                                           \\[10.5pt]
+    \href{https://github.com/stark3998}{\raisebox{-0.05\height}\faGithub\ stark3998} \ $|$ \
+    \href{https://linkedin.com/in/jatin39}{\raisebox{-0.05\height}\faLinkedin\ Jatin39} \ $|$ \
+    \href{https://github.com/stark3998}{\raisebox{-0.05\height}\faGlobe \ Portfolio} \ $|$ \
+    \href{mailto:madanj@uci.edu}{\raisebox{-0.05\height}\faEnvelope \ madanj@uci.edu} \ $|$ \
+    % \href{https://maps.app.goo.gl/YbKs3GmpJMfMrPKr9}{\textifsymbol{18} \ Irvine,CA,92617} \ $|$ \ 
+    \href{tel:+19492139330}{\raisebox{-0.05\height}\faMobile \ +1(949)-213-9330} \\
+\end{tabularx}
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+    \textbf{University of California, Irvine} | Master of Computer Science | GPA: 4.0            & \hfill [Irvine, CA, USA] Sept 2023 - Dec 2024 \\[2pt]
+    \multicolumn{2}{@{}X@{}}{
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=1pt]
+            \item[--]  Courses: Cyber Security, Parallel and Distributed Computing, AI, Data Structures, Algorithms, Image Processing, ML, DL
+        \end{itemize}
+    \end{minipage}
+    }                                                                                                                                  \\[2.75pt]
+    \textbf{Vellore Institute of Technology} | B.Tech Computer Science and Engineering & \hfill [Vellore, India] July 2016 - June 2020 \\[2pt]
+\end{tabularx}
+% \begin{tabularx}{\linewidth}{@{}l X@{}}	
+% 2030 - present & PhD (Subject) at \textbf{University} \hfill \normalsize (GPA: 4.0/4.0) \\
+
+% 2023 - 2027 & Bachelor's Degree at \textbf{College} \hfill (GPA: 4.0/4.0) \\ 
+
+% 2022 & Class 12th Some Board \hfill  (Grades) \\
+
+% 2021 & Class 10th Some Board \hfill  (Grades) \\
+% \end{tabularx}
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+    Languages/Scripts & \normalsize{\textbf{Python, C\#, ASP .Net, Powershell,} SQL, HTML, Bash, JAVA, Javascript}                                                                                                                                         \\
+    Tools/Libraries   & \normalsize{\textbf{Kubernetes, Docker, Databricks, Terraform}, Postman, Azure DevOps, AWS S3, Lambda, Azure Cloud, YAML, Git, Jenkins, PySpark, \textbf{OpenCV, Numpy, Pandas}, NLTK, Django, Vulnerability Management}                            \\
+    Cloud Stack       & \normalsize{\textbf{Azure PaaS}(Storage Accounts/Function Apps/Web Apps/Event Hubs/Service Bus/Log Analytics}, \textbf{Azure IaaS} (Virtual Machine/ Virtual Machine Scale Set/ Azure Kubernetes/Container Instances, SQL Servers)
+    % Operating Systems &  \normalsize{Windows, Ubuntu, Kali, Mac, Arduino, Raspberry Pi, Samsung Tizen, LG Web OS}\\
+\end{tabularx}
+
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+%Experience
+\section{Experience}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+    \textbf{ZS Associates} | (Associate Consultant Intern) | \href{https://uci.edu/}{Cloud and Big Data Team | Philadelphia, PA} & \hfill Jun 2024 - Present \\[3pt]
+    \multicolumn{2}{@{}X@{}}{
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[--] ETL Workflow Overhaul: Converted \textbf{3000 Parquet tables to Delta tables} using \textbf{Apache Spark and Databricks}, leveraging Delta's ACID transactions, scalable metadata handling, and batch data processing to enhance data management efficiency
+            % enhancing data management efficiency with Delta Lake's features.
+            \item[--] Built a \textbf{custom Docker image} for Databricks clusters with preinstalled custom packages, reducing cluster run time by 14\% by avoiding runtime installations.
+            \item[--] Implemented \textbf{Unity Catalog} in Databricks for unified governance, utilizing Azure Data Lake Storage (ADLS) for secure and compliant data management through fine-grained access controls and audit logging.
+        \end{itemize}
+    \end{minipage}
+    }                                                                                                                                                        \\
+\end{tabularx} \\[2.5pt]
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+    % \textbf{Data \& Tech Fellow} - (Professor Tom Andriola) - \href{https://uci.edu/}{University of California Irvine} & \hfill Sep 2023 - Present \\[3pt]
+    \textbf{University of California, Irvine} | (Data \& Tech Fellow) | \href{https://odit.uci.edu/about/vc-profile.php}{Prof. Tom Andriola | Irvine, CA} & \hfill Sep 2023 - Present \\[3pt]
+    \multicolumn{2}{@{}X@{}}{
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[--] Developed an \textbf{API Gateway} for uploading files to scan for malware, utilizing \textbf{API Management and Azure Functions}.
+            \item[--]  Self-Hosted a \textbf{custom OpenAI chatbot} using Azure Services (\textbf{Azure Kubernetes Service, Azure Cognitive Services, Azure Storage}) to ensure data security and compliance, protecting organizational data
+        \end{itemize}
+    \end{minipage}
+    }                                                                                                                                                                                 \\
+\end{tabularx} \\[2.5pt]
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+    \textbf{Deloitte} | (Cyber Security Solution Advisor) | \href{https://uci.edu/}{Cloud Infrastructure Team | Gurugram, IN} & \hfill Aug 2020 - Sep 2023 \\[3pt]
+    \multicolumn{2}{@{}X@{}}{
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            % \item[--] Engineered an  \textbf{Automated M365 and Multi-Cloud Security Assessment Tool} to evaluate cross-tenant resources and identities for vulnerability management and compliance with various Cloud Security Frameworks like \textbf{NIST, CIS}.
+            \item[--] Engineered an \textbf{Automated M365 and Multi-Cloud Security Assessment Tool} to evaluate cross-tenant resources and identities against \textbf{NIST, CIS} frameworks, reducing manual efforts by 78\%, enhancing risk identification accuracy by 35\%, accelerating mitigation actions to improve security posture and compliance adherence
+                  % \item[--] Established \textbf{Industry Standards and Compliance Framework}: Created a comprehensive framework for industry standards and compliance, including \textbf{Cloud Governance} processes, standard Operating Procedures, and roles and responsibilities segregation \textbf{RACI Matrix} for a client transitioning to the cloud.
+            \item[--]  Overhauled \textbf{Identity and Access Management} for PaaS \textbf{Databases and Kubernetes Clusters/Namespaces}: Automated creating \textbf{Azure AD} Groups and mapping them to various RBAC Roles based on Custom User Configuration Rules.
+            \item[--] Architected and deployed \textbf{Zero Trust} security within Azure, integrating \textbf{Azure AD/Entra ID} governance, RBAC, \textbf{identity lifecycle management}, and \textbf{conditional access policies} to tighten access control and compliance
+            \item[--] \textbf{Established Industry Standards and Compliance Framework}: Created a comprehensive framework for industry standards and compliance, including \textbf{Cloud Governance} processes, standard \textbf{Cloud Operating Procedures}, and roles and responsibilities segregation \textbf{RACI Matrix} for a client transitioning to the cloud.
+        \end{itemize}
+    \end{minipage}
+    }                                                                                                                                                      \\
+\end{tabularx} \\[2.5pt]
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+    \textbf{Indian Institute of Technology, Mumbai} - (Azure Architect Intern) - \href{https://www.cse.iitb.ac.in/~ganesh/}{Prof. Ganesh | Mumbai. IN} & \hfill Jul 2020 - Aug 2020 \\[3pt]
+    \multicolumn{2}{@{}X@{}}{
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[--]  Engineered a \textbf{Video Conferencing Platform}: Designed an in-house Solution using Open Source VC solutions, JITSI and BBB using \textbf{Azure VMSS, App Service, Storage Account, NoSQL Cosmos DB}
+            \item[--] Developed a \textbf{Single Sign-On System}: Created the \textbf{Secure API} architecture for \textbf{SSO} deployed across IIT Bombay Applications using \textbf{Azure App Service, REDIS Cache, Application Gateway}.
+            % \item [--] Social Media Scraping Tool: Coded a \textbf{Web Crawler} to fetch data from social media (Facebook, Whatsapp, Twitter) to form a \textbf{PowerBi dashboard} of all consumer complaints using \textbf{Python, NLTK and Scikit}.
+        \end{itemize}
+    \end{minipage}
+    }                                                                                                                                                                               \\
+\end{tabularx} \\[2.5pt]
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+    \textbf{Deloitte} | (Advisory Analyst Intern) | \href{https://uci.edu/}{Cloud Infrastructure Team | Hyderabad, IN} & \hfill Jan 2020 - Apr 2020 \\[3pt]
+    \multicolumn{2}{@{}X@{}}{
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[--] Data Extraction and Analysis for OnPrem Data Sources: Built an \textbf{Extract Transform Load (ETL) Workflow} using \textbf{Azure Synapse} and \textbf{Azure SQL Server} to create a \textbf{PowerBI Dashboard} for \textbf{data analysis} and \textbf{data visualization}
+            \item[--] Engineered an extension for \textbf{Azure DevOps} to pre-scan \textbf{Terraform} templates for compliance, risk, security analysis
+        \end{itemize}
+    \end{minipage}
+    }                                                                                                                                               \\
+\end{tabularx}
+\vspace{0.5pt}
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{Django Backend Development Intern} - (IT Cell) - \href{https://delhi.gov.in/}{Aam Aadmi Party (Delhi Government, INDIA)} & \hfill Jun 2019 - Aug 2019 \\[3pt]
+% \multicolumn{2}{@{}X@{}}{
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+%         \item[--] Social Media Scraping Tool: Coded a \textbf{Web Crawler} to fetch data from social media (Facebook, Whatsapp, Twitter) to form a \textbf{PowerBi dashboard} of all consumer complaints using \textbf{Python, NLTK and sci-kit}.
+%         \item[--]  Formulated a \textbf{data pre-processing} algorithm to batch update bulk records by utilizing \textbf{binning} and \textbf{database partitioning}
+%     \end{itemize}
+%     \end{minipage}
+% }  \\
+% \end{tabularx}\\[2.5pt]
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{SAP HANA Intern} - (Plant Maintenance Team) - \href{https://www.hmel.in}{HPCL-Mittal Energy Ltd} & \hfill Apr 2018 - Jul 2018 \\[3pt]
+% \multicolumn{2}{@{}X@{}}{
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+%         \item[--] Deployed \textbf{SAP HANA} and \textbf{SAP BTP} on Azure Cloud Platform with customised modules tailored to the organization needs
+%     \end{itemize}
+%     \end{minipage}
+% }  \\
+% \end{tabularx}
+% Certifications
+\section{Certifications \hfill \href{https://github.com/stark3998/\#certifications}{\normalsize{Link to all Certifications}}}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+    \multicolumn{2}{@{}X@{}}{
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2.5pt]
+            \item Microsoft Certified: Azure Security Engineer Associate \hspace{10mm} AZ-500 \hspace{25mm} \href{https://github.com/stark3998/\#certifications}{H736-2347} \hspace{20mm} Mar 28, 2021
+            \item Microsoft Certified: Azure Developer Associate	 \hspace{22mm} AZ-204 \hspace{25mm} \href{https://github.com/stark3998/\#certifications}{H717-3092} \hspace{20mm} Mar 13, 2021
+            \item Microsoft Certified: Azure Solutions Architect Expert \hspace{11.5mm} AZ-304 \hspace{25mm} \href{https://github.com/stark3998/\#certifications}{H693-3978} \hspace{20mm} Feb 21, 2021
+            \item Microsoft Certified: DevOps Engineer Expert \hspace{24mm} AZ-400 \hspace{25mm} \href{https://github.com/stark3998/\#certifications}{H813-4148} \hspace{20mm} May 16, 2021
+                  % \item Microsoft Certified: Azure Network Engineer Associate \hspace{9.2mm} AZ-700 \hspace{25mm} \href{https://github.com/stark3998/#certifications}{I483-3372} \hspace{22mm} Nov 12, 2021
+                  % \item Microsoft Certified: Azure Database Administrator Associate \hspace{0.2mm} DP-300 \hspace{25mm} I094-4717	 \hspace{20mm} Dec 29, 2021
+        \end{itemize}
+    \end{minipage}
+    }
+\end{tabularx}
+\vspace{0.5pt}
+
+%Projects
+\section{Research and Projects}
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{minipage}[t]{\linewidth}
+    \textbf{Emergency Response Assist} | Developed an audio detection system using \textbf{MFCC Feature Extraction and LSTM/CNN} models, achieving 95.6\% accuracy in identifying gunshot sounds to enhance real-time detection and response capabilities
+\end{minipage}
+
+% \begin{minipage}[t]{\linewidth}
+%     \textbf{Intelligent and Personalized Factoid QA Bot} | Designed a facial recognition chatbot leveraging \textbf{HAAR Classifiers}, Local Binary Patterns (\textbf{LBP}), and the Natural Language Processing Toolkit (\textbf{NLTK}) with Python. \hfill (\href{https://ieeexplore.ieee.org/document/9964818}{IEEE})
+% \end{minipage}
+
+% \begin{minipage}[t]{\linewidth}
+%     \textbf{Hybrid Data Security Enhancing Model} | Enhanced big data security using \textbf{Pan-Tompkins algorithm, CNN}, and advanced encryption, reducing data breaches by 30\% and increasing anomaly detection accuracy by 25\%.\hfill (\href{https://github.com/stark3998#hcs-a-hybrid-data-security-enhancing-model-based-on-cryptography-algorithms}{SPRINGER})
+% \end{minipage}
+
+\begin{minipage}[t]{\linewidth}
+    \textbf{Integrating Big Data and Cloud Computing} | Analyzed the benefits and drawbacks of cloud computing resources for big data processing, focusing on the integration of \textbf{Delta Tables, Cloud Computing, Data Lake, and Hadoop} ecosystems.
+\end{minipage}
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{ Integrating Big Data and Cloud Computing} & \hfill (\href{https://github.com/stark3998#integrating-big-data-and-cloud-computing}{Book Series: Taylor and Francis Group (CRC PRESS)}) \href{}{} \\[1pt]
+% \multicolumn{2}{@{}X@{}}{
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=1pt]
+%         \item[--]  Highlight the pros and cons of cloud computing resources for big data processing. It focuses on the connections among \textbf{big data, cloud computing, storage technologies, and Hadoop} technology.
+%     \end{itemize}
+%     \end{minipage}
+% } 
+% \end{tabularx}
+% Developed an audio detection system with MFCC, LSTM, and CNN models, achieving 95.6\% accuracy in identifying gunshots.
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{ERA: Emergency Response Assist } & \hfill (\href{https://github.com/stark3998#hcs-a-hybrid-data-security-enhancing-model-based-on-cryptography-algorithms}{SPRINGER LNSS})  \href{}{} \\[2pt]
+% \multicolumn{2}{@{}X@{}}{
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=1pt]
+%         \item[--] Developed an audio detection system using MFCC Feature Extraction, and LSTM and CNN models for prediction, achieving 95.6\% accuracy in identifying gunshot sounds to enhance real-time detection and response
+%     \end{itemize}
+% \end{minipage}}
+% \end{tabularx} 
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{HCS: A Hybrid Data Security Enhancing Model Based on Cryptography Algorithms} & \hfill (\href{https://github.com/stark3998#hcs-a-hybrid-data-security-enhancing-model-based-on-cryptography-algorithms}{SPRINGER LNSS})  \href{}{} \\[2pt]
+% \multicolumn{2}{@{}X@{}}{
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=1pt]
+%         \item[--] Enhanced data security at scale with the help of \textbf{Pan Tompkins, Multilayer Perceptron, encryption} algorithms.
+%     \end{itemize}
+% \end{minipage}}
+% \end{tabularx}
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{The Critical Analysis of Digital Forensics role in Offense Investigation } & \hfill (\href{https://github.com/stark3998#the-critical-analysis-of-digital-forensics-role-in-offense-investigation}{SPRINGER LNEE})  \href{}{} \\[2pt]
+% \multicolumn{2}{@{}X@{}}{
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=1pt]
+%         \item[--] This paper outlines a concise \textbf{digital forensics process}, trailed by the in depth-review of the OSForensics tool and features
+%     \end{itemize}
+%     \end{minipage}}
+% \end{tabularx}
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{ Intelligent and Personalized Factoid Question and Answer System } & \hfill (\href{https://ieeexplore.ieee.org/document/9964818}{IEEE})  \href{}{} \\[1pt]
+% \multicolumn{2}{@{}X@{}}{
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=1pt]
+%         \item[--] This paper proposes a facial recognition chatbot utilizing the \textbf{natural language processing toolkit} with python using \textbf{HAAR Classifiers and Local Binary Pattern (LBP)}.
+%     \end{itemize}
+%     \end{minipage}}
+% \end{tabularx}
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{ Integrating Big Data and Cloud Computing} & \hfill (\href{https://github.com/stark3998#integrating-big-data-and-cloud-computing}{Book Series: Taylor and Francis Group (CRC PRESS)}) \href{}{} \\[1pt]
+% \multicolumn{2}{@{}X@{}}{
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=1pt]
+%         \item[--]  Highlight the pros and cons of cloud computing resources for big data processing. It focuses on the connections among \textbf{big data, cloud computing, storage technologies, and Hadoop} technology.
+%     \end{itemize}
+%     \end{minipage}
+% } 
+% \end{tabularx}
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+%     \textbf{  Analyzing and Evaluating IoT Platforms for Smart Cities} & \hfill (\href{https://github.com/stark3998#analyzing-and-evaluating-iot-platforms-for-smart-cities}{Book Series: Taylor and Francis Group (CRC PRESS)}) \\[1pt]
+%     \multicolumn{2}{@{}X@{}}{
+%     \begin{minipage}[t]{\linewidth}
+%         \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=1pt]
+%             \item[--] This paper attempts to establish relation between IoT and Smart cities, highlighting issues, challenges and future opportunities
+%         \end{itemize}
+%         \end{minipage}
+%     } 
+% \end{tabularx}
+
+
+% \section{Activities \& Leadership}
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{Technology Transfer Group, IIT Kharagpur-Coordinator}  & \hfill \href{https://drive.google.com/file/d/1bg8TzytyzbaCTnjZUstq98UpqHS20hFi/view?usp=sharing}{Certificate} \\[1.75pt]
+% \multicolumn{2}{@{}X@{}}{
+% }
+% % \multicolumn{2}{@{}X@{}}{
+% % \begin{minipage}[t]{\linewidth}
+% %     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+% %         \item[--] Under the aegis of SRIC, elected for organizing IPR Workshops and helping Institute to file Patents. Spearheaded team in Publicity and Logistics for TEDx IIT Kharagpur 2020 and 2nd INAE Conclave.
+% %     \end{itemize}
+% %     \end{minipage}
+% % }  \\
+% \end{tabularx}
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{CRY, IIT Kharagpur - Volunteer} & \hfill \href{https://wiki.metakgp.org/w/Child_Rights_and_You_(CRY)_IIT_Kharagpur_Volunteer_Chapter}{Website} \\[3.75pt]
+% % \multicolumn{2}{@{}X@{}}{
+% % \begin{minipage}[t]{\linewidth}
+% %     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+% %         \item[--] Under the Volunteer Chapter has taken some initiatives like the Mid-day meal, \textbf{Barrier-Free IIT Kharagpur project}.
+% %         \item[--] Conducted multiple \textbf{RTE campaigns} to promote the Right to Education act and other education 
+% %  related policies.
+% %     \end{itemize}
+% %     \end{minipage}
+% % }  \\
+% \end{tabularx}
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{Chess and Table tennis} & \hfill \\[3.75pt]
+% % \multicolumn{2}{@{}X@{}}{
+% % \begin{minipage}[t]{\linewidth}
+% %     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+% %         \item[--] Table Tennis: \textbf{State-level player} and one of the top players in the Kgp team securing victories in college tournaments.
+% %         \item[--]  Chess: Master of \textbf{Ruy Lopez} and the \textbf{London System}, achieved an ELO rating of \textbf{1800} in 2022.
+% %     \end{itemize}
+% %     \end{minipage}
+% % }  \\
+% \end{tabularx}
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{Technology Events Secretary - RP Hall} & \hfill \href{https://drive.google.com/file/d/1lklBK8ysFlIV8O9THOnCAk8Df5bCy75q/view?usp=sharing}{Certificate} \\[3.75pt]
+% % \multicolumn{2}{@{}X@{}}{
+% % \begin{minipage}[t]{\linewidth}
+% %     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+% %         \item[--]  Managed a Budget of INR. 30,000 under the Technology General Championship securing 1st position for the Hall.
+% %         \item[--]  Captain of Data Analytics, Maths Olympiad, and Product Design Team and was awarded \textbf{Hall Blue}
+% %     \end{itemize}
+% %     \end{minipage}
+% % }  \\
+% \end{tabularx}
+
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \textbf{Carboncopies Foundation - Part-Time Researcher} & \hfill \href{https://carboncopies.org/}{Website} \\[3.75pt]
+% % \multicolumn{2}{@{}X@{}}{
+% % \begin{minipage}[t]{\linewidth}
+% %     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+% %          \item[--] Worked with Dr. Randal Koene on the \textbf{Braingenix project} to build a distributed computational neuroscience platform that explores the possibility of whole brain emulation.
+% %     \end{itemize}
+% %     \end{minipage}
+% % }  \\
+% \end{tabularx}
+
+
+% \section{Activities \& Leadership}
+% \begin{tabularx}{\linewidth}{ @{}l r@{} }
+% \multicolumn{2}{@{}X@{}}{
+% \begin{minipage}[t]{\linewidth}
+%     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+%         \item \textbf{Captain} Inter hall Data Science and Maths Olympiad Team; Co-Founder Recreational Maths Group; \href{https://drive.google.com/file/d/1bg8TzytyzbaCTnjZUstq98UpqHS20hFi/view?usp=sharing}{TTG Head}.
+%         \item State Level \textbf{Table Tennis} Player with multiple medals at University Championships and \textbf{1900* ELO chess} player.
+%     \end{itemize}
+%     \end{minipage}
+% }
+% \end{tabularx}
+\end{document}
