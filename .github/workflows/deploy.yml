@@ -37,6 +37,7 @@ jobs:
           COSMOS_KEY: ${{ secrets.COSMOS_KEY }}
           COSMOS_DATABASE: ${{ secrets.COSMOS_DATABASE }}
           NEXT_PUBLIC_SITE_URL: https://jatinmadan.com
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
