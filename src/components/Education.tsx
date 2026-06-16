@@ -36,6 +36,7 @@ const education: EducationItem[] = [
     degree: "B.Tech Computer Science and Engineering",
     period: "July 2016 — June 2020",
     location: "Vellore, India",
+    gpa: "3.58",
   },
 ];
 

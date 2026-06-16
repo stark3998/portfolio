@@ -6,6 +6,7 @@ import SectionWrapper from "./SectionWrapper";
 interface Role {
   period: string;
   title: string;
+  location: string;
   description: string;
   highlights: string[];
   status: "current" | "completed";
@@ -24,8 +25,9 @@ const experience: CompanyGroup[] = [
     overallPeriod: "Jan 2020 — Present",
     roles: [
       {
-        period: "Jan 2025 — Present",
+        period: "Jun 2026 — Present",
         title: "Engineering Manager 2",
+        location: "Seattle, WA",
         description:
           "Leading identity modernization, enterprise AI security governance, and cloud control engineering across Microsoft Entra, Azure, and agentic platforms.",
         highlights: [
@@ -44,8 +46,9 @@ const experience: CompanyGroup[] = [
         promotion: true,
       },
       {
-        period: "Jun 2023 — Dec 2024",
+        period: "Jan 2025 — Jun 2026",
         title: "Cloud Security Senior Consultant",
+        location: "Seattle, WA",
         description:
           "Built multi-cloud security assessment and governance capabilities for cloud migration programs.",
         highlights: [
@@ -56,8 +59,22 @@ const experience: CompanyGroup[] = [
         promotion: true,
       },
       {
+        period: "Jun 2023 — Dec 2024",
+        title: "Advisory Solution Advisor",
+        location: "Gurugram, India",
+        description:
+          "Drove organizational IAM strategy development and led tabletop exercises for Microsoft Sentinel real-time alert response.",
+        highlights: [
+          "Built organizational IAM strategy frameworks to align identity governance with enterprise security objectives",
+          "Led tabletop exercises for Microsoft Sentinel real-time alerts, improving incident response readiness and team coordination",
+        ],
+        status: "completed",
+        promotion: true,
+      },
+      {
         period: "Jun 2022 — Jun 2023",
         title: "Advisory Associate Solution Advisor",
+        location: "Gurugram, India",
         description:
           "Focused on identity modernization, controls assessment, and access automation across Azure platforms.",
         highlights: [
@@ -71,6 +88,7 @@ const experience: CompanyGroup[] = [
       {
         period: "Aug 2020 — Jun 2022",
         title: "Advisory Analyst",
+        location: "Hyderabad, India",
         description:
           "Delivered Azure automation, ETL reporting, tenant assessment tooling, and resource security controls.",
         highlights: [
@@ -85,6 +103,7 @@ const experience: CompanyGroup[] = [
       {
         period: "Jan — Apr 2020",
         title: "Cyber Security Advisor Intern",
+        location: "Hyderabad, India",
         description:
           "Built Azure security and compliance automation during an early cybersecurity internship.",
         highlights: [
@@ -103,6 +122,7 @@ const experience: CompanyGroup[] = [
       {
         period: "Jan 2024 — Dec 2024",
         title: "Data and Technology Fellow",
+        location: "Irvine, CA",
         description:
           "Built an Apple Vision OS application enabling immersive remote development with SSH and VS Code Server.",
         highlights: [
@@ -122,6 +142,7 @@ const experience: CompanyGroup[] = [
       {
         period: "Jun 2024 — Aug 2024",
         title: "Business Technology Solutions Associate Consultant",
+        location: "Philadelphia, PA",
         description:
           "Designed Azure data engineering foundations for scalable ETL, analytics, governance, and secrets management.",
         highlights: [
@@ -142,6 +163,7 @@ const experience: CompanyGroup[] = [
       {
         period: "Jul 2020 — Sep 2020",
         title: "Azure Architect",
+        location: "Mumbai, India",
         description:
           "Designed Azure-hosted collaboration and SSO solutions for IIT Bombay use cases.",
         highlights: [
@@ -160,6 +182,7 @@ const experience: CompanyGroup[] = [
       {
         period: "Jun 2019 — Aug 2019",
         title: "Intern",
+        location: "New Delhi, India",
         description:
           "Built data collection and preprocessing pipelines for citizen complaint analytics.",
         highlights: [
@@ -177,6 +200,7 @@ const experience: CompanyGroup[] = [
       {
         period: "Apr 2018 — Jul 2018",
         title: "Intern",
+        location: "Punjab, India",
         description:
           "Supported SAP modernization and Azure deployment initiatives for enterprise workloads.",
         highlights: [
@@ -289,6 +313,13 @@ export default function Experience() {
                               >
                                 {role.period}
                               </span>
+                              <span className="text-xs text-slate-mid flex items-center gap-1">
+                                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                {role.location}
+                              </span>
                             </div>
 
                             <h4 className="font-heading font-semibold text-base text-slate-dark mt-1">
@@ -339,6 +370,13 @@ export default function Experience() {
                       </h3>
                       <p className="text-sm text-azure font-medium mt-0.5">
                         {group.company}
+                      </p>
+                      <p className="text-xs text-slate-mid mt-0.5 flex items-center gap-1">
+                        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        {group.roles[0].location}
                       </p>
                       <p className="text-sm text-slate-mid mt-2">
                         {group.roles[0].description}
