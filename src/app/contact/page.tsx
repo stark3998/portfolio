@@ -150,11 +150,11 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-teal" />
-                  Cloud Security Senior Consultant at Deloitte
+                  Engineering Manager 2 at Deloitte
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-azure" />
-                  11× Microsoft Certified
+                  11× Microsoft Certified · 2× Claude Certified
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-teal" />

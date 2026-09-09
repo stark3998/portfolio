@@ -23,9 +23,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Jatin Madan — Cloud Security Senior Consultant",
+  title: "Jatin Madan — Engineering Manager 2 | Enterprise AI Program Architect",
   description:
-    "Portfolio of Jatin Madan — Cloud Security Senior Consultant specializing in Microsoft Entra, enterprise AI security governance, hybrid identity, and Azure security architecture.",
+    "Portfolio of Jatin Madan — Engineering Manager 2 and Enterprise AI Program Architect specializing in Microsoft Entra, enterprise AI security governance, hybrid identity, and Azure security architecture.",
   keywords: [
     "Azure",
     "Cloud Security",
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Jatin Madan — Cloud Security Senior Consultant",
+    title: "Jatin Madan — Engineering Manager 2 | Enterprise AI Program Architect",
     description:
-      "Portfolio of Jatin Madan — Cloud Security Senior Consultant specializing in Microsoft Entra, enterprise AI security governance, hybrid identity, and Azure security architecture.",
+      "Portfolio of Jatin Madan — Engineering Manager 2 and Enterprise AI Program Architect specializing in Microsoft Entra, enterprise AI security governance, hybrid identity, and Azure security architecture.",
     url: baseUrl,
     siteName: "Jatin Madan",
     images: [
@@ -56,16 +56,16 @@ export const metadata: Metadata = {
         url: ogImageUrl,
         width: 1200,
         height: 630,
-        alt: "Jatin Madan - Cloud Security Senior Consultant",
+        alt: "Jatin Madan - Engineering Manager 2 | Enterprise AI Program Architect",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jatin Madan — Cloud Security Senior Consultant",
+    title: "Jatin Madan — Engineering Manager 2 | Enterprise AI Program Architect",
     description:
-      "Portfolio of Jatin Madan — Cloud Security Senior Consultant specializing in Microsoft Entra, enterprise AI security governance, hybrid identity, and Azure security architecture.",
+      "Portfolio of Jatin Madan — Engineering Manager 2 and Enterprise AI Program Architect specializing in Microsoft Entra, enterprise AI security governance, hybrid identity, and Azure security architecture.",
     images: [ogImageUrl],
     creator: "@jatinmadan",
   },

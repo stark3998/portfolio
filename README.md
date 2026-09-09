@@ -7,7 +7,7 @@ Production domain: **https://jatinmadan.com**
 ## Pages & Sections
 
 ### Homepage (`/`)
-- **Hero** — Animated intro with particle background, floating security icons, and role titles (Cloud Security Senior Consultant, Entra ID & External ID Specialist, 11x Microsoft Certified)
+- **Hero** — Animated intro with particle background, floating security icons, and role titles (Engineering Manager 2 · Enterprise AI Program Architect, Enterprise AI Security & Identity Governance, 11x Microsoft Certified · 2x Claude Certified)
 - **About** — Overview with stats (11 certifications, 7+ years experience, 5 research publications, CIS/MCSB/CISA frameworks) and four focus areas: Cloud Security Architecture, Identity Modernization, Data & Reporting, DevSecOps & Compliance
 - **Tech Stack** — Categorized skill grid centered on identity platforms, security governance, cloud infrastructure, data/reporting, and DevSecOps automation
 - **Experience** — Interactive timeline covering Deloitte, UC Irvine, ZS, IIT Bombay, Aam Aadmi Party, and HPCL-Mittal Energy roles

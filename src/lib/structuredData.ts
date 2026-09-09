@@ -63,14 +63,14 @@ export function getPersonSchema(
     name: "Jatin Madan",
     url: baseUrl,
     image: ogImageUrl,
-    jobTitle: "Cloud Security Senior Consultant",
+    jobTitle: "Engineering Manager 2 | Enterprise AI Program Architect",
     sameAs: [
       "https://github.com/stark3998",
       "https://www.linkedin.com/in/jatin39/",
       "https://twitter.com/jatumadan",
     ],
     description:
-      "Cloud Security Senior Consultant specializing in Microsoft Entra, enterprise AI security governance, hybrid identity, Azure security architecture, and migration accelerators",
+      "Engineering Manager 2 and Enterprise AI Program Architect specializing in Microsoft Entra, enterprise AI security governance, hybrid identity, Azure security architecture, and migration accelerators",
     skills: [
       "Azure",
       "Cloud Security",
@@ -98,7 +98,7 @@ export function getWebsiteSchema(baseUrl: string): WebsiteSchema {
     name: "Jatin Madan - Cloud Security Portfolio",
     url: baseUrl,
     description:
-      "Portfolio of Jatin Madan, Cloud Security Senior Consultant focused on identity modernization, enterprise AI governance, and Azure security engineering",
+      "Portfolio of Jatin Madan, Engineering Manager 2 and Enterprise AI Program Architect focused on identity modernization, enterprise AI governance, and Azure security engineering",
     potentialAction: {
       "@type": "SearchAction",
       target: {

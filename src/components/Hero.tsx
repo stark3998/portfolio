@@ -8,9 +8,9 @@ import ParticleBackground from "./ParticleBackground";
 import { trackCTAClick } from "@/lib/analytics";
 
 const titles = [
-  "Cloud Security Senior Consultant",
+  "Engineering Manager 2 · Enterprise AI Program Architect",
   "Enterprise AI Security & Identity Governance",
-  "11x Microsoft Certified",
+  "11x Microsoft Certified · 2x Claude Certified",
 ];
 
 export default function Hero() {
