@@ -7,7 +7,7 @@ interface Certification {
   title: string;
   image: string;
   url: string;
-  level: "Expert" | "Associate" | "Specialty" | "Fundamentals";
+  level: "Expert" | "Associate" | "Specialty" | "Fundamentals" | "Architect";
 }
 
 const certifications: Certification[] = [
@@ -88,6 +88,20 @@ const certifications: Certification[] = [
     url: "https://www.credly.com/badges/a08f1a61-3623-4c4f-b81f-af0e3d399525/public_url",
     level: "Fundamentals",
   },
+  {
+    title: "Claude Certified Associate — Foundations",
+    image:
+      "https://images.credly.com/size/220x220/images/a6387cbd-5ac1-4894-833a-da2cbc28587e/blob",
+    url: "https://www.credly.com/badges/6c088338-6b6b-4335-8937-1c1ffcfe0df9/public_url",
+    level: "Associate",
+  },
+  {
+    title: "Claude Certified Architect — Foundations",
+    image:
+      "https://images.credly.com/size/220x220/images/f2040db3-3904-4240-8966-e87b1510bea0/blob",
+    url: "https://www.credly.com/badges/61e29a6f-f63e-4519-aa36-1dfda2091590/public_url",
+    level: "Architect",
+  },
 ];
 
 const levelColors: Record<string, string> = {
@@ -95,6 +109,7 @@ const levelColors: Record<string, string> = {
   Associate: "bg-azure text-white",
   Specialty: "bg-teal text-white",
   Fundamentals: "bg-slate-200 text-slate-dark",
+  Architect: "bg-slate-dark text-white",
 };
 
 export default function Certifications() {
@@ -104,7 +119,7 @@ export default function Certifications() {
         Certifications
       </h2>
       <p className="mt-4 text-slate-mid">
-        11× Microsoft Certified across architecture, security, development, and data.
+        11× Microsoft Certified across architecture, security, development, and data — plus 2× Claude Certified (Associate & Architect).
       </p>
 
       <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">

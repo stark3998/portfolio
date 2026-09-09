@@ -14,6 +14,19 @@ import remarkGfm from "remark-gfm";
 import SectionWrapper from "./SectionWrapper";
 import { type GitHubRepo, GITHUB_PROFILE_URL, languageColors } from "@/lib/github";
 
+// Actively maintained / advanced repos to surface first, in priority order.
+const HIGHLIGHTED_REPOS = [
+  "Security-Agents-MS",
+  "Entra-Security-Analytics",
+  "Agents-Log-Monitor",
+  "Personal-Outlook-Agent",
+  "Enterprise-AI-SecurityBoard",
+  "client-dossier",
+  "Entra-Privilege-Analyzer",
+  "agent-skills-sync",
+  "Postman-API-Collections",
+];
+
 interface GitHubProjectsProps {
   repos: GitHubRepo[];
 }
@@ -21,6 +34,7 @@ interface GitHubProjectsProps {
 export default function GitHubProjects({ repos }: GitHubProjectsProps) {
   const [selectedLanguage, setSelectedLanguage] = useState<string | null>(null);
   const [expandedRepo, setExpandedRepo] = useState<GitHubRepo | null>(null);
+  const [showAll, setShowAll] = useState(false);
 
   const languages = useMemo(() => {
     const langs = new Set(
@@ -33,6 +47,26 @@ export default function GitHubProjects({ repos }: GitHubProjectsProps) {
     if (!selectedLanguage) return repos;
     return repos.filter((r) => r.language === selectedLanguage);
   }, [selectedLanguage, repos]);
+
+  const { highlightedRepos, otherRepos } = useMemo(() => {
+    const highlighted = HIGHLIGHTED_REPOS.map((name) =>
+      filteredRepos.find((r) => r.name === name)
+    ).filter((r): r is GitHubRepo => Boolean(r));
+
+    // Fallback if none of the curated names matched this filtered set
+    if (highlighted.length === 0) {
+      return {
+        highlightedRepos: filteredRepos.slice(0, 6),
+        otherRepos: filteredRepos.slice(6),
+      };
+    }
+
+    const highlightedNames = new Set(highlighted.map((r) => r.name));
+    const rest = filteredRepos.filter((r) => !highlightedNames.has(r.name));
+    return { highlightedRepos: highlighted, otherRepos: rest };
+  }, [filteredRepos]);
+
+  const visibleRepos = showAll ? [...highlightedRepos, ...otherRepos] : highlightedRepos;
 
   if (repos.length === 0) return null;
 
@@ -86,7 +120,7 @@ export default function GitHubProjects({ repos }: GitHubProjectsProps) {
 
       {/* Repo Grid */}
       <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {filteredRepos.map((repo, index) => (
+        {visibleRepos.map((repo, index) => (
           <motion.div
             key={repo.name}
             initial={{ opacity: 0, y: 16 }}
@@ -138,6 +172,20 @@ export default function GitHubProjects({ repos }: GitHubProjectsProps) {
           </motion.div>
         ))}
       </div>
+
+      {/* Show More / Show Less */}
+      {otherRepos.length > 0 && (
+        <div className="mt-6 text-center">
+          <button
+            onClick={() => setShowAll((prev) => !prev)}
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-100 text-slate-700 font-medium text-sm hover:bg-slate-200 transition-colors"
+          >
+            {showAll
+              ? "Show fewer repositories"
+              : `Show ${otherRepos.length} more repositories`}
+          </button>
+        </div>
+      )}
 
       {/* View All Link */}
       <div className="mt-8 text-center">

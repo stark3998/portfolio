@@ -8,10 +8,10 @@ import { HiOutlineAcademicCap } from "react-icons/hi2";
 import { useScrollTracking } from "@/hooks/useScrollTracking";
 
 const stats = [
-  { label: "Microsoft Certifications", value: "11", icon: VscAzure },
+  { label: "Certifications", value: "11 MS + 2 Claude", icon: VscAzure },
   { label: "Years Experience", value: "7+", icon: HiOutlineShieldCheck },
   { label: "Research Publications", value: "5", icon: HiOutlineAcademicCap },
-  { label: "Security Frameworks", value: "CIS · MCSB · CISA", icon: GoLock },
+  { label: "Security Frameworks", value: "OWASP ASI · CIS · MCSB", icon: GoLock },
 ];
 
 const techAreas = [
@@ -30,13 +30,13 @@ const techAreas = [
   {
     title: "AI Security & Governance",
     description:
-      "Building Azure Policy and AI configuration controls for Copilot Studio, Microsoft Foundry, Purview, Agent365, and Agent ID to strengthen enterprise AI governance.",
+      "Designing enterprise AI security frameworks aligned to the OWASP Top 10 for Agentic Applications and MITRE ATLAS, plus Azure Policy and AI configuration controls for Copilot Studio, Microsoft Foundry, Purview, Agent365, and Agent ID.",
     color: "azure",
   },
   {
-    title: "Automation & Reporting",
+    title: "Agentic Systems & Automation",
     description:
-      "Deploying agentic solutions for client communication workflows, executive reporting, remediation tracking, and operational coordination across Teams and Outlook.",
+      "Building multi-agent systems on the Microsoft Agent Framework and Azure AI Foundry Agent Service — SecOps threat detection, SIEM remediation, and MCP-based automation — alongside executive reporting and operational coordination.",
     color: "teal",
   },
 ];
@@ -51,10 +51,11 @@ export default function About() {
       </h2>
 
       <p className="mt-8 text-lg text-slate-mid leading-relaxed max-w-2xl">
-        Cloud Security Senior Consultant at Deloitte, specializing in identity
-        modernization, enterprise AI security governance, and Microsoft Entra
-        ID and External ID. I work across large-scale migration accelerators,
-        hybrid identity architecture, AI control design, and agentic automation
+        Engineering Manager 2 and Enterprise AI Program Architect at Deloitte,
+        specializing in AI security & governance, agentic systems, and
+        Microsoft Entra ID identity modernization. I work across agentic
+        threat detection, OWASP Agentic-AI-aligned governance frameworks,
+        large-scale migration accelerators, and hybrid identity architecture
         for complex Azure estates.
       </p>
 

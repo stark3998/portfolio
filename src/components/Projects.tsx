@@ -14,28 +14,163 @@ import { ProjectModal } from "./ProjectModal";
 
 const projects: Project[] = [
   {
-    id: "ai-governance-controls",
-    title: "Enterprise AI Governance Controls",
+    id: "enterprise-ai-security-governance",
+    title: "Enterprise AI Security & Governance Program",
     description:
-      "Built AI security and governance controls for Copilot Studio, Microsoft Foundry, Purview, Agent365, and Agent ID using policy-driven guardrails and configuration baselines.",
+      "Built an enterprise framework for securing agentic AI, aligned to the OWASP Top 10 for Agentic Applications (ASI01\u2013ASI10) and MITRE ATLAS/ATT&CK, closing architecture gaps across identity, secrets, supply-chain, and human-in-the-loop controls.",
     detailedDescription:
-      "Designed and implemented enterprise AI governance patterns that translated security and compliance requirements into enforceable Azure Policy and AI platform configuration controls. The solution focused on improving consistency, visibility, and control coverage across emerging AI platforms while creating a repeatable governance model for enterprise adoption.",
-    tags: ["AI Governance", "Azure Policy", "Copilot Studio", "Foundry"],
+      "Led design of a client enterprise AI security and governance framework addressing agentic AI risk end-to-end. Mapped ten architecture gaps \u2014 agent identity & access, connector secrets management, skill/MCP supply-chain vetting, human-in-the-loop for high-risk actions, gateway DLP, data-classification-driven segmentation, orchestration hub governance, alert severity calibration, vendor/model risk criteria, and machine-speed disaster-recovery readiness \u2014 to Microsoft-native controls (Entra ID, Key Vault, Purview, Defender, Sentinel). Stood up a Frontier-Threat-Defense-style operating model borrowed from frontier AI labs (vendor capability watch, AI red-teaming, guardian-agent runtime oversight) inside the existing AI security function, and specified a six-agent, vendor-agnostic remediation pipeline (discovery correlation, risk-based prioritization, patch orchestration, remediation verification, continuous agentic pentest, machine-speed containment) sequenced across a 30/60/90-day rollout.",
+    tags: ["AI Governance", "OWASP ASI", "Threat Defense", "Agentic Remediation"],
     icon: HiOutlineShieldCheck,
-    color: "azure",
+    color: "teal",
     featured: true,
     metrics: {
-      impact: "Cross-platform AI guardrails",
-      performance: "Policy-driven enforcement",
-      scale: "Enterprise AI services",
+      impact: "10 controls mapped to Microsoft-native fixes",
+      performance: "6-agent vendor-agnostic remediation pipeline",
+      scale: "30/60/90-day enterprise rollout",
     },
     fullTechStack: [
-      "Azure Policy",
-      "Copilot Studio",
+      "OWASP ASI Taxonomy",
+      "MITRE ATLAS / ATT&CK",
+      "Microsoft Entra ID",
+      "Azure Key Vault",
+      "Microsoft Purview",
+      "Microsoft Defender",
+      "Microsoft Sentinel",
+    ],
+  },
+  {
+    id: "secops-multi-agent-fleet",
+    title: "Microsoft SecOps Multi-Agent Fleet",
+    description:
+      "Built a 7-agent SecOps investigation fleet on the Microsoft Agent Framework and Azure AI Foundry Agent Service, detecting 17 MITRE ATLAS/OWASP-tagged AI-runtime and identity threats.",
+    detailedDescription:
+      "Designed an Orchestrator agent that delegates to six specialists (Triage, AI Runtime, Correlation, Threat Intel, Remediation, Quality) plus a standalone hypothesis-driven Hunt agent. The fleet fuses Microsoft Graph sign-in logs, Azure Log Analytics, Microsoft Sentinel, and Microsoft Defender XDR signals into markdown investigation reports streamed live over SSE, covering prompt injection, content-safety abuse, cost abuse, coordinated attacks, malicious models, and compromised accounts \u2014 every remediation recommendation is read-only and requires human approval.",
+    tags: ["Agentic AI", "Microsoft Agent Framework", "Azure AI Foundry", "Threat Detection"],
+    icon: HiOutlineShieldCheck,
+    color: "azure",
+    featured: false,
+    github: "https://github.com/stark3998/Security-Agents-MS",
+    metrics: {
+      impact: "17 MITRE ATLAS / OWASP LLM-tagged detections",
+      performance: "Live SSE investigation streaming",
+      scale: "7-agent orchestrated fleet",
+    },
+    fullTechStack: [
+      "Microsoft Agent Framework",
+      "Azure AI Foundry Agent Service",
+      "FastAPI",
+      "React + Vite",
+      "Microsoft Graph API",
+      "Azure Log Analytics",
+      "Microsoft Sentinel",
+      "Microsoft Defender XDR",
+    ],
+  },
+  {
+    id: "entra-security-analytics",
+    title: "Entra Security Analytics \u2014 M365 SIEM",
+    description:
+      "Built a self-hosted SIEM for Microsoft 365 tenants with 90 detection rules across 13 categories, plus AI-powered investigation and autonomous remediation.",
+    detailedDescription:
+      "Engineered a correlation rules engine collecting logs from Entra ID, Exchange Online, SharePoint, Power Platform, Microsoft Defender, Purview DLP, Intune, and Secure Score across 10 data collectors. Layered Azure AI Foundry (GPT-4o) on top for autonomous investigation and remediation planning, a Conditional Access policy visualizer with gap analysis, and PIM role monitoring, surfaced through a React risk-scoring dashboard.",
+    tags: ["SIEM", "Detection Engineering", "Entra ID", "AI Remediation"],
+    icon: HiOutlineShieldCheck,
+    color: "teal",
+    featured: false,
+    github: "https://github.com/stark3998/Entra-Security-Analytics",
+    metrics: {
+      impact: "90 rules + 10 meta-rules across 13 categories",
+      performance: "AI-driven investigation & remediation (GPT-4o)",
+      scale: "10 Microsoft 365 data collectors",
+    },
+    fullTechStack: [
+      "Python",
+      "FastAPI",
+      "SQLAlchemy",
+      "React",
+      "Azure AI Foundry",
+      "Entra ID",
+      "Conditional Access",
+      "PIM",
+    ],
+  },
+  {
+    id: "agents-log-monitor",
+    title: "Agent Activity Log Monitor",
+    description:
+      "Built a real-time local monitor that normalizes and streams AI agent activity across Claude Code, Azure AI Foundry, and Copilot Studio into one live dashboard.",
+    detailedDescription:
+      "Implemented push (HTTP hooks) and pull (REST/OData) collectors that normalize events from Claude Code, Azure AI Foundry Agent Service, and Copilot Studio's Dataverse-backed transcripts into a shared schema, storing them in an embedded SQLite database and broadcasting them over WebSocket to a live browser UI, with an optional Electron desktop shell.",
+    tags: ["Observability", "Agentic AI", "WebSocket"],
+    icon: VscAzure,
+    color: "azure",
+    featured: false,
+    github: "https://github.com/stark3998/Agents-Log-Monitor",
+    metrics: {
+      impact: "Unified visibility across 3 agent platforms",
+      performance: "Real-time WebSocket streaming",
+      scale: "Claude Code \u00b7 Foundry \u00b7 Copilot Studio",
+    },
+    fullTechStack: [
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "SQLite",
+      "WebSocket",
+      "Electron",
+    ],
+  },
+  {
+    id: "personal-outlook-agent",
+    title: "Personal Outlook Agent",
+    description:
+      "Built a local-first Outlook automation platform exposing mail, calendar, and an AI agent layer through three equal interfaces \u2014 MCP, REST, and CLI \u2014 sharing one service layer.",
+    detailedDescription:
+      "Built a cross-platform desktop Outlook automation service (AppleScript on macOS, COM on Windows) with an AI agent layer for summaries, action-item extraction, reply proposals, and meeting prep powered by Azure OpenAI / Microsoft Foundry. Every write or destructive action flows through a two-step prepare-then-confirm approval service, and email content is treated as untrusted data to guard against prompt injection. Shipped with 125 tests, 89% coverage, and a clean mypy --strict / ruff bar.",
+    tags: ["MCP", "Agentic AI", "Automation"],
+    icon: SiPython,
+    color: "teal",
+    featured: false,
+    github: "https://github.com/stark3998/Personal-Outlook-Agent",
+    metrics: {
+      impact: "89% test coverage, mypy --strict clean",
+      performance: "3 interfaces, 1 shared service layer",
+      scale: "28-tool MCP catalog",
+    },
+    fullTechStack: [
+      "Python 3.13",
+      "FastMCP",
+      "FastAPI",
+      "Typer CLI",
+      "Azure OpenAI",
       "Microsoft Foundry",
-      "Purview",
-      "Agent365",
-      "Agent ID",
+    ],
+  },
+  {
+    id: "enterprise-ai-security-board",
+    title: "Enterprise AI Security Board",
+    description:
+      "Built an internal enterprise AI portfolio and vendor intelligence platform giving AI program teams one place to manage use cases, inspect vendor capabilities, consult a security reference, and ask a streaming AI advisor questions about the portfolio.",
+    detailedDescription:
+      "Paired a React 18 + Vite frontend with a FastAPI backend, Azure Cosmos DB, Azure OpenAI chat, Foundry Agent Service, and Entra ID JWT validation. An asynchronous vendor scanner runs discovery, research, analysis, and upsert stages to keep a live vendor catalogue current, while a streaming chat advisor answers questions over the portfolio content in real time.",
+    tags: ["Vendor Intelligence", "Multi-Agent Pipeline", "Cosmos DB"],
+    icon: VscAzure,
+    color: "azure",
+    featured: false,
+    metrics: {
+      impact: "4-stage multi-agent vendor research pipeline",
+      performance: "Streaming AI chat advisor (SSE)",
+      scale: "Private / internal initiative",
+    },
+    fullTechStack: [
+      "React",
+      "FastAPI",
+      "Azure Cosmos DB",
+      "Azure OpenAI",
+      "Azure AI Foundry Agent Service",
+      "Bing Grounding",
+      "Entra ID",
     ],
   },
   {
@@ -48,7 +183,7 @@ const projects: Project[] = [
     tags: ["Okta", "Entra ID", "Migration Accelerator", "Identity"],
     icon: GoLock,
     color: "teal",
-    featured: true,
+    featured: false,
     metrics: {
       impact: "Reduced migration effort",
       performance: "Accelerated tenant onboarding",
@@ -61,31 +196,6 @@ const projects: Project[] = [
       "Applications",
       "Users & Groups",
       "Policy Mapping",
-    ],
-  },
-  {
-    id: "agentic-communication",
-    title: "Agentic Communication Automation",
-    description:
-      "Deployed agentic solutions that automate stakeholder communication, project coordination, and client updates across Teams and Outlook.",
-    detailedDescription:
-      "Built agentic workflows to reduce manual communication overhead across active client programs. The solution helped organize status coordination, stakeholder follow-ups, and message routing across Microsoft Teams and Outlook, improving communication consistency and freeing delivery teams from repetitive operational tasks.",
-    tags: ["Agentic AI", "Teams", "Outlook", "Automation"],
-    icon: SiPython,
-    color: "teal",
-    featured: true,
-    metrics: {
-      impact: "Reduced manual coordination",
-      performance: "Faster stakeholder updates",
-      scale: "Multi-project communication",
-    },
-    fullTechStack: [
-      "Agentic Workflows",
-      "Microsoft Teams",
-      "Outlook",
-      "Python",
-      "Automation",
-      "Operational Orchestration",
     ],
   },
   {

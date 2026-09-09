@@ -39,6 +39,8 @@ const experience: CompanyGroup[] = [
           "Architected hybrid identity infrastructure with Application Proxy, Entra ID Connect, firewall, F5 load balancing, and DNS routing for secure and seamless application access",
           "Implemented domain hints and HRD policies that streamlined sign-in journeys and reduced user friction across migrated applications",
           "Built Azure Policy and AI configuration controls for Copilot Studio, Microsoft Foundry, Purview, Agent365, and Agent ID to improve enterprise AI governance and guardrail enforcement",
+          "Designed an enterprise AI security and governance framework aligned to the OWASP Top 10 for Agentic Applications and MITRE ATLAS/ATT&CK, closing architecture gaps across agent identity, connector secrets, and human-in-the-loop controls",
+          "Specified a six-agent, vendor-agnostic remediation pipeline (discovery correlation, risk-based prioritization, patch orchestration, remediation verification, continuous agentic pentest, machine-speed containment) sequenced across a 30/60/90-day rollout",
           "Deployed agentic solutions that automated client communication and project coordination workflows across Teams and Outlook",
           "Produced security gap assessments and remediation recommendations aligned to CIS, MCSB, and CISA, giving leadership a prioritized roadmap for posture improvement",
         ],

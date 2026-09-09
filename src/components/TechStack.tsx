@@ -70,6 +70,18 @@ const stack: TechCategory[] = [
     ],
   },
   {
+    name: "Agentic AI & Threat Detection",
+    items: [
+      { name: "Microsoft Agent Framework", icon: HiOutlineCommandLine },
+      { name: "Azure AI Foundry Agent Service", icon: VscAzure },
+      { name: "MCP / FastMCP", icon: HiOutlineCodeBracket },
+      { name: "OWASP ASI Taxonomy", icon: HiOutlineShieldCheck },
+      { name: "MITRE ATLAS / ATT&CK", icon: GoLock },
+      { name: "Microsoft Sentinel", icon: HiOutlineShieldCheck },
+      { name: "Microsoft Defender XDR", icon: GoLock },
+    ],
+  },
+  {
     name: "Cloud & Infrastructure",
     items: [
       { name: "Azure", icon: VscAzure },
