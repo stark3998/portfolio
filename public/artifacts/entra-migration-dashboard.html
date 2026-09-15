@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Okta → Entra Migration Dashboard</title>
+<style>
+  :root {
+    --bg: #0b1120;
+    --panel: #131c31;
+    --panel-2: #1b2740;
+    --line: rgba(148, 163, 184, 0.16);
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --azure: #38bdf8;
+    --green: #34d399;
+    --amber: #fbbf24;
+    --red: #f87171;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    background: radial-gradient(1200px 600px at 20% -10%, #16233f, var(--bg));
+    color: var(--text);
+    min-height: 100vh;
+    padding: 32px;
+  }
+  header { margin-bottom: 24px; }
+  h1 { font-size: 22px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); font-size: 13px; }
+  .grid { display: grid; gap: 16px; }
+  .kpis { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); margin-bottom: 20px; }
+  .card {
+    background: linear-gradient(180deg, var(--panel), var(--panel-2));
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px;
+  }
+  .kpi .value { font-size: 28px; font-weight: 700; }
+  .kpi .label { color: var(--muted); font-size: 12px; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .bar { height: 8px; border-radius: 999px; background: var(--panel-2); overflow: hidden; margin-top: 12px; }
+  .bar > span { display: block; height: 100%; border-radius: 999px; }
+  .cols { grid-template-columns: 2fr 1fr; }
+  @media (max-width: 760px) { .cols { grid-template-columns: 1fr; } body { padding: 18px; } }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .pill { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 11px; font-weight: 600; }
+  .pill.done { background: rgba(52,211,153,0.14); color: var(--green); }
+  .pill.progress { background: rgba(56,189,248,0.14); color: var(--azure); }
+  .pill.risk { background: rgba(248,113,113,0.14); color: var(--red); }
+  .pill.pending { background: rgba(251,191,36,0.14); color: var(--amber); }
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 14px; color: var(--muted); font-size: 12px; }
+  .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+  .donut { display: grid; place-items: center; }
+  .donut svg { transform: rotate(-90deg); }
+  .center { text-align: center; }
+  .center .big { font-size: 30px; font-weight: 700; }
+  .foot { color: var(--muted); font-size: 11px; margin-top: 20px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Okta &rarr; Entra Migration Dashboard</h1>
+  <div class="sub">Wave 3 &middot; Application cutover readiness &middot; <span id="ts"></span></div>
+</header>
+
+<section class="grid kpis" id="kpis"></section>
+
+<section class="grid cols">
+  <div class="card">
+    <strong>Application instances by status</strong>
+    <table>
+      <thead><tr><th>Application</th><th>Protocol</th><th>Risk</th><th>Status</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+  <div class="card donut">
+    <div class="center">
+      <svg width="150" height="150" viewBox="0 0 150 150" id="donut"></svg>
+      <div class="big" id="pct">0%</div>
+      <div class="sub">cutover ready</div>
+    </div>
+    <div class="legend" id="legend"></div>
+  </div>
+</section>
+
+<div class="foot">Illustrative sample artifact &mdash; synthetic data. Built by Jatin Madan.</div>
+
+<script>
+  const apps = [
+    { name: "Concur Expense", proto: "SAML", risk: "Low", status: "done" },
+    { name: "Workday HCM", proto: "SAML", risk: "Medium", status: "progress" },
+    { name: "ServiceNow ITSM", proto: "OIDC", risk: "Low", status: "done" },
+    { name: "Salesforce CRM", proto: "SAML", risk: "High", status: "risk" },
+    { name: "Atlassian Cloud", proto: "OIDC", risk: "Medium", status: "progress" },
+    { name: "Box Enterprise", proto: "SAML", risk: "Low", status: "pending" },
+    { name: "Slack Grid", proto: "OIDC", risk: "Medium", status: "progress" },
+    { name: "Zoom Enterprise", proto: "SAML", risk: "Low", status: "done" },
+  ];
+
+  const statusMeta = {
+    done: { label: "Ready", color: "#34d399" },
+    progress: { label: "In progress", color: "#38bdf8" },
+    pending: { label: "Pending", color: "#fbbf24" },
+    risk: { label: "At risk", color: "#f87171" },
+  };
+
+  document.getElementById("ts").textContent = new Date().toLocaleString();
+
+  const counts = apps.reduce((a, x) => ((a[x.status] = (a[x.status] || 0) + 1), a), {});
+  const total = apps.length;
+  const ready = counts.done || 0;
+  const readyPct = Math.round((ready / total) * 100);
+
+  const kpis = [
+    { value: total, label: "App instances", color: "#38bdf8" },
+    { value: ready, label: "Cutover ready", color: "#34d399" },
+    { value: (counts.progress || 0), label: "In progress", color: "#38bdf8" },
+    { value: (counts.risk || 0), label: "At risk", color: "#f87171" },
+  ];
+  document.getElementById("kpis").innerHTML = kpis.map(k => `
+    <div class="card kpi">
+      <div class="value" style="color:${k.color}">${k.value}</div>
+      <div class="label">${k.label}</div>
+      <div class="bar"><span style="width:${(k.value/total)*100}%;background:${k.color}"></span></div>
+    </div>`).join("");
+
+  document.getElementById("rows").innerHTML = apps.map(a => `
+    <tr>
+      <td>${a.name}</td>
+      <td>${a.proto}</td>
+      <td>${a.risk}</td>
+      <td><span class="pill ${a.status}">${statusMeta[a.status].label}</span></td>
+    </tr>`).join("");
+
+  const svg = document.getElementById("donut");
+  const r = 60, c = 2 * Math.PI * r;
+  let offset = 0;
+  const order = ["done", "progress", "pending", "risk"];
+  const ns = "http://www.w3.org/2000/svg";
+  order.forEach(k => {
+    const n = counts[k] || 0;
+    if (!n) return;
+    const frac = n / total;
+    const circle = document.createElementNS(ns, "circle");
+    circle.setAttribute("cx", "75"); circle.setAttribute("cy", "75"); circle.setAttribute("r", r);
+    circle.setAttribute("fill", "none");
+    circle.setAttribute("stroke", statusMeta[k].color);
+    circle.setAttribute("stroke-width", "16");
+    circle.setAttribute("stroke-dasharray", `${frac * c} ${c}`);
+    circle.setAttribute("stroke-dashoffset", `${-offset * c}`);
+    svg.appendChild(circle);
+    offset += frac;
+  });
+  document.getElementById("pct").textContent = readyPct + "%";
+  document.getElementById("legend").innerHTML = order.map(k => `
+    <span><span class="dot" style="background:${statusMeta[k].color}"></span>${statusMeta[k].label} (${counts[k]||0})</span>`).join("");
+</script>
+</body>
+</html>

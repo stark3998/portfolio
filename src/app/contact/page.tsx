@@ -20,20 +20,13 @@ export const metadata: Metadata = {
     description: "Get in touch with Jatin Madan for cloud security, identity modernization, Azure platform consulting, and collaboration.",
     url: `${baseUrl}/contact`,
     type: "website",
-    images: [
-      {
-        url: `${baseUrl}/og-image.svg`,
-        width: 1200,
-        height: 630,
-        alt: "Jatin Madan - Contact",
-      },
-    ],
+    images: [{ url: `${baseUrl}/og-image.png`, width: 1200, height: 630, alt: "Jatin Madan — Contact" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Contact — Jatin Madan",
     description: "Get in touch with Jatin Madan for cloud security, identity modernization, Azure platform consulting, and collaboration.",
-    images: [`${baseUrl}/og-image.svg`],
+    images: [`${baseUrl}/og-image.png`],
   },
 };
 

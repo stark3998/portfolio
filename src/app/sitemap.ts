@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { getAllPosts } from "@/lib/blog";
+import { getAllItems } from "@/lib/content";
 
 export const dynamic = "force-static";
 
@@ -9,20 +9,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Static pages
   const staticPages = [
     { url: "", changeFrequency: "weekly" as const, priority: 1 },
+    { url: "/ai", changeFrequency: "weekly" as const, priority: 0.8 },
     { url: "/blog", changeFrequency: "weekly" as const, priority: 0.8 },
     { url: "/contact", changeFrequency: "monthly" as const, priority: 0.7 },
   ];
 
-  // Dynamic blog pages from Cosmos DB
-  const posts = await getAllPosts();
+  // Dynamic content pages (Cosmos posts + repo artifacts)
+  const items = await getAllItems();
 
-  const blogPages = posts.map((post) => ({
-    url: `/blog/${post.slug}`,
+  const contentPages = items.map((item) => ({
+    url: item.type === "artifact" ? `/ai/${item.slug}` : `/blog/${item.slug}`,
     changeFrequency: "monthly" as const,
     priority: 0.8,
-    lastModified: post.updatedAt
-      ? new Date(post.updatedAt)
-      : new Date(post.publishedAt),
+    lastModified: item.updatedAt
+      ? new Date(item.updatedAt)
+      : new Date(item.publishedAt),
   }));
 
   return [
@@ -32,7 +33,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: page.priority,
       lastModified: new Date(),
     })),
-    ...blogPages.map((page) => ({
+    ...contentPages.map((page) => ({
       url: `${baseUrl}${page.url}`,
       changeFrequency: page.changeFrequency,
       priority: page.priority,

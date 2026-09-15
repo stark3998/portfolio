@@ -8,7 +8,7 @@ import Script from "next/script";
 import { AnalyticsProvider } from "@/components/AnalyticsProvider";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://jatinmadan.com";
-const ogImageUrl = `${baseUrl}/og-image.svg`;
+const ogImageUrl = `${baseUrl}/og-image.png`;
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
@@ -42,8 +42,17 @@ export const metadata: Metadata = {
     "MFA",
   ],
   metadataBase: new URL(baseUrl),
+  authors: [{ name: "Jatin Madan", url: baseUrl }],
+  category: "technology",
   alternates: {
     canonical: "/",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-icon.png", type: "image/png", sizes: "180x180" }],
   },
   openGraph: {
     title: "Jatin Madan — Engineering Manager 2 | Enterprise AI Program Architect",
@@ -51,23 +60,24 @@ export const metadata: Metadata = {
       "Portfolio of Jatin Madan — Engineering Manager 2 and Enterprise AI Program Architect specializing in Microsoft Entra, enterprise AI security governance, hybrid identity, and Azure security architecture.",
     url: baseUrl,
     siteName: "Jatin Madan",
+    locale: "en_US",
+    type: "website",
     images: [
       {
         url: ogImageUrl,
         width: 1200,
         height: 630,
-        alt: "Jatin Madan - Engineering Manager 2 | Enterprise AI Program Architect",
+        alt: "Jatin Madan — Engineering Manager 2 | Enterprise AI Program Architect",
       },
     ],
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Jatin Madan — Engineering Manager 2 | Enterprise AI Program Architect",
     description:
       "Portfolio of Jatin Madan — Engineering Manager 2 and Enterprise AI Program Architect specializing in Microsoft Entra, enterprise AI security governance, hybrid identity, and Azure security architecture.",
-    images: [ogImageUrl],
     creator: "@jatinmadan",
+    images: [ogImageUrl],
   },
   creator: "Jatin Madan",
   formatDetection: {
@@ -86,14 +96,15 @@ export default function RootLayout({
   const websiteSchema = getWebsiteSchema(baseUrl);
 
   return (
-    <html lang="en" className="scroll-smooth">
+    <html
+      lang="en"
+      className={`scroll-smooth ${jetbrainsMono.variable} ${inter.variable}`}
+    >
       <head>
         <meta name="theme-color" content="#0078D4" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Jatin Madan - Blog RSS Feed" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" href="/favicon.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
@@ -104,7 +115,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${jetbrainsMono.variable} ${inter.variable} antialiased blueprint-grid`}
+        className="antialiased blueprint-grid"
       >
         {process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID && (
           <Script

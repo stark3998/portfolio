@@ -124,7 +124,7 @@ export function getArticleSchema(
     "@type": "BlogPosting",
     headline: title,
     description: description,
-    image: ogImageUrl || `${baseUrl}/og-image.svg`,
+    image: ogImageUrl || `${baseUrl}/og-image.png`,
     datePublished: new Date(date).toISOString(),
     author: {
       "@type": "Person",
@@ -136,12 +136,103 @@ export function getArticleSchema(
       name: "Jatin Madan",
       logo: {
         "@type": "ImageObject",
-        url: `${baseUrl}/og-image.svg`,
+        url: `${baseUrl}/og-image.png`,
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${baseUrl}/blog/${slug}`,
+    },
+  };
+}
+
+export interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
+/** BreadcrumbList JSON-LD for rich-result breadcrumb trails. */
+export function getBreadcrumbSchema(items: BreadcrumbItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}
+
+/** CollectionPage + ItemList JSON-LD for listing pages (blog, AI). */
+export function getCollectionPageSchema(
+  baseUrl: string,
+  path: string,
+  name: string,
+  description: string,
+  items: { title: string; url: string }[]
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name,
+    description,
+    url: `${baseUrl}${path}`,
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Jatin Madan",
+      url: baseUrl,
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: items.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.title,
+        url: item.url,
+      })),
+    },
+  };
+}
+
+/** CreativeWork JSON-LD for interactive AI artifacts. */
+export function getCreativeWorkSchema(
+  baseUrl: string,
+  slug: string,
+  title: string,
+  description: string,
+  date: string,
+  keywords: string[] = [],
+  author: string = "Jatin Madan"
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: title,
+    headline: title,
+    description,
+    url: `${baseUrl}/ai/${slug}`,
+    image: `${baseUrl}/og-image.png`,
+    datePublished: new Date(date).toISOString(),
+    keywords: keywords.join(", "),
+    genre: "Interactive AI artifact",
+    author: {
+      "@type": "Person",
+      name: author,
+      url: baseUrl,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Jatin Madan",
+      logo: {
+        "@type": "ImageObject",
+        url: `${baseUrl}/og-image.png`,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${baseUrl}/ai/${slug}`,
     },
   };
 }

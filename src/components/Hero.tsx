@@ -20,21 +20,21 @@ export default function Hero() {
 
       {/* Floating security icons */}
       <motion.div
-        className="absolute top-24 right-[15%] text-azure/10"
+        className="hero-float absolute top-24 right-[15%] text-azure/10"
         animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       >
         <HiOutlineShieldCheck className="w-16 h-16" />
       </motion.div>
       <motion.div
-        className="absolute bottom-32 left-[12%] text-teal/10"
+        className="hero-float absolute bottom-32 left-[12%] text-teal/10"
         animate={{ y: [0, 12, 0], rotate: [0, -5, 0] }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
       >
         <GoLock className="w-12 h-12" />
       </motion.div>
       <motion.div
-        className="absolute top-[40%] left-[8%] text-azure/8"
+        className="hero-float absolute top-[40%] left-[8%] text-azure/8"
         animate={{ y: [0, -10, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
       >

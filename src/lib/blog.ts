@@ -8,6 +8,11 @@ export interface BlogPostMeta {
   sourceUrl?: string;
   publishedAt: string;
   updatedAt?: string;
+  /** Optional taxonomy (Cosmos is schemaless — older posts may omit these). */
+  category?: string;
+  tags?: string[];
+  /** "article" (default) or "artifact" for interactive HTML pieces. */
+  type?: "article" | "artifact";
 }
 
 export interface BlogPost extends BlogPostMeta {
@@ -56,7 +61,7 @@ export async function getAllPosts(): Promise<BlogPostMeta[]> {
     const { resources } = await container.items
       .query<BlogPostMeta>({
         query:
-          "SELECT c.id, c.slug, c.title, c.excerpt, c.sourceUrl, c.publishedAt, c.updatedAt FROM c ORDER BY c.publishedAt DESC OFFSET 0 LIMIT 50",
+          "SELECT c.id, c.slug, c.title, c.excerpt, c.sourceUrl, c.publishedAt, c.updatedAt, c.category, c.tags, c.type FROM c ORDER BY c.publishedAt DESC OFFSET 0 LIMIT 50",
       })
       .fetchAll();
 

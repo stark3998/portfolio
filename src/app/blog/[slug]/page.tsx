@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { HiArrowLeft, HiOutlineCalendar } from "react-icons/hi2";
 import { Metadata } from "next";
-import { getArticleSchema } from "@/lib/structuredData";
+import { getArticleSchema, getBreadcrumbSchema } from "@/lib/structuredData";
 import Script from "next/script";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { ShareButtons } from "@/components/ShareButtons";
@@ -47,11 +47,11 @@ export async function generateMetadata({
   if (!post) return { title: "Post Not Found" };
 
   const postUrl = `${baseUrl}/blog/${slug}`;
-  const ogImage = `${baseUrl}/og-image.svg`;
 
   return {
     title: `${post.title} — Jatin Madan`,
     description: post.excerpt,
+    keywords: post.tags,
     alternates: {
       canonical: postUrl,
     },
@@ -61,22 +61,17 @@ export async function generateMetadata({
       url: postUrl,
       type: "article",
       publishedTime: post.publishedAt,
+      modifiedTime: post.updatedAt,
       authors: ["Jatin Madan"],
-      images: [
-        {
-          url: ogImage,
-          width: 1200,
-          height: 630,
-          alt: post.title,
-        },
-      ],
+      tags: post.tags,
+      images: [{ url: `${baseUrl}/og-image.png`, width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
-      images: [ogImage],
       creator: "@jatinmadan",
+      images: [`${baseUrl}/og-image.png`],
     },
   };
 }
@@ -137,6 +132,12 @@ export default async function BlogPostPage({
     "Jatin Madan"
   );
 
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: baseUrl },
+    { name: "Blog", url: `${baseUrl}/blog` },
+    { name: post.title, url: `${baseUrl}/blog/${slug}` },
+  ]);
+
   return (
     <div className="min-h-screen pt-24 pb-16">
       <ReadingProgress />
@@ -144,6 +145,11 @@ export default async function BlogPostPage({
         type="application/ld+json"
         id={`article-schema-${slug}`}
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <Script
+        type="application/ld+json"
+        id={`article-breadcrumb-${slug}`}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <div className="w-full px-6 md:px-10 lg:px-16 grid lg:grid-cols-[3fr_1fr] gap-10">

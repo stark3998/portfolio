@@ -16,9 +16,15 @@ Production domain: **https://jatinmadan.com**
 - **Research & Publications** — 5 published papers across Springer, IEEE, and CRC Press covering cryptography, digital forensics, NLP, cloud computing, and IoT
 
 ### Blog (`/blog`)
-- Dynamic blog powered by **Azure Cosmos DB**
+- Dynamic blog powered by **Azure Cosmos DB**, merged with repo-hosted content
+- Lists **everything** — written posts and interactive AI artifacts — with category filter chips
 - Individual post pages with reading progress bar, table of contents sidebar, and share buttons
 - RSS feed at `/blog/rss.xml`
+
+### AI (`/ai`)
+- AI section surfacing **AI-tagged posts and interactive HTML artifacts**
+- Artifacts are self-contained HTML documents rendered in a full-screen sandboxed `<iframe>` viewer at `/ai/<slug>`
+- Artifacts are **repo-hosted now** (`public/artifacts/*.html` registered in `content/artifacts.ts`) and can be **served from Cosmos DB later** with no code changes — both sources flow through the unified content layer (`src/lib/content.ts`)
 
 ### Contact (`/contact`)
 - Social links (LinkedIn, GitHub, YouTube, X/Twitter) and email contact card
@@ -40,9 +46,12 @@ Production domain: **https://jatinmadan.com**
 ```
 src/
   app/
-    page.tsx              # Homepage
+    page.tsx              # Homepage (renders shared HomeSections)
+    ai/
+      page.tsx            # AI section listing (AI posts + artifacts)
+      [slug]/page.tsx     # Artifact viewer (sandboxed iframe, SSG)
     blog/
-      page.tsx            # Blog listing
+      page.tsx            # Blog listing (all content, filterable)
       [slug]/page.tsx     # Blog post (SSG via generateStaticParams)
       rss.xml/route.ts    # RSS feed
     contact/page.tsx      # Contact page
@@ -50,6 +59,7 @@ src/
     robots.ts             # Robots.txt
     layout.tsx            # Root layout with analytics
   components/
+    HomeSections.tsx      # Shared homepage composition
     Hero.tsx              # Animated hero with particles
     About.tsx             # About section with stats
     TechStack.tsx         # Categorized skill grid
@@ -59,6 +69,9 @@ src/
     ProjectModal.tsx      # Project detail modal
     Certifications.tsx    # Certification badge grid
     Research.tsx          # Publications list
+    ContentCard.tsx       # Blog/AI content card
+    ContentGrid.tsx       # Filterable content grid
+    ArtifactViewer.tsx    # Full-screen sandboxed artifact iframe
     Navbar.tsx            # Navigation bar
     Footer.tsx            # Site footer
     ReadingProgress.tsx   # Blog reading progress bar
@@ -68,13 +81,18 @@ src/
     AnalyticsProvider.tsx # GA4 + Vercel analytics
     SectionWrapper.tsx    # Reusable section container
   lib/
+    content.ts            # Unified content layer (Cosmos + repo artifacts)
     blog.ts               # Cosmos DB blog queries
     cosmos.ts             # Cosmos DB client
     analytics.ts          # Shared event tracking helpers
     structuredData.ts     # JSON-LD schema generators
   hooks/
     useScrollTracking.ts  # Intersection observer for section tracking
-public/                   # Static assets (images, og-image)
+content/
+  artifacts.ts            # Repo-hosted AI artifact manifest
+public/
+  artifacts/              # Standalone HTML artifact files
+  ...                     # Other static assets (images, og-image)
 ```
 
 ## Environment Variables
@@ -111,6 +129,28 @@ Deployment is automated via GitHub Actions (`.github/workflows/deploy.yml`). On 
 3. Uploads the `out/` directory
 4. Deploys to GitHub Pages
 
+## Adding an AI Artifact
+
+Interactive artifacts are self-contained HTML documents shown in the AI section.
+
+1. Drop a standalone HTML file into `public/artifacts/`, e.g. `public/artifacts/my-demo.html`.
+2. Register it in `content/artifacts.ts`:
+
+   ```ts
+   {
+     slug: "my-demo",
+     title: "My Demo",
+     excerpt: "Short description shown on the card.",
+     publishedAt: "2026-03-01",
+     tags: ["AI"],
+     file: "my-demo.html",
+   }
+   ```
+
+3. It automatically appears in `/ai` (and `/blog`), and opens at `/ai/my-demo` in the sandboxed viewer.
+
+Later, the same content can be published from Azure Cosmos DB (set `type: "artifact"` on the document) instead of the repo — no code changes required.
+
 ## Analytics
 
 Analytics are initialized globally via `AnalyticsProvider` and tracked through `src/lib/analytics.ts`:
@@ -130,14 +170,23 @@ Analytics are initialized globally via `AnalyticsProvider` and tracked through `
 
 ## SEO
 
-- Open Graph + Twitter Card metadata on all pages
-- JSON-LD structured data for blog articles
-- Dynamic sitemap generated from Cosmos DB blog posts
-- RSS feed for blog subscribers
-- Canonical URLs and robots.txt
+- **Open Graph + Twitter Card** metadata on all pages, with a real **PNG social image** (`public/og-image.png`, 1200×630) generated at build time via `scripts/generate-og-image.js` (uses `sharp`). PNG is used instead of SVG because most social platforms don't render SVG previews.
+- **JSON-LD structured data:**
+  - `Person` + `WebSite` on all pages
+  - `BlogPosting` + `BreadcrumbList` on blog posts
+  - `CreativeWork` + `BreadcrumbList` on AI artifacts
+  - `CollectionPage` + `ItemList` + `BreadcrumbList` on the AI section
+- **PWA web manifest** (`/manifest.webmanifest`) with icons and theme color for mobile SEO.
+- **Favicon + Apple touch icon** as real PNGs (`public/icon.png`, `public/apple-icon.png`) wired via metadata `icons`.
+- **Dynamic sitemap** covering static pages, blog posts (Cosmos), and AI artifacts.
+- **RSS feed** including all content (posts + artifacts) with categories.
+- Canonical URLs, per-page keywords, and `robots.txt`.
+
+Branding images are regenerated automatically on every build via the `prebuild` npm script. Run `npm run generate-images` to regenerate them manually.
 
 ## Configuration Files
 
 - `next.config.ts` — Static export configuration for GitHub Pages custom-domain deployment
 - `eslint.config.mjs` — ESLint configuration
 - `tsconfig.json` — TypeScript configuration
+- `scripts/generate-og-image.js` — Generates `og-image.png`, `icon.png`, and `apple-icon.png` (runs on `prebuild`)

@@ -79,7 +79,7 @@ export default function ParticleBackground() {
     <Particles
       id="tsparticles"
       options={options}
-      className="absolute inset-0 z-0"
+      className="hero-particles absolute inset-0 z-0"
     />
   );
 }
