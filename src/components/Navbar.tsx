@@ -13,6 +13,7 @@ const navLinks = [
   { href: "/#github", label: "GitHub" },
   { href: "/#certifications", label: "Certifications" },
   { href: "/#research", label: "Research" },
+  { href: "/frontier-threat-defense", label: "Threat Defense" },
   { href: "/ai", label: "AI" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },

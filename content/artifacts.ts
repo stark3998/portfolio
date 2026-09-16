@@ -23,6 +23,24 @@ export interface ArtifactManifestEntry {
 
 export const artifacts: ArtifactManifestEntry[] = [
   {
+    slug: "frontier-threat-defense-program-strategy",
+    title: "Frontier Threat Defense — Program Strategy",
+    excerpt:
+      "A full operating model for defending an enterprise against adversaries that attack at machine speed with AI — scope, controls, ownership, and measurement for a Frontier Threat Defense program.",
+    publishedAt: "2026-09-16",
+    tags: ["AI", "Security", "Threat Defense", "Strategy", "Governance"],
+    file: "frontier-threat-defense-program-strategy.html",
+  },
+  {
+    slug: "frontier-threat-defense-kill-chain",
+    title: "Frontier Threat Defense — The AI Attack Kill Chain",
+    excerpt:
+      "A stage-by-stage anatomy of a real frontier-AI agent intrusion — roughly 700 autonomous agents, no human operator, two and a half days — mapped as a kill chain, with the control that breaks it at each stage.",
+    publishedAt: "2026-09-15",
+    tags: ["AI", "Security", "Threat Defense", "Frontier AI", "Kill Chain"],
+    file: "frontier-threat-defense-kill-chain.html",
+  },
+  {
     slug: "entra-migration-dashboard",
     title: "Okta → Entra Migration Dashboard",
     excerpt:
