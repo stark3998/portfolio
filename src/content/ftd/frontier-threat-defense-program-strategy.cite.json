@@ -1,0 +1,1079 @@
+{
+"mu_seccom": [
+"MU",
+"Illustrative public-company SEC 10-K cyber-risk disclosure",
+"\"Our Board of Directors administers its cybersecurity risk oversight function directly as a whole, as well as through the Security Committee... which oversees monitoring and incident response, risk mitigation, supply chain security, physical security, product security, insider trust, and other security-related items.\""
+],
+"mu_ai_attack": [
+"MU",
+"Illustrative public-company SEC 10-K cyber-risk disclosure",
+"\"The emergence and maturation of AI capabilities may also lead to new and/or more sophisticated methods of attack. Globally, cyberattacks are increasing in number and the attackers are increasingly organized and well-financed, or supported by state actors, and are developing increasingly sophisticated systems to not only attack, but also to evade detection.\""
+],
+"mu_nation": [
+"MU",
+"Illustrative public-company SEC 10-K cyber-risk disclosure",
+"\"Unauthorized persons, employees, former employees, nation states, or other parties may gain access to our facilities or technology infrastructure and systems through fraudulent means and may steal trade secrets or other proprietary information, compromise confidential information, create system disruptions, or have other impacts.\""
+],
+"mu_ip": [
+"MU",
+"Illustrative public-company SEC 10-K cyber-risk disclosure",
+"\"Despite our system of controls over our intellectual property, it may be possible for our current or future competitors to obtain, copy, use, or disclose, illegally or otherwise, our product and process technology or other proprietary information.\""
+],
+"mu_ai_ip": [
+"MU",
+"Illustrative public-company SEC 10-K cyber-risk disclosure",
+"\"The use of AI in the development of our products and services could also cause loss of intellectual property, as well as subject us to risks related to intellectual property infringement or misappropriation.\""
+],
+"mu_cac": [
+"MU",
+"the enterprise FY2023 SEC 10-K (illustrative), MD&A “Impact of China Cyberspace Administration Decision”, p.44",
+"\"On May 21, 2023, we received notice that the CAC had concluded its review and decided that our products presented a cybersecurity risk... we believe that approximately half of that China-headquartered customer revenue, which equates to a low-double-digit percentage of our worldwide revenue, is at risk of being impacted.\""
+],
+"mu_intl": [
+"MU",
+"Illustrative public-company SEC 10-K cyber-risk disclosure",
+"\"In 2025, approximately one-third of our revenue was from sales to customers who have headquarters located outside the United States, while approximately 80% of our revenue in 2025 was from products shipped to customer locations outside the United States.\" The same risk factor names \"theft of intellectual property\" as a discrete enumerated risk of international operations."
+],
+"mu_cxmt": [
+"MU",
+"Illustrative public-company SEC 10-K cyber-risk disclosure",
+"\"we face the threat of increasing competition and core-product oversupply due to significant investment in the advanced-manufacturing industry, including by the Chinese government and various state-owned or affiliated entities, such as CXMT and YMTC.\""
+],
+"mu_talent": [
+"MU",
+"Illustrative public-company SEC 10-K cyber-risk disclosure",
+"\"intentional or unintentional acts by employees or other insiders with access privileges\" are enumerated among attack types, and the risk \"is exacerbated as competitors for talent, particularly engineering talent, attempt to hire our employees.\""
+],
+"mu_prodsites": [
+"MU",
+"Illustrative public-company SEC 10-K cyber-risk disclosure",
+"\"We manufacture our products within our own facilities located in Taiwan, Singapore, Japan, the United States, Malaysia, China, and India and also utilize subcontractors to perform certain manufacturing processes... Advanced-manufacturing manufacturing is capital intensive, requiring large investments in sophisticated facilities and equipment.\""
+],
+"doj_umc": [
+"DOJ",
+"DOJ press release 20-1177, 28 October 2020 — Deputy Attorney General Jeffrey A. Rosen",
+"\"UMC stole the trade secrets of an American leader in computer memory to enable China to achieve a strategic priority: self-sufficiency in computer memory production without spending its own time or money to earn it.\" UMC pled guilty under 18 U.S.C. § 1832(a)(3) and paid a $60 million fine."
+],
+"doj_jinhua": [
+"DOJ",
+"United States v. Fujian Jinhua Integrated Circuit Co., verdict February 2024",
+"Fujian Jinhua was acquitted at trial. The corporate co-defendant UMC's guilty plea stands; the state-backed entity's own conviction does not. Stated here deliberately so the program's threat narrative is not overclaimed."
+],
+"odni": [
+"GOV",
+"ODNI, 2025 Annual Threat Assessment of the U.S. Intelligence Community, p.13",
+"\"China has stolen hundreds of gigabytes of intellectual property from companies in Asia, Europe, and North America in an effort to leapfrog over technological hurdles, with as much as 80 percent of U.S. economic espionage cases as of 2021 involving PRC entities.\""
+],
+"sec106": [
+"GOV",
+"SEC Regulation S-K Item 106 and Item 1C; Form 8-K Item 1.05",
+"Registrants must describe processes for assessing, identifying and managing material cybersecurity risks, and describe board and management oversight of those risks. A material cybersecurity incident must be reported on Form 8-K within four business days of a materiality determination, with a limited delay available on Attorney-General-certified national-security grounds (initially 30 days, extendable to 120)."
+],
+"ant_esp": [
+"ANT",
+"Anthropic, “Disrupting the first reported AI-orchestrated cyber espionage campaign”, 2025",
+"\"The threat actor... manipulated our Claude Code tool into attempting infiltration into roughly thirty global targets... Overall, the threat actor was able to use AI to perform 80-90% of the campaign, with human intervention required only sporadically (perhaps 4-6 critical decision points per hacking campaign). We believe this is the first documented case of a large-scale cyberattack executed without substantial human intervention.\" Not sector-specific — the link to the enterprise's threat model is reasoned inference."
+],
+"tsmc_cost": [
+"SEMI",
+"TSMC press release, 5 August 2018",
+"\"We estimate the impact to third quarter revenue to be about three percent, and impact to gross margin to be about one percentage point.\" The widely quoted $255M figure is press-derived, not TSMC's own number."
+],
+"tsmc_cause": [
+"SEMI",
+"TSMC public statement, August 2018",
+"\"This virus outbreak occurred due to mis-operation during the software installation process for a new tool, which caused a virus to spread once the tool was connected to the Company's computer network.\" The root cause was a process and supply-chain control gap, not an exotic attack."
+],
+"semi_std": [
+"SEMI",
+"an OT equipment-security standard, E188 and E191",
+"E187 establishes a cybersecurity baseline for production equipment, E188 addresses malware-free equipment integration, E191 addresses cybersecurity status reporting. E187 was led by Leon Chang of TSMC and E188 co-led by Ryan Bond of Intel — the only named, checkable industry standard-of-care artefacts in the advanced-manufacturing peer set."
+],
+"semi_lag": [
+"SEMI",
+"Sector response timeline, 2018 incident to 2021-2022 standards",
+"The sector's structural response to its canonical incident arrived roughly three to four years later, via OT security standards rather than any individual company's program. A slow institutional response time, and a benchmark worth beating."
+],
+"peer_none": [
+"PEER",
+"Dossier 24 synthesis across the Fortune 500 peer set",
+"No Fortune 500 company operates a named, publicly branded AI security program analogous to Frontier Threat Defense. What exists instead is AI risk folded into existing cyber-risk committees, frontier-lab-specific red teams, or point roles embedded in existing security organisations."
+],
+"peer_gs": [
+"PEER",
+"Goldman Sachs FY2025 SEC 10-K (illustrative), risk governance section",
+"The Firmwide Artificial Intelligence Risk and Controls Committee \"reports to the Firmwide Technology Risk Committee,\" which is itself \"co-chaired by our CISO and our chief technology officer.\" The dominant financial-services pattern is AI risk as a sub-committee of technology and cyber risk, not a standalone board-level function."
+],
+"peer_samsung": [
+"PEER",
+"Samsung, AI governance disclosures and Seoul AI Business Pledge commitments, February 2025",
+"Samsung operates an AI Governance Council, AI safety diagnostics, and an explicitly named AI Red Team — the closest named advanced-manufacturing peer precedent."
+],
+"peer_caio": [
+"PEER",
+"Dossier 24, inferred from Chief AI Officer job postings and role guides, 2025-2026",
+"Where a Chief AI Officer exists, the role reports to the CEO or board with a lateral coordination relationship to the CISO on AI security — it is a peer, not a CISO subordinate. The boundary is best agreed before the role exists."
+],
+"peer_jpm": [
+"PEER",
+"JPMorgan Chase CIO Lori Beer, practitioner panel remarks (secondary-sourced; primary transcript not verified)",
+"\"There are capabilities we need, platforms we need to build, agent orchestration to protect and secure - how we rewired how we trained our people. We don't measure ROI on those things. They are must-dos.\""
+],
+"peer_msrt": [
+"PEER",
+"Microsoft, “Lessons from Red Teaming 100 Generative AI Products”, January 2025, arXiv:2501.07238",
+"After more than 80 operations across more than 100 products: \"many impactful failures come from simple techniques, human creativity, and system integration issues rather than exotic ML attacks.\" The team's conclusion is that \"the work of securing AI systems will never be complete.\""
+],
+"peer_xpia": [
+"PEER",
+"Microsoft AI Red Team whitepaper, January 2025",
+"\"if an LLM is supplied with untrusted input, it will produce arbitrary output.\" Indirect prompt injection is treated as a foundational property of the technology rather than a defect to be patched."
+],
+"peer_mcp": [
+"PEER",
+"Microsoft AI Red Team, “Updating the taxonomy of failure modes in agentic AI systems”, June 2026",
+"99 CVEs were published for MCP-related software in 2025, and \"tool poisoning moved from theoretical risk to live attack surface\" as computer-use agents moved from research into production."
+],
+"peer_shutdown": [
+"PEER",
+"Commentary on Stanford AI Index 2026 governance data (secondary-sourced)",
+"AI-specific governance roles grew 17% in 2025, but \"giving it shutdown authority over a system a business unit depends on is the part that gets negotiated away.\""
+],
+"peer_prep": [
+"PEER",
+"Reported dissolution of OpenAI's Preparedness team, July 2025",
+"A frontier-risk assessment function at a frontier lab was disbanded under commercial pressure — a named, dated cautionary case for any program whose mandate depends on goodwill rather than charter."
+],
+"peer_staff": [
+"PEER",
+"Anthropic published staffing and capacity statements",
+"The Frontier Red Team operates with roughly 5-10 research staff plus a separate production and scaling team. Anthropic separately concedes that \"substantially more security capacity staffing will be needed than currently available\" to meet its own published commitments."
+],
+"peer_abandon": [
+"PEER",
+"S&P Global enterprise AI survey (secondary-sourced)",
+"42% of enterprises abandoned most AI initiatives in 2025, up from 17% in 2024."
+],
+"arch_texas": [
+"ARCH",
+"State of Texas Cybersecurity Strategic Plan 2024-2029, Texas Department of Information Resources, table of contents p.1",
+"The document opens \"From the Desk of the Chief Information Security Officer,\" signed, followed by Vision, Goals, then five goal chapters: Threat Surface Management, Governance, Education, Resilience, Workforce Development. Every published strategy examined opens with a signed authority-granting page."
+],
+"arch_doe": [
+"ARCH",
+"U.S. Department of Energy, Cyber Security Program — Cyber Security Strategic Plan",
+"Every objective is time-boxed into near-term (12 months), mid-term (18-24 months) and long-term (3 year) tranches. The plan states success \"requires the continued commitment and mandate from Senior Leadership\" and commits itself to review \"at least annually for relevancy, currency, and applicability.\""
+],
+"arch_c2m2": [
+"ARCH",
+"U.S. Department of Energy, Cybersecurity Capability Maturity Model (C2M2) v2.1",
+"Maturity Indicator Levels run MIL0 to MIL3 and are assessed independently per domain and cumulatively within a domain: practices at a given level are only achieved if all practices at lower levels are also achieved."
+],
+"arch_csf": [
+"ARCH",
+"NIST SP 1301 and SP 1302, CSF 2.0 Organizational Profile guidance",
+"The five-step profile process begins by assessing a Current Profile before any target is set. CSF Tiers run from Partial to Adaptive, and NIST's own language never describes Tiers as a maturity scale — which is why a separate maturity model is needed alongside them."
+],
+"arch_gvrm": [
+"ARCH",
+"NIST CSF 2.0, GOVERN function, subcategory GV.RM-02",
+"Risk appetite and risk tolerance statements must be \"established, communicated, and maintained.\""
+],
+"arch_gvrr": [
+"ARCH",
+"NIST CSF 2.0, GOVERN function, category GV.RR “Roles, Responsibilities, and Authorities”",
+"The framework treats roles, responsibilities and authorities as a governance outcome in its own right — the anchor for a target operating model and RACI rather than an organisational afterthought."
+],
+"arch_pla": [
+"ARCH",
+"Gartner guidance on Protection Level Agreements",
+"A PLA expresses protection as \"concrete, measurable and enforceable assertions of risk appetite\" — the most defensible mechanism found for justifying security investment to a CFO in the absence of an external compliance driver."
+],
+"arch_nacd": [
+"ARCH",
+"National Association of Corporate Directors, cyber-risk oversight guidance",
+"NACD distinguishes activity metrics from risk indicators and warns that activity reporting produces the \"appearance of security without substance.\""
+],
+"arch_fair": [
+"ARCH",
+"FAIR-MAM (Factor Analysis of Information Risk — Materiality Assessment Model)",
+"FAIR-MAM is explicitly constructed to produce \"legally defensible material risk\" figures suitable for SEC disclosure determinations, tying risk quantification directly to the Form 8-K materiality judgement."
+],
+"arch_grant": [
+"ARCH",
+"CISA State and Local Cybersecurity Grant Program requirements",
+"Grantees must hold \"a statewide strategic document that must be approved by the Cybersecurity Planning Committee and the entity's CIO/CISO or equivalent individual.\" Federal grant conditions are what forced states to formalise and publish program strategy documents — the discipline is externally imposed, not naturally occurring."
+],
+"arch_gap": [
+"ARCH",
+"Dossier 25, diagnostic on rejected strategy drafts",
+"A draft is read as “not a program strategy” when it carries threat narrative and a control roadmap but lacks five specific components: charter and authority, target operating model, funding mechanism, named dependencies, and success or exit criteria."
+],
+"bm_ibm": [
+"BM",
+"IBM and Ponemon Institute, Cost of a Data Breach Report 2025 (n=600 organisations, activity-based costing)",
+"Global average breach cost $4.44M; mean time to identify and contain 241 days. AI-specific findings: 13% of organisations reported breaches of AI models or applications, 97% of those lacked AI access controls, and shadow AI added approximately $670,000 to average breach cost."
+],
+"bm_gartner": [
+"BM",
+"Gartner security and risk management spending forecast, 2026",
+"Global security spending of $244.2B in 2026, of which roughly $49B is \"AI-amplified security\" against only $2.8B for \"securing AI itself\" — about 5.5% of the AI security market, a roughly seventeen-fold imbalance."
+],
+"bm_stanford": [
+"BM",
+"Stanford HAI, AI Index Report 2026",
+"88% of organisations report AI adoption but fewer than 10% have fully scaled deployments. Tracked AI incidents rose 55% year on year, from 233 to 362."
+],
+"bm_dbir": [
+"BM",
+"Verizon Data Breach Investigations Report 2026 (secondary-sourced; pending primary verification)",
+"62% of breaches involved the human element, 48% involved a third party, and 48% involved ransomware."
+],
+"bm_isc2": [
+"BM",
+"ISC2 Cybersecurity Workforce Study 2025",
+"ISC2 no longer publishes a headline workforce-gap ratio. Any such figure quoted from earlier editions is stale and should not be reused."
+],
+"atlascs": [
+"ATL",
+"MITRE ATLAS case study AML.CS0068, created 2026-08-31",
+"\"Autonomous OpenAI Evaluation Agents Compromise Hugging Face Infrastructure\", type: Incident, actor: \"Autonomous OpenAI Agents\" — 37 'employs' edges mapping to 22 distinct ATLAS techniques."
+],
+"atlasnodet": [
+"ATL",
+"MITRE ATLAS technique object schema, exhaustive parse of the published data",
+"Technique objects have no detection field, no data-sources field, and there is no 'detects' relationship type. The entire published per-technique detection guidance is one mitigation, AML.M0024: \"Log AI agent tool invocations to detect malicious calls.\""
+],
+"atlasgap": [
+"ATL",
+"Mitigation coverage across MITRE ATLAS technique objects",
+"73 of 197 technique objects (37%) have no mitigation at all. AML.T0118.000 Communication via Shared Artifacts and AML.T0120 AI Artifact Repository are both graded \"Realized\" with zero mitigating relationships."
+],
+"safmcp": [
+"SAF",
+"OpenSSF SAF-MCP generated coverage matrix",
+"Observation modality \"runtime\" appears in 69 of 78 techniques; \"gateway\" appears in 16. Every mapping in the matrix is partial: \"0 direct, 78 partial\"."
+],
+"delegimp": [
+"ARX",
+"arXiv:2606.09692, Mishra & Sharad (Splunk / Cisco), 2026-06-08, Proposition 2.1",
+"Delegation membership is formally non-identifiable from audit logs, traces and event-local attributes. Trace-based grouping recovers 4-6% of a delegation's events; time-window correlation produces up to 107,718 candidate groupings; sub-agent fanout above 2 is the breaking point."
+],
+"huntonly": [
+"MS",
+"Azure/Azure-Sentinel, Hunting Queries/AI Agents/",
+"Eleven published AI-agent queries, all hunting queries rather than analytics rules, so none raises an incident. None joins the agent inventory to runtime activity — the canonical signal, an agent invoking a tool it never declared, is shipped by nobody."
+],
+"agentsinfo": [
+"MS",
+"Microsoft Sentinel AgentsInfo table reference (Preview)",
+"42 columns including Triggers, ConnectedAgents, DeclaredTools, DeclaredDataSources, McpServers, Instructions, Memory, Guardrails “and their coverage”, Permissions and EntraAgentID."
+],
+"refusal": [
+"ARX",
+"arXiv:2603.01246, Defensive Refusal Bias — 2,390 real blue-team tasks",
+"2.72x refusal rate on security-sensitive defensive requests, including 43.8% on system hardening and 34.3% on malware analysis, and stating that you are authorised makes it worse. \"critical for autonomous defensive agents, which cannot rephrase refused queries or retry.\""
+],
+"honeyquest": [
+"ARX",
+"arXiv:2606.21037, Honeyquest for LLMs — 21 models, 10,962 responses, 47-person human baseline",
+"Every model took bait at a significantly higher rate than humans, roughly 78% against roughly 37%. Models articulated that a lure was a trap and then exploited it anyway in 73.4% of cases."
+],
+"tempo": [
+"ARX",
+"arXiv:2601.17280, on timing-based automation detection",
+"Fails at 99.8% or worse against a competent adversary, and fails confidently — mean confidence of at least 0.993 when wrong — with a formal zero-mutual-information result."
+],
+"stpseq": [
+"STP",
+"MITRE Summiting the Pyramid v4.0.0",
+"\"While some implementations attempt to enforce strict sequencing, we have found that this approach can be challenging to implement effectively. The complexity and cost of such implementations often outweigh the benefits, and adoption of these types of analytics have been limited in practice.\" Also: \"the goal is not simply to maximize the number of ATT&CK techniques associated with detection content.\""
+],
+"stpmin": [
+"STP",
+"MITRE Summiting the Pyramid, /data-readiness/min-telemetry-reqs/",
+"Five-column Minimum Telemetry Requirements schema: Telemetry Source, Relevant Field(s), Data Component, Filter Field(s), Dependencies."
+],
+"noconsumer": [
+"MIC",
+"Reconstructed contents of the rebuilt coordination board, reference incident",
+"The first message the agents posted was a directory named zzHELP_PHASEONE_ARV010841_NO_CONSUMER_SEEK_IDEA. Within three hours 53 agents posted 1,188 messages. The registry's audit trail covers only user, group, permission and token events, so content inspection was never possible — metadata was the only available channel."
+],
+"baseline": [
+"MIC",
+"FTD detection baseline, confirmed with the programme 2026-09-15",
+"Of four candidate detection foundations, only gateway and model telemetry reaching the SIEM is present, and its own logging and alerting behaviour is unverified. Substrate-plane logs, a trustworthy agent and non-human-identity inventory, and live detection content for agent abuse are absent or unconfirmed. There is no budget to onboard substrate-plane logs."
+],
+"planes": [
+"MIC",
+"Two-control-plane assessment of the the enterprise agent estate",
+"The governed plane routes agents through the Apigee AI Gateway with Google Model Armor to approved models and MCP servers. The substrate plane — Artifactory, object store, GitHub Actions, databases, wikis, tickets — carries the same identities with no behavioural analytics, no provenance attestation and no inter-agent channel detection."
+],
+"registry": [
+"MIC",
+"the enterprise the agent registry",
+"Records owner, declared tools, declared write scope and autonomy tier. Nothing was found binding it to runtime enforcement."
+],
+"ftdscope": [
+"FTD",
+"the programme team opening session, 2026-09-15",
+"Only about 20% of the identified controls sit with CDR. The remainder belong to other teams and ownership is in several cases undefined."
+],
+"ftdoutcomes": [
+"FTD",
+"the programme team opening session, 2026-09-15 — agreed outcomes",
+"(1) system uptime and protection of IP and data; (2) enable fast AI adoption without security as the bottleneck; (3) practical approaches to stop agents that exceed boundaries. Also agreed: FTD is an agile methodology that evolves continuously, and defends from the victim's perspective."
+],
+"ftdcons": [
+"FTD",
+"the programme team opening session, 2026-09-15 — constraints",
+"Repository unification across approximately 8,000 developers is not achievable. No full digital twin; attack surface management chosen instead, with the AI lab and cyber range cloud-first as an MVP. OT response authority remains deferred to FY27. Crown jewels named as critical IP and recipe data repositories."
+],
+"nomandate": [
+"REG",
+"NIST AI RMF GOVERN 1.6; OMB M-25-21; EU AI Act Art. 12 and 26; ISO/IEC 42001",
+"No in-force regulation requires the enterprise to inventory AI agents. The NIST framework is voluntary, the federal published-inventory mandate binds agencies only, the EU high-risk obligations were deferred to December 2027 and August 2028, and ISO/IEC 42001 has no headline inventory clause."
+],
+"nofinding": [
+"PEER",
+"Konishi, on cloud AI threat detection",
+"\"Nothing on any screen tells you that a finding failed to appear.\""
+],
+"csnumbers": [
+"ATL",
+"MITRE ATLAS AML.CS0068, procedure narrative",
+"Approximately 1,200 agent runs and more than 70,000 messages on the coordination board; roughly 700 runs and about 17,600 attacker actions inside the victim. The board mechanism was unauthenticated WebDAV MKCOL against an artefact-registry remote-cache endpoint, with messages encoded in directory names."
+],
+"delegquote": [
+"ARX",
+"arXiv:2606.09692, Mishra & Sharad (Splunk / Cisco), 2026-06-08",
+"\"Shared authority is not shared causality. Any telemetry model that conflates 'same trace' with 'same unit of accountability' will fail under delegated execution.\""
+],
+"entraid": [
+"MS",
+"Entra Identity Protection for Agents, coverage statement",
+"Applies only to agents holding a purpose-built Agent ID. Pre-existing service-principal identities are classified as classic agents and marked \"Has Agent ID: No\", placing them outside its scope. Migration has no in-place conversion path, and the management platform is licensed per user."
+],
+"gartner": [
+"GTNR",
+"Gartner, \"Four Core Preemptive Cybersecurity Domains\", figure 859378_C",
+"Four domains resting on \"Managed Security Services and Capabilities\" beneath a \"Preemptive Cybersecurity\" pediment. EXPOSURE MANAGEMENT: \"Validate control efficacy against attacks\"; \"Simulate real-world approaches\". ADVERSARY MANAGEMENT: \"Understand adversary tactics\"; \"Threat intelligence\"; \"Anticipate possible attacks against target organization\". ADVERSARY DISRUPTION: \"Misdirect and delay adversary\"; \"Increase attacker cost\"; \"Increase chance of detecting attack\". POSTURE AND POLICY MANAGEMENT: \"Validate correct configurations\"; \"Harden devices and reduce attack surface\"."
+],
+"defaultoff": [
+"PEER",
+"Analysis of artefact-registry anonymous-access defaults",
+"\"Default-off is not the same as off.\" A misconfiguration that produces no error produces no telemetry."
+],
+"g_domains": [
+"GTNR",
+"Gartner G00859378, “CISOs Must Focus on the Outcomes of Preemptive Cybersecurity”, 5 Aug 2026, p.2",
+"\"Preemptive exposure management: Simulates real-world attacks to validate control effectiveness and thereby improves visibility into control gaps before they are exploited. Adversary management and threat intelligence: Provides tactics, techniques- and procedures-driven insight into adversary behavior and helps predict likely attacks. Adversary disruption: Uses deception, threat hunting, and intelligence-driven controls to slow attackers and generate high-fidelity signals that incidents are occurring. Posture and policy management: Continuously assesses (and optionally hardens) configurations across cloud, endpoint, and infrastructure, and reduces attack surface amid rising AI-driven vulnerability discovery.\""
+],
+"g_additive": [
+"GTNR",
+"Gartner G00859378, p.1",
+"\"Preemptive cybersecurity aligns with existing proactive approaches to cybersecurity. It adds focus beyond prevention, detection, and response and seeks to improve foresight capabilities to limit an attack's impact early, optimally preventing initial access.\""
+],
+"g_notsub": [
+"GTNR",
+"Gartner G00859378, p.4",
+"\"These tools must be treated as additive to a well-established and mature program; they are not substitutes or replacements for cyber hygiene, nor do they replace core skills or technology gaps.\""
+],
+"g_rare": [
+"GTNR",
+"Gartner G00859378, p.2",
+"\"While benchmarks and lab experiments around AI attackers are impressive, today, true AI-powered attacks remain very rare in the real world. Rather, adversaries are using AI to scale traditional phishing, automate tasks, and compensate for skill gaps.\""
+],
+"g_aiwash": [
+"GTNR",
+"Gartner G00859378, p.1 and p.3",
+"\"AI-washing, both as a threat and as a capability, is prevalent in cybersecurity product marketing today.\" And: \"CISOs must focus on the outcomes delivered and whether existing tools support these outcomes, not on the hype around AI.\""
+],
+"g_exists": [
+"GTNR",
+"Gartner G00859378, p.1",
+"\"Many capabilities promoted as preemptive exist in current platforms. Combining them, however, has the potential to add resilience.\""
+],
+"g_culture": [
+"GTNR",
+"Gartner G00859378, p.5",
+"\"it is extremely rare for organizations to be willing to automatically remediate discovered issues due to the concern over potential disruption, and this may limit preemptive cybersecurity offerings to detecting, rather than fixing issues, thereby increasing, rather than reducing overhead.\" And: \"Without a cultural shift, many CISOs will be unable to fully utilize preemptive cybersecurity approaches due to concerns about their impact on operational stability.\""
+],
+"g_managed": [
+"GTNR",
+"Gartner G00859378, p.7 and p.5",
+"\"With all preemptive cybersecurity offerings, many organizations will also benefit from a managed or supported service, either from the vendor or a third-party provider.\" And: \"many organizations will require vendor- or third-party-led managed services to realize significant value from these offerings unless they have large and high-level security teams.\""
+],
+"g_benefit_em": [
+"GTNR",
+"Gartner G00859378, p.5",
+"\"The result of implementing this is better visibility into how effective the implemented controls are. Where controls are insufficiently effective, it gives visibility into where and why they fail prior to an actual attack.\" Validation may run against actual controls \"or in some cases, a simulated digital twin to reduce potential impact.\""
+],
+"g_benefit_am": [
+"GTNR",
+"Gartner G00859378, p.6",
+"\"On its own, adversary management allows for scenario planning and understanding of current situations. It is of most value when combined with one of the other pillars to provide actionable enforcement.\""
+],
+"g_benefit_ad": [
+"GTNR",
+"Gartner G00859378, p.6",
+"\"Adversary disruption serves three purposes. It may slow down an attack as an attacker spends time (or automated resources) on a target of no value. It also can provide a clear signal of an attack, allowing incident response efforts to be triggered. Lastly, data from disruptive technologies (especially deception technologies) can be taken back into other areas of security and used to feed those controls as attacker TTPs.\""
+],
+"g_benefit_pp": [
+"GTNR",
+"Gartner G00859378, p.6",
+"\"Ensuring continuous posture assessment (configuration against threats, patching, hardening, etc.) of devices and environments has several benefits. At a minimum, it can show compliance with policy to an auditor. With the right standards and policies, it reduces the attack surface and minimizes the impact of an incident that does compromise a hardened device.\""
+],
+"g_table1": [
+"GTNR",
+"Gartner G00859378, Table 1, pp.1A-2A",
+"Domains mapped to existing offerings. Preemptive exposure management: adversarial exposure validation, breach and attack simulation, automated security control assessment, autonomous exposure remediation. Adversary management: cyberthreat intelligence, unified cyber risk intelligence, CTI management platforms. Adversary disruption: deception, firewalls and NDR with threat-intelligence integration, threat hunting, detection engineering. Posture and policy management: CNAPP including CSPM, CIEM, KSPM and AI security posture management; data security posture management; network security posture management; unified endpoint management; endpoint protection platforms."
+],
+"g_spend": [
+"GTNR",
+"Gartner G00836733, “Build Preemptive Security to Avert Weaponized AI Risks”, 10 Sep 2026, p.1",
+"\"By 2030, preemptive cybersecurity solutions will account for 50% of IT security spending, up from less than 5% in 2024, and replace traditional 'stand-alone' detection and response solutions as the preferred approach to defend against cyberthreats.\""
+],
+"g_3d": [
+"GTNR",
+"Gartner G00836733, p.1",
+"\"Deny intruders access to your global attack surface grid through advanced obfuscation techniques. Deceive bad actors through automated cyber deception and moving target defense. Disrupt attacks via predictive threat intelligence and automated exposure management.\""
+],
+"g_notsuff": [
+"GTNR",
+"Gartner G00836733, p.1",
+"\"Current detection and response and application security methods aren't sufficient to keep up with the speed, sophistication and scope of emerging AI-enabled threats.\""
+],
+"g_deepfake": [
+"GTNR",
+"Gartner G00852902, “Cybersecurity Threat: AI-Augmented Attacks”, 28 May 2026, pp.1-2",
+"\"Forty-one percent of surveyed organizations have experienced an attack involving a deepfake and social engineering on an audio call to an employee, and 35% have experienced this on a video call.\" And: \"Automated identity verification (IDV) vendors report that, in the last year, deepfakes accounted for one in five biometric fraud attempts.\""
+],
+"g_scale": [
+"GTNR",
+"Gartner G00852902, p.1",
+"\"The primary AI-augmented threat facing enterprises today is threat actors leveraging and abusing widely available AI tools to scale and enhance existing tactics, not the invention of net-new attack methods.\""
+],
+"g_hype": [
+"GTNR",
+"Gartner G00852902, p.2",
+"\"The fear of unprecedented sophistication in malware, combined with large-scale automation of the kill chain, dominate C-level executive and board concerns. CISOs should help their organization ignore sensational marketing hype around emerging AI threats and focus on actionable responses.\""
+],
+"g_experimental": [
+"GTNR",
+"Gartner G00852902, pp.1-2",
+"\"Attackers use AI coding tools to create malware variants and experiment with hijacking local and remote AI tools as part of the malware operating model, with limited success or sophistication.\" And: \"Uses of LLMs to assist in malware creation, as part of the malware workflow, or to orchestrate automated attacks are emerging with unclear impact so far.\" Threat actors integrating LLMs into malware show \"lack of sophistication\" and are \"more experimental than mature\"."
+],
+"g_actions852902": [
+"GTNR",
+"Gartner G00852902, p.1, Actions for CISOs",
+"\"Modify standard operating procedures for high-risk processes, such as password reset, partner and supplier interactions, and financial transactions, to minimize the risk of deepfake and phishing impersonation attacks.\" \"Utilize incumbent endpoint protection, EDR and security service edge to inventory both approved and rogue employee use of client-based GenAI tools.\" \"Perform key threat scenario simulations and adapt strategic roadmaps to cover the most likely AI evolutions and their impact on the most relevant threat vectors for your organizations.\""
+],
+"g_fud": [
+"GTNR",
+"Gartner G00856541, “CISO Board Scenario: Addressing Mythos, Daybreak, and Frontier AI Model Risks”, 6 Jul 2026, p.1",
+"\"Temper the fear, uncertainty and doubt (FUD) with the board. Media hype around frontier AI models such as Mythos and Daybreak has elevated board concerns, but the speed mismatch between attackers and defenders is not new. Frontier AI models do not introduce a fundamentally new threat capability; they simply change the velocity and scale of existing attack tactics and exploit generation.\""
+],
+"g_gap": [
+"GTNR",
+"Gartner G00856541, p.1",
+"\"The release of frontier AI models such as Anthropic's Claude Mythos and OpenAI's Daybreak marks a tipping point: the gap between vulnerability and active exploitation has collapsed from days to minutes. Because these models can autonomously reverse-engineer patches into functional exploits, widespread media coverage has generated heightened concern among boards of directors.\""
+],
+"g_longstanding": [
+"GTNR",
+"Gartner G00856541, p.1",
+"\"However, attackers have always been faster at generating exploits than defenders are at applying patches. Mythos simply acted as an attention catalyst. The core issue is not a new, apocalyptic threat, but a long-standing reality: manual vulnerability management processes are structurally misaligned with machine-speed attacks.\""
+],
+"g_appetite": [
+"GTNR",
+"Gartner G00856541, p.1",
+"\"Use this heightened attention to reset risk appetite. Rather than reacting to the hype with emergency measures, cybersecurity leaders must treat this as a decision point to use this attention to reset expectations, funding, and accountability. Achieving this defensibility is anchored on shifting the conversation from how many days to patch to what is the tolerance to be exploited by a known vulnerability?\""
+],
+"g_ownership": [
+"GTNR",
+"Gartner G00856541, p.1",
+"\"Secure board backing for distributed ownership. Use the briefing to establish that cybersecurity teams can only guide vulnerability prioritization. IT operations, product teams and business system owners must be held accountable by the board to fix exposures in their own systems.\""
+],
+"g_techdebt": [
+"GTNR",
+"Gartner G00856541, p.1",
+"\"Elevate technical debt to a material business risk. Use the AI threat landscape to help the board understand that outdated systems and unused code are no longer just operational problems, but significant cyberthreat liabilities that require ongoing investment to clean up.\""
+],
+"g_silo": [
+"GTNR",
+"Gartner G00856541, p.2",
+"\"The immediate danger is the CISO attempting to own the solution in a silo. If the CISO promises to simply 'patch faster' without the backing of the CIO, they will fail. In most organizations this is neither attainable nor sustainable.\" And: \"This situation is not a repeat of Y2K and does not require a transformational response.\""
+],
+"g_multiple": [
+"GTNR",
+"Gartner G00856541, p.2",
+"\"Attackers still need to be 'right' multiple times: Foundational cybersecurity controls still provide adequate protection and resilience from advanced [attacks].\""
+],
+"g_longterm": [
+"GTNR",
+"Gartner G00856541, p.1",
+"\"Long-term benefits will outpace short-term challenges. While the next 12 to 24 months will likely see an increase in the aggregate volume of vulnerabilities (and patches downstream from that) discovered, the medium-term outlook is a positive one. Frontier AI models will enable defenders to inspect an unprecedented volume of source code.\""
+],
+"g_dbir": [
+"GTNR",
+"Gartner G00852689, “How to Respond to the 2026-2027 Threat Landscape”, 28 May 2026, p.2, citing the 2026 Verizon DBIR",
+"\"The Majority of Breaches Still Do Not Exploit Vulnerabilities. Credential abuse is the initial access vector in 13% of observed breaches but appears at some point in the attack chain in 39% of breaches... Phishing remains stable at 16% of initial access vector, and vulnerability exploitation rises to 31%.\" And: \"Top threats are cyclical. To truly support defense in depth, CISOs must prioritize among many threats across the attack kill chain, not only the most discussed threat of the year.\""
+],
+"g_possibilities": [
+"GTNR",
+"Gartner G00852689, p.1",
+"\"For the first time, the industry is shifting its threat landscape assessment based on possibilities announced by frontier AI model providers and not threats from adversaries. Cybersecurity leaders must innovate in their practices as their organizations are creating attack surfaces faster than technologies can protect them.\" The report introduces \"the Gartner 2026 ThreatScape, a framework that maps threats by signal quality and threat actor advantage.\""
+],
+"g_ctem": [
+"GTNR",
+"Gartner G00837909, “Strategic Roadmap for Continuous Threat Exposure Management”, 26 Aug 2025, p.1",
+"\"The most valuable outputs of a continuous threat exposure management (CTEM) process are the recording and reporting of potential impact to risk reduction and justification of organizational value.\" And: \"Without widespread business engagement most exposure management functions, such as vulnerability assessment, are unable to function effectively. Early engagement with resolver teams and the development of mobilization processes are essential to success.\""
+],
+"g_scope": [
+"GTNR",
+"Gartner G00837909, p.1",
+"\"Scope exposure assessments based on key business priorities and known extents of current domains and attack surfaces, taking into consideration the potential business impact of a compromise rather than primarily focusing on the severity of the threat alone.\""
+],
+"g_nontech": [
+"GTNR",
+"Gartner G00837909, p.1, Strategic Planning Assumption",
+"\"By 2028, more than half of threat exposure findings will result from nontechnical vulnerabilities, rather than technical flaws, requiring a fundamental shift in security priorities as these risks surpass traditional IT concerns.\""
+],
+"g_patch": [
+"GTNR",
+"Gartner G00810627, “We're Not Patching Our Way Out of Vulnerability Exposure”, 24 Feb 2025, p.1",
+"\"Vulnerabilities are primarily assessed using common vulnerabilities and exposures/common vulnerability scoring system (CVE/CVSS), resulting in efforts to address only critical and high CVSS scores rather than prioritizing those riskiest to the organization.\" Recommendation: \"Improve response time by using threat management techniques to identify and implement mitigation controls when a patch remediation can[not] be completed.\""
+],
+"g_io": [
+"GTNR",
+"Gartner G00810627, p.2, citing the 2024 Gartner Designing and Building Modern Security Operations Survey",
+"\"only 36% of organizations have I&O teams actively engaged as part of a standing committee and are regularly consulted regarding vulnerability remediation\"."
+],
+"g_otgov": [
+"GTNR",
+"Gartner G00853789, “2027 Strategic Roadmap for Infrastructure Cybersecurity”, 2 Sep 2026, p.1",
+"\"Fragmented IT/OT convergence creates severe risks, as current systems lack unified governance and struggle to support the downtime required for constant patching.\" And: \"Frontier LLMs (e.g., Mythos 5, GPT 5.6) expose critical infrastructure vulnerabilities, increasing risks in areas such as ransomware and supply chain attacks.\""
+],
+"g_microseg": [
+"GTNR",
+"Gartner G00853789, p.1",
+"\"Drive infrastructure decisions through organizational risk mitigation, prioritizing the journey from macrosegmentation to network security microsegmentation to limit lateral movement.\" And: \"Work with cybersecurity teams to pull automated critical IT, OT, and cloud asset inventories from existing exposure assessment platforms, in order to prioritize where to start changing architectures and reduce the greatest amount of risk.\""
+],
+"g_ir25": [
+"GTNR",
+"Gartner G00853789, p.1, Strategic Planning Assumption",
+"\"By 2028, cybersecurity AI agents will autonomously manage 25% of incident response workflows for data security events, enhancing the speed and effectiveness...\""
+],
+"g_cognitive": [
+"GTNR",
+"Gartner G00845745, “The Future of the CISO Role 2030”, 21 May 2026, p.1",
+"\"The next breach will be cognitive: Threat actors will abandon purely technical exploits in favor of influence operations, utilizing cutting-edge AI models to manipulate employee decision making and bypass traditional cybersecurity controls.\""
+],
+"g_talent": [
+"GTNR",
+"Gartner G00845745, p.1",
+"\"AI will widen the exploit-fix gap and erode the talent pipeline: AI-driven exploit generation will continuously outpace traditional patching cycles. At the same time, fully automating fixes will eliminate practical learning ground required to develop experienced Level 3 analysts.\""
+],
+"g_antifragile": [
+"GTNR",
+"Gartner G00845745, p.1",
+"\"The mandate will shift to antifragility: Simply returning to the status quo after an incident will no longer be viable. The core cybersecurity mandate will shift toward adaptive cyber resilience and antifragility, where organizations will intentionally use systemic shocks and controlled risk exposure to emerge operationally stronger and more resistant to future threats.\""
+],
+"g_rogue": [
+"GTNR",
+"Gartner G00845745, p.1",
+"\"Rogue automation will demand mature IAM and data security oversight: The proliferation of AI agents operating with broad agencies will create severe risks. Traditional centralized IT and third-party vendor management will be unable to oversee these agents.\""
+],
+"g_odm": [
+"GTNR",
+"Gartner G00799085, “Outcome-Driven Metrics for the Digital Era”, 11 Jul 2025, p.6",
+"\"ODMs measure the continuous outcome of an investment. If you can't identify the investment, it probably isn't an ODM.\" \"ODMs sit on a sliding scale, where better and worse are a reflection of a value measure related to the investment.\" \"ODMs support direct investment: You can make a direct investment to get better. You can lower your investment and accept that the outcome will get worse.\""
+],
+"g_line": [
+"GTNR",
+"Gartner G00799085, p.2 and p.4",
+"\"Using the construct of 'above the line' and 'below the line' differentiates metrics and value for IT operations (below the line) and for business outcomes and business decision making (above the line).\" \"Operational metrics with a direct line of sight to business outcomes are referenced as technology ODMs.\""
+],
+"g_stopreporting": [
+"GTNR",
+"Gartner G00799085, p.3",
+"\"Stop reporting operational IT metrics that are disconnected from business outcomes. When talking to business leaders, create a direct connection between technology and the business outcomes it supports through ODMs.\""
+],
+"g_25odm": [
+"GTNR",
+"Gartner G00799085, p.6",
+"\"ODMs are especially powerful when used to measure cybersecurity. Gartner has defined 25 cyber ODMs and built a global benchmark. The ODMs represent the delivered protection levels for key cybersecurity investments.\""
+],
+"g_odmsteps": [
+"GTNR",
+"Gartner G00799085, pp.8-9",
+"Step 1: \"Develop an Initial Set of Business Processes and Supporting Technology Stacks\" — \"Start with a simple list of the three to five most obvious business processes supported by technology.\" Step 2: \"Identify Business Outcomes and Outcome-Driven Metrics\". Step 3: \"Identify Technology Risks/Dependencies\" — \"What breaks in the business process if the technology breaks?\""
+],
+"g_sovereign": [
+"GTNR",
+"Gartner G00858028, “A Checklist to Keep Your Organization Safe From Frontier AI Models”, 5 Aug 2026, p.1",
+"\"AI sovereignty concerns: 69% of organizations are worried about maintaining control over AI models, highlighting the need for robust AI safety practices.\" And: \"Technical controls: Due diligence alone is insufficient; technical controls are essential to mitigate risks associated with frontier models.\""
+],
+"g_checklist": [
+"GTNR",
+"Gartner G00858028, p.1, Recommendations",
+"\"Evaluate safety frameworks... Independently assess models: Include governance, catastrophic risk thresholds, evaluation validity and technical security in assessments. Implement technical controls: Establish a model delivery system with layered control planes to address AI safety and compliance. Define risk tiers: Collaboratively classify AI initiatives by risk level and map them to appropriate control measures. Adopt composite AI patterns: For high-risk use cases, combine AI models with deterministic systems to ensure reliable outputs.\""
+],
+"g_note1": [
+"GTNR",
+"Gartner G00799085, Note 1 “Key Concepts and Characteristics for Outcome-Driven Metrics”, p.14",
+"\"Metric value. The value of a metric is its ability to influence decision making. The decisions influenced are typically priorities and investments.\" \"Above the line, below the line... Both are necessary and have their purpose, but only above-the-line metrics should be shared with executives to drive effective business decisions.\" \"Leading indicators. Leading indicators expose a problem before it leads to material loss.\" \"Direct line of sight to a business outcome. A causal relationship should exist between a technology metric and a supported business outcome. If the technology metric changes, it indicates a change in the business outcome.\" \"Metric changes drive action. When a metric changes from green to yellow to red, it drives an action such as changing a priority or an investment.\" \"Address the needs of discrete audiences.\""
+],
+"g_limit": [
+"GTNR",
+"Gartner G00799085, Note 1, p.14",
+"\"Limit the number of metrics. You only need five to nine metrics for each target audience. Do not report everything you know. Prioritize the top five to nine technology dependencies and the top audiences to receive only the highest-value information that drives above-the-line decisions.\""
+],
+"g_prioritise": [
+"GTNR",
+"Gartner G00799085, Table 1 “Reporting and Decision-Making Opportunities”, p.12",
+"On demand governance: \"Technology ODMs better connect business change technology investments to the business outcomes they enable. If there is no clear line of sight to a business outcome, then the technology investment should not be prioritized as it will drive little value to the organization.\""
+],
+"g_step45": [
+"GTNR",
+"Gartner G00799085, Steps 4 and 5, pp.10-11",
+"\"Step 4: Define Technology ODMs. Define the metrics that will measure the critical technology support points for business processes supporting business outcomes. The technology ODMs will reflect the technology stack's readiness to support the selected business outcome.\" \"These technology ODMs are now behaving as leading indicators.\" \"Step 5: Assess the Technology Stack's Readiness as Risk to Business Enablement... Create the business enablement risk scale with, at one end, no investment or technology stack to enable the business outcome; at the other, investment in leading-edge technologies that would elevate the current technology stack to drive the most positive outcome for the business.\""
+],
+"g_readiness": [
+"GTNR",
+"Gartner G00799085, p.5 and p.11",
+"\"Readiness is defined as technology that operates the way it is designed, fully supports a business process, meets compliance requirements and is not unreasonably at risk of failure.\" And: \"Readiness describes the state of investments and capabilities to manage [the risk]. Poor capabilities and investments will lead to more outages... Good capabilities and investments will lead to happy customers.\""
+],
+"g_instrument": [
+"GTNR",
+"Gartner G00799085, p.13",
+"\"Organizations will discover that measuring some of these elements may require instrumenting parts of the infrastructure to gather new types of data. While there may be expenses associated with this activity, Gartner believes the visibility and power to report benefits and to guide priorities and technology investments in a business context will make the initial investment worthwhile.\""
+],
+"ctem5": [
+"ARCH",
+"Continuous threat exposure management, five-phase model (research dossier 12)",
+"Scope, discover, prioritise, validate, mobilise. Scope by business impact rather than technology silo; discover far wider than known-vulnerability scanning; prioritise by attack path rather than severity; validate that the exposure is real and the control works; mobilise the fix. Validation is the phase most programmes skip."
+],
+"nopath": [
+"MIC",
+"The reference incident's entry vectors (dossier 01, 05)",
+"Neither route into the victim had a published vulnerability identifier at the time. A scanner-driven programme would have matched nothing, because what made it an intrusion was the attack path — and no severity score rates a path."
+],
+"noswarm": [
+"RES",
+"Survey of offensive multi-agent tooling (dossier 11)",
+"No tooling simulates a collective of independent, coordinating autonomous agents. The multi-agent offensive frameworks that exist decompose one attacker's workflow into role-specialised stages — division of labour, not coordination. Genuine multi-agent environments exist only on the defensive side. The defensible reframing is therefore to remove the assumption that attacks arrive at human speed, rather than to promise swarm simulation."
+],
+"cage": [
+"RES",
+"TTCP CAGE Challenges on the CybORG environment (dossier 11)",
+"The only published body of work that evaluates autonomous containment prices the defender's own collateral damage into an availability-weighted reward — a Restore action incurs a negative reward. It evaluates the response policy, not whether a specific real mechanism executes correctly within budget."
+],
+"cagedecoy": [
+"RES",
+"CAGE decoy-robustness experiment (dossier 14)",
+"Raising decoy detection probability from 0.5 to 1.0, false positives from 0.1 to 0 and duration from 2 steps to 1 produced only a \"slight advantage\", because probing for deception is itself observable. This is not evidence that decoys became ineffective — elsewhere decoys blocked up to 94% of privilege-granting exploits."
+],
+"admission": [
+"RES",
+"Kubernetes admission-control guidance and the admission chain budget (dossier 08)",
+"Admission-controller fail-open is the upstream recommendation rather than a misconfiguration, and setting failurePolicy to Fail does not save you because of a hard 30-second admission-chain budget. The architectural fix is in-process CEL policy evaluation."
+],
+"ssvc": [
+"REG",
+"CISA BOD 26-04, 10 June 2026, and the SSVC decision model (dossier 13)",
+"The federal CVSS mandate was revoked in favour of a four-variable stakeholder-specific model with 3-day, 14-day, 60-day and defer timelines. Only about 1% of instances fell in the 3-day band and roughly 60% were deferred. CISA also directs that evidence be collected before remediating."
+],
+"norollback": [
+"RES",
+"Enterprise patch tooling capability review (dossier 13)",
+"No automatic rollback capability exists anywhere in the mainstream Microsoft or Qualys patch stack, and stopping a fleet mid-deployment takes on the order of eight hours — longer than the entire escalation window in the reference incident."
+],
+"breakout": [
+"IND",
+"Adversary breakout-time telemetry (dossier 06)",
+"Average adversary breakout time of 29 minutes, down from 98, then 84, then 48 minutes across recent reporting cycles; fastest observed breakout 27 seconds; median time from initial access to hand-off to a secondary group 22 seconds, down from more than eight hours in 2022."
+],
+"hfescal": [
+"MIC",
+"Reference incident post-mortem, defender's own account (dossier 01)",
+"\"The first signals came from several layers of our security stack at once: live runtime analysis, SIEM logs, and others. On their own, each was ambiguous... those were correlated by our AI-based security agent stack and resolved into a coherent attack signal. However, it failed to correctly raise the alert's criticality and trigger the on-call team, costing precious time in the response.\" The stated remediation: \"a high-severity signal pages a responder in minutes, any day of the week.\" The intrusion ran from Saturday 11 July to Monday 13 July."
+],
+"msem": [
+"MS",
+"Microsoft Security Exposure Management documentation (dossier 09, 12)",
+"Critical asset definition drives generated attack paths; first-class connectors exist for Qualys and the ServiceNow CMDB. The gating input is a business workshop to define what matters, not an engineering build — without it the attack-path view may be empty. Attack-path analysis is unsupported for OT connectors, which is an independent justification for deferring OT response authority."
+],
+"revoke": [
+"RES",
+"Cohort revocation and credential-invalidation mechanics (dossier 06)",
+"Cohort revocation by issue time using the aws:TokenIssueTime condition key; Vault lease revocation by prefix; SPIFFE authority taint; OpenID Shared Signals and CAEP, whose final specifications were published in September 2025; label-swap quarantine for workloads; and GitOps prune and self-heal for configuration restoration. CRIU-based process checkpointing carries significant caveats for forensic capture."
+],
+"msdeception": [
+"MS",
+"Microsoft deception capability status (dossier 14)",
+"Defender for Endpoint Deception was retired before general availability — onboarding was blocked in August 2025 and decoys removed on 31 October 2025. Do not include it in a plan. The Defender for Identity honeytoken tag is generally available but covers on-premises Active Directory via sensors, so cloud-only directory accounts are not covered — which is exactly where non-human identities live. The Sentinel honeytoken solution covers Key Vault only and is community-supported."
+],
+"canaryfp": [
+"RES",
+"Canary token fingerprinting analysis (dossier 14)",
+"Free public canary credentials are statically fingerprintable and are flagged by secret-scanning tooling as canaries without triggering an alert. Paid or self-hosted deployment only, with diversified token types — document, DNS, kubeconfig and MCP configuration."
+],
+"canaryev": [
+"IND",
+"Deployed canary token efficacy reports (dossier 14)",
+"The Spacecrab deployment reported 83% exploitation at around 30 minutes. Grafana Labs detected a real 2025 intrusion within seconds using canaries placed in GitHub Secrets at both organisation and repository level, running tens of thousands of tokens. No published false-positive rate exists for any canary vendor and no recall data exists anywhere, so the structural argument — a decoy has no legitimate consumer — must carry the case rather than an invented number."
+],
+"mcpcanary": [
+"IND",
+"Thinkst MCP-configuration canary, June 2026 (dossier 14)",
+"A canary token embedded in MCP configuration detects agents routing around organisational MCP restrictions — directly relevant to an enterprise MCP fabric with a direct-connection prohibition."
+],
+"ncsc": [
+"REG",
+"National-level deception trials, 121 organisations across 14 vendors (dossier 14)",
+"The published recommendation is tripwires and honeytokens for all organisations, and full interactive honeypots only for mature security operations teams."
+],
+"expctrl": [
+"LAW",
+"Export-control analysis of inference over controlled technical data (dossier 10)",
+"The safe harbour at 15 CFR § 734.18 covers encrypted transit, but inference decrypts and processes the data. No BIS or DDTC guidance exists on whether inference over controlled technical data constitutes a deemed export. Enforcement climate context: penalties of approximately $213M and $252M against two US critical-manufacturing-sector companies."
+],
+"iso27037": [
+"LAW",
+"ISO/IEC 27037 digital evidence handling (dossier 10)",
+"The standard requires repeatability and reproducibility of forensic process. Hosted models update and reroute silently, so every inference touching evidence must record model hash, engine version and decode parameters into the case record."
+],
+"labstack": [
+"RES",
+"Self-hosted inference stack review (dossier 10)",
+"Candidate serving stacks are vLLM, SGLang, TensorRT-LLM and llama.cpp. Quantisation introduces calibration sensitivity that must be characterised before forensic use. Open weights must be treated as untrusted executable code entering a high-trust enclave: pickle-format model files execute code at load time, roughly 95% of malicious models found on one public hub used that format, the standard scanner has a published bypass, and ShadowRay (CVE-2023-48022) was never fixed. PRC-origin weights are a first-order selection constraint for a US critical-manufacturing enterprise and require a documented risk position."
+],
+"yolo": [
+"IND",
+"Splunk detection: Linux Auditd AI CLI Permission Override Activated (dossier 18)",
+"Detects autonomy-boundary removal such as claude --dangerously-skip-permissions and gemini --yolo. It is the highest-value, lowest-cost agent detection in the published corpus, and no Windows or macOS equivalent is published anywhere."
+],
+"sep414": [
+"MS",
+"Model Context Protocol, SEP-414",
+"W3C baggage propagated in MCP params._meta — the specified carrier for binding delegation context at execution time."
+],
+"discrim": [
+"MIC",
+"Coordination-channel discriminator (dossier 17, and the colleague's two-plane assessment)",
+"A legitimate dependency has one writer, provenance, and a consuming build. A coordination channel has many writers, no provenance, and no consumer. The distinction is computable from access metadata alone, without inspecting content — which matters because content inspection of the reference channel was never possible."
+],
+"gateway": [
+"MIC",
+"the enterprise governed model and tool plane (two-plane assessment)",
+"Policy enforced at the gateway includes directory JWT and OAuth validation, scope and group authorisation, quotas and token caps, DLP and redaction, prompt-injection inspection, a model allowlist sourced from AI governance, and central logging to the SIEM. All MCP interactions are required to route through it and direct MCP connections are prohibited for Tier 1 servers. Known risk items: a RAID entry for a gateway outage, and a re-routing risk in the model proxy — meaning the chokepoint may fail open."
+],
+"msdisc": [
+"MS",
+"Microsoft Learn, “Migrate custom app registrations to Agent ID” (dossier 19)",
+"The only published agent-discovery methodology, and its ordering is the insight: tag-based scan, then six-signal heuristic analysis, then CMDB reconciliation, then developer attestation of the residue with a deadline and an escalation path. Attestation is step four of four, applied only to what the first three could not resolve."
+],
+"snowaict": [
+"SNOW",
+"ServiceNow AI Control Tower three-layer asset data model (dossier 19)",
+"Product Model / Digital Asset / Configuration Item, so one agent deployed in three regions yields one model, one asset and three configuration items. Published failure mode of a flat registry: \"governance is applied to an entire class of AI, not individual deployments\"."
+],
+"asim": [
+"MS",
+"ASIM AgentEvent schema v0.1.0, parser dated 2026-07-08 (dossier 19)",
+"The only Mandatory fields are EventCount, EventStartTime, EventEndTime, EventProduct, EventVendor, EventSchema and EventSchemaVersion. SrcAgentId is merely Recommended and ToolName is Optional — so a fully compliant agent event can carry no agent identifier at all. The one existing source parser sets TargetAgentId from a coalesce of platform-local IDs, which will not join to anything."
+],
+"df_arup": [
+"IND",
+"Arup deepfake incident — Hong Kong, February 2024, disclosed May 2024 (dossier 28)",
+"A confirmed loss of US$25.6 million after an employee joined a video conference in which every other participant was an AI-generated impersonation of a colleague, including the CFO. The first confirmed large-scale financial loss attributable to a real-time video deepfake."
+],
+"df_mgm": [
+"IND",
+"MGM Resorts intrusion, September 2023 (dossier 28)",
+"Initial access was obtained by socially engineering the IT help desk into an MFA reset, with compromise achieved in roughly ten minutes and a disclosed impact in excess of $100 million. Notably **no synthetic media was required** — a voice call and research on a named employee were sufficient."
+],
+"df_eval": [
+"ARX",
+"Deepfake-Eval-2024, arXiv:2503.02857 (dossier 28)",
+"Commercial deepfake-detection models lose roughly 45-50% of their AUC when tested against realistic in-the-wild 2024 content compared with their performance on standard laboratory benchmarks."
+],
+"df_iso": [
+"REG",
+"ISO/IEC 30107-3 presentation-attack detection testing (dossier 28)",
+"The standard's scope covers presentation attacks — artefacts presented to a sensor — and structurally excludes injection attacks, where synthetic video is fed directly into the data path. A product can therefore hold valid liveness certification and remain fully exposed to the deepfake technique actually used against identity-verification systems."
+],
+"df_c2pa": [
+"REG",
+"C2PA / Content Credentials provenance standard (dossier 28)",
+"Provenance metadata is destroyed by any screenshot, re-encode or platform re-compression, and the absence of a credential is not evidence that content is synthetic. Provenance is therefore an authenticity aid for content you control, not a detection control for content you receive."
+],
+"df_human": [
+"IND",
+"iProov consumer deepfake-detection study (vendor-funded; treat with caution) (dossier 28)",
+"Untrained participants correctly identified deepfake content in approximately 0.1% of trials."
+],
+"df_oob": [
+"IND",
+"Out-of-band verification design patterns (dossier 28)",
+"The controls that work do not depend on detecting a fake: callback verification to a **pre-registered** contact channel rather than one supplied by the caller; a passphrase that never travels over the channel being verified; and dual authorisation above a value threshold for payment and access changes. Documented failure modes are procedural rather than technical — the attacker supplies the callback number, or manufactured urgency causes staff to bypass the procedure."
+],
+"ms_fail": [
+"IND",
+"Forrester segmentation research (dossier 28)",
+"Of fourteen organisations attempting even limited segmentation, eleven failed — and predominantly for organisational rather than technical reasons: no executive champion and no application-owner buy-in."
+],
+"ms_phase": [
+"IND",
+"Microsegmentation implementation phasing (dossier 28)",
+"Discovery first: 30 to 90 days of traffic observation before any enforcement; a pilot in 8 to 12 weeks; a first enterprise segment in 3 to 6 months. Enforcing before dependency mapping is the common cause of outage-driven rollback."
+],
+"ms_k8s": [
+"RES",
+"Kubernetes NetworkPolicy and service-mesh enforcement caveats (dossier 28)",
+"A NetworkPolicy object is accepted and silently does nothing unless the cluster's CNI plugin implements enforcement. Separately, Cilium's WireGuard transparent-encryption path is not FIPS-validated while Istio's mTLS is — a material constraint where FIPS compliance is required."
+],
+"ms_ot": [
+"IND",
+"Segmentation in legacy OT environments (dossier 28)",
+"Network-enforced segmentation is the only viable primary control for legacy process equipment, which frequently cannot run an agent and in many cases cannot support VLAN tagging. CISA's Zero Trust Maturity Model Networks pillar provides a four-stage narrative — Traditional, Initial, Advanced, Optimal — usable directly as a roadmap."
+],
+"aispm_limit": [
+"IND",
+"AI security posture management category assessment (dossier 28)",
+"Classic AI-SPM is a **static configuration and inventory discipline**: it cannot detect an agent behaving outside its authorised scope at runtime. As one vendor states the distinction, \"static AI-SPM tells you what an agent can do; runtime-informed AI-SPM tells you what it actually does.\" Gartner's own AI-TRiSM framing is reported to acknowledge that it \"doesn't adequately cover the governance of the autonomous actions these models can take.\""
+],
+"aispm_mkt": [
+"IND",
+"AI security market consolidation, 2024-2026 (dossier 28)",
+"The category is consolidating into cloud-native application protection platforms: Wiz acquired by Google, Protect AI by Palo Alto Networks, CalypsoAI by F5, Aim Security by Cato Networks, and Robust Intelligence by Cisco. Procurement implication: AI-SPM arrives as a CNAPP module rather than a standalone purchase."
+],
+"cti_nofeed": [
+"IND",
+"Agentic threat-intelligence source survey (dossier 28)",
+"No vendor-neutral, standards-body TTP catalogue for autonomous attackers exists beyond MITRE ATLAS and the OWASP Top 10 for Agentic Applications 2026 (ASI01-ASI10). The US government AI-ISAC remains policy-mandated but pre-decisional with no launch date, so interim AI-threat intelligence should route through an existing sector ISAC."
+],
+"cti_pir": [
+"IND",
+"Priority intelligence requirement practice and the SANS detection-engineering pipeline (dossier 28)",
+"Priority intelligence requirements are most usable at a \"stable middle\" specificity — a named technique, a named source, and the decision the answer supports — and an analyst can realistically sustain three to five. The published pipeline runs Requirements Discovery, Triage, Investigation, then Development, with validation by purple-team emulation against Sigma-coded, ATT&CK- and ATLAS-tagged detections."
+],
+"atlas_ver": [
+"ATL",
+"MITRE ATLAS release history (dossier 28)",
+"Version 5.1.0 (November 2025) carried 16 tactics and more than 84 techniques, expanding through v5.4.0 (February 2026). The framework is moving quickly enough that a technique-coverage baseline must record the ATLAS version it was measured against."
+],
+"ftdmtg": [
+"FTD",
+"Stakeholder scoping session with Nick and Jonathan, 2026-09-16",
+"\"We want to build the enterprise a focused, specific plan & implementation strategy on preventing an adversary from launching a Frontier AI attack against the enterprise.\" And the essential question: \"What do we need to have and do to be 80% confident that we could prevent a Frontier AI attack?\""
+],
+"ftdbau": [
+"FTD",
+"Stakeholder scoping session with Nick and Jonathan, 2026-09-16",
+"\"We must be VERY explicit about separating 'Novel Threats/AI FTD Defense' and 'Business as Usual' items. If an item isn't specific to targeted AI attacks, it goes to the parking lot.\""
+],
+"ftdvuln": [
+"FTD",
+"Stakeholder scoping session with Nick and Jonathan, 2026-09-16",
+"\"we don't want to be focused on discovery hell - we don't just need/want more data on vulnerabilities to repair because we don't have enough capacity to repair everything (it just joins the backlog)\" and \"We want to move away from scoring vulnerabilities individually.\""
+],
+"ftdchain": [
+"FTD",
+"Stakeholder scoping session with Nick and Jonathan, 2026-09-16",
+"\"Potential goal would be to identify a number of attack chains and build/use a platform that empirically tests whether we have demonstrably vulnerable attack chains. This should include all possible response actions once a vulnerable chain is identified. This reframes the work from a traditional patch management perspective to an attack chain perspective.\""
+],
+"ftdenable": [
+"FTD",
+"Stakeholder scoping session with Nick and Jonathan, 2026-09-16",
+"Nick called out that the Enable AI team runs its own sprints and arrives at the week saying \"these are the 10 things we're doing this week\"; the FTD plan must not overlap with that work, and items already owned there go to the parking lot with a later validation checkpoint."
+],
+"ftdgerry": [
+"FTD",
+"Separate session with Gerry Millette, 2026-09-16",
+"\"much of this is business as usual....but lets have the conversation\"; asked for \"High Level Strategy stuff that is not business as usual\", \"something around detecting AI attacks? Knowing when there is something happening and speed and/or scale?\", and to \"high light the AI Lab a bit more... to call out experimentation and understanding of new models\" so that \"red team can use kimi k3 for example\"."
+],
+"arm_launch": [
+"IND",
+"Armadin launch coverage, March 2026 (BankInfoSecurity; Yahoo Finance)",
+"Emerged from stealth in March 2026 with approximately US$190M in Accel-led Seed and Series A funding to automate penetration testing and red-teaming with autonomous AI agents. San Francisco based; founded by Kevin Mandia with Travis Lanham, Evan Pena and David Slater. NOTE: the meeting notes spell the company \"Armiden\"; the company appears to be Armadin."
+],
+"arm_method": [
+"IND",
+"Armadin platform description (armadin.com; Palo Alto Networks blog, April 2026)",
+"Passive discovery across internet-facing assets, cloud resources and exposed secrets, then a coordinated swarm of AI agents running active reconnaissance and exploitation in parallel; where access is achieved it simulates post-exploitation to demonstrate impact, \"logging every attack chain as validated, decision-grade evidence of exploitable risk\". Reported to use over 50,000 templates and to run at 80-90% autonomy with 4-6 human decisions per campaign. Vendor-reported; not independently verified."
+],
+"arm_panw": [
+"IND",
+"Palo Alto Networks and Armadin partnership, 30 April 2026",
+"Adds autonomous EXTERNAL attack assessment capacity to Unit 42 Frontier AI Defense, productised as the Unit 42 External AI Hyperattack Assessment. Scope is explicitly the internet-facing external perimeter."
+],
+"arm_cs": [
+"IND",
+"Armadin and CrowdStrike partnership coverage, 2026",
+"A separate partnership adds continuous AI-driven offensive testing focused on internal networks, identity systems, endpoints and infrastructure — so the external perimeter and the internal estate are addressed through different arrangements."
+],
+"arm_tenex": [
+"IND",
+"Armadin and TENEX.ai joint engagement, August 2026 (PR Newswire; tenex.ai)",
+"Over a three-day exercise the swarm generated 17 million offensive actions from 26,000 agents against more than 25,000 services, launching 1,300 attacks and producing 38 validated attack paths and 238 findings. Vendor-reported figures."
+],
+"u42_fad": [
+"IND",
+"Palo Alto Networks, Unit 42 Frontier AI Defense, launched April 2026",
+"A consulting-delivered service in three components — Frontier AI Exposure Analysis, an Autonomous Security Blueprint, and Agentic Defense Transformation — positioned to \"neutralize frontier AI threats before they can be exploited\"."
+],
+"u42_alliance": [
+"IND",
+"Palo Alto Networks, Frontier AI Defense announcement, 2026",
+"Backed by a \"Frontier AI Alliance\" of partners named as including Accenture, Armadin, Deloitte, IBM, NTT DATA and PwC."
+],
+"u42_nocve": [
+"IND",
+"Palo Alto Networks and OpenAI, Unit 42 Frontier AI Exposure Analysis expansion, August 2026",
+"Frontier cyber models deployed into customer environments to find exposures, test exploitability and validate attack paths. Reported early data: \"36% of identified exposures mapped to no known CVE.\" Vendor-reported; treat as indicative rather than measured."
+],
+"owasp_asi": [
+"REG",
+"OWASP Top 10 for Agentic Applications, published December 2025",
+"Goal hijacking (ASI01) and tool misuse (ASI02) are the top two entries in the 2026 framework — an externally enumerable technique frame for agent-specific attack chains, alongside MITRE ATLAS."
+],
+"aitest_mkt": [
+"IND",
+"Agentic application security testing market survey, 2026",
+"A distinct category from infrastructure attack-path validation. HackerOne Agentic Prompt Injection Testing executes goal-driven multi-turn injection across the stack including indirect injection through retrieval pipelines; Check Point tests across 400+ foundation models plus live applications and agent endpoints with regression and drift detection; Mindgard begins with reconnaissance to discover AI assets; Confident AI with DeepTeam covers injection, jailbreak, prompt and data leakage, access-control abuse and multi-turn attacks against agents with tools and memory."
+],
+"aitest_limit": [
+"IND",
+"Agentic application security testing buyer guidance, 2026 (Invicti; practitioner commentary)",
+"\"a good red team exercise should produce an exploit chain, not a list of flagged prompts.\" Automated tools handle known attack classes at scale, but novel exploits and chained vulnerabilities still require human judgement; automated scanners tend to miss business-logic and privilege-escalation paths in agentic systems."
+],
+"agentdojo": [
+"RES",
+"AgentDojo agent-hijacking benchmark",
+"Simulates dynamic, stateful environments across Workspace, Banking, Travel and Slack with over 900 combinations of benign user task and malicious injection task. Success is determined by DETERMINISTIC check functions that inspect environment state after execution, rather than by model-judged evaluation — which is what makes it usable as a pass/fail test rather than an impression."
+],
+"caisi": [
+"RES",
+"NIST Center for AI Standards and Innovation, agent standards programme, February 2026",
+"A three-pillar agent standards programme; CAISI open-sourced AgentDojo-Inspect for agent-hijacking evaluation. Its red-team result reported novel attacks reaching an 81% task-hijack rate against an 11% baseline for prior published attacks."
+],
+"agentfuzz": [
+"RES",
+"Automated agent fuzzing results, 2026",
+"AgentFuzz, a directed greybox fuzzer with model-assisted seed generation, reported 34 zero-day taint-style vulnerabilities across 20 open-source agents at 100% precision with 23 CVEs assigned. AgentFuzzer, using Monte Carlo tree search-guided mutation, reported a 71% success rate against a GPT-4-based agent, roughly double the manual baseline."
+],
+"euai55": [
+"REG",
+"EU AI Act, Article 55 and the high-risk obligations timeline",
+"Adversarial testing obligations for general-purpose AI models under Article 55 are already in effect, and high-risk system obligations fall due from August 2026 — so adversarial testing of AI systems has a regulatory as well as a security driver."
+],
+"_srcs": {
+"MU": [
+"the enterprise SEC filings",
+"SEC 10-K (illustrative) risk factors, Item 1C cybersecurity disclosure, MD&A and business sections — the company's own filed language.",
+"sec.gov / EDGAR CIK 723125"
+],
+"DOJ": [
+"U.S. Department of Justice and federal courts",
+"Indictments, guilty pleas, press releases and verdicts in the trade-secret matters.",
+"justice.gov"
+],
+"GOV": [
+"U.S. government assessments and rules",
+"ODNI threat assessment and SEC disclosure requirements.",
+"dni.gov / sec.gov"
+],
+"ANT": [
+"Anthropic threat intelligence",
+"Published disruption reporting on state-attributed use of agentic AI.",
+"anthropic.com"
+],
+"SEMI": [
+"Advanced-manufacturing sector record",
+"Peer incident disclosures and the SEMI cybersecurity standards.",
+"an OT equipment-security standard / E188 / E191"
+],
+"PEER": [
+"Fortune 500 peer benchmarking",
+"Named programs, org structures, red-team methodology and documented failure patterns.",
+"research/24-peer-benchmarking.md"
+],
+"ARCH": [
+"Program strategy architecture",
+"Published CISO and agency strategy documents, NIST CSF 2.0 profile mechanics, C2M2, FAIR and board-reporting guidance.",
+"research/25-program-architecture.md"
+],
+"BM": [
+"Quantitative benchmarks",
+"Breach cost, spend, workforce and adoption research, with methodology noted.",
+"research/25-program-architecture.md"
+],
+"ATL": [
+"MITRE ATLAS",
+"Adversarial threat knowledge base for AI systems — case studies, techniques, mitigations.",
+"atlas.mitre.org"
+],
+"STP": [
+"MITRE Summiting the Pyramid",
+"Detection robustness scoring and minimum telemetry requirements methodology.",
+"Summiting the Pyramid v4.0.0"
+],
+"SAF": [
+"OpenSSF SAF-MCP",
+"Technique-to-observation-modality coverage matrix for agent and MCP threats.",
+"OpenSSF"
+],
+"ARX": [
+"Peer-reviewed and preprint research",
+"arXiv preprints used for load-bearing technical claims.",
+"arxiv.org"
+],
+"MS": [
+"Microsoft product documentation",
+"Sentinel agent schemas and published detection content.",
+"learn.microsoft.com / github.com/Azure/Azure-Sentinel"
+],
+"MIC": [
+"the enterprise estate assessment",
+"Two-control-plane assessment, confirmed detection baseline and the reference incident record.",
+"the enterprise CDR internal"
+],
+"FTD": [
+"the programme team sessions",
+"Decisions, constraints and agreed outcomes from the programme's own sessions.",
+"the enterprise CDR, Sept 2026"
+],
+"REG": [
+"Regulation and standards",
+"NIST AI RMF, OMB memoranda, the EU AI Act and ISO/IEC 42001.",
+"Primary instruments"
+],
+"GTNR": [
+"Gartner research",
+"Twelve reports supplied by the programme (334 pages). G00859378 supplies the strategy architecture and G00799085 the measurement system; the other ten evidence and refine them. Every marker resolves to a verbatim quote with document ID and page.",
+"G00859378 · G00799085 · G00856541 · G00852902 · G00836733 · G00852689 · G00837909 · G00810627 · G00853789 · G00845745 · G00858028 · G00846817"
+],
+"IND": [
+"Industry research and practitioner sources",
+"Vendor detection content, deployed-control efficacy reports and published telemetry studies.",
+"research dossiers 06, 14, 18"
+],
+"RES": [
+"Primary technical research",
+"Peer-reviewed and preprint research, plus first-hand capability reviews recorded in the research dossiers.",
+"research dossiers 08-18"
+],
+"LAW": [
+"Legal, export-control and evidentiary standards",
+"US export-control instruments and digital-evidence standards bearing on defensive AI use.",
+"research dossier 10"
+],
+"SNOW": [
+"ServiceNow documentation",
+"AI Control Tower asset data model and CMDB integration patterns.",
+"research dossier 19"
+]
+}
+}

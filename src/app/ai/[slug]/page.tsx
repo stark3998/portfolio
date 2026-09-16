@@ -1,8 +1,10 @@
 import { getAllItems, getItemBySlug } from "@/lib/content";
+import { getFtdAsset, isNativeFtd } from "@/lib/ftd";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import Script from "next/script";
 import { ArtifactViewer } from "@/components/ArtifactViewer";
+import { NativeArtifact } from "@/components/NativeArtifact";
 import {
   getCreativeWorkSchema,
   getBreadcrumbSchema,
@@ -81,6 +83,8 @@ export default async function ArtifactPage({
     { name: item.title, url: `${baseUrl}/ai/${slug}` },
   ]);
 
+  const ftdAsset = isNativeFtd(slug) ? getFtdAsset(slug) : null;
+
   return (
     <>
       <Script
@@ -93,11 +97,22 @@ export default async function ArtifactPage({
         id={`artifact-breadcrumb-${slug}`}
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <ArtifactViewer
-        title={item.title}
-        src={item.artifactUrl}
-        html={item.htmlContent}
-      />
+      {ftdAsset ? (
+        <NativeArtifact
+          title={item.title}
+          css={ftdAsset.css}
+          html={ftdAsset.html}
+          js={ftdAsset.js}
+          cite={ftdAsset.cite}
+          src={item.artifactUrl}
+        />
+      ) : (
+        <ArtifactViewer
+          title={item.title}
+          src={item.artifactUrl}
+          html={item.htmlContent}
+        />
+      )}
     </>
   );
 }

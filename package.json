@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/generate-og-image.js",
+    "prebuild": "node scripts/generate-og-image.js && node scripts/build-ftd-native.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "generate-images": "node scripts/generate-og-image.js"
+    "generate-images": "node scripts/generate-og-image.js",
+    "build-ftd": "node scripts/build-ftd-native.mjs"
   },
   "dependencies": {
     "@azure/cosmos": "^4.9.1",
@@ -33,6 +34,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "postcss-selector-parser": "^7.1.6",
     "sharp": "^0.35.4",
     "tailwindcss": "^4",
     "typescript": "^5"
