@@ -19,14 +19,14 @@ interface FeatureArtifact {
 const artifacts: FeatureArtifact[] = [
   {
     slug: "frontier-threat-defense-kill-chain",
-    eyebrow: "The worked example",
+    eyebrow: "Deep dive",
     title: "The AI Attack Kill Chain",
     blurb:
       "A real frontier-AI agent intrusion — ~700 autonomous agents, no human operator — broken into ten stages, with the control that stops it at each one.",
   },
   {
     slug: "frontier-threat-defense-program-strategy",
-    eyebrow: "The operating model",
+    eyebrow: "Deep dive",
     title: "The Program Strategy",
     blurb:
       "A full Frontier Threat Defense program: scope, controls, ownership, and a tight executive metric set that proves it is working.",
@@ -45,10 +45,22 @@ export default function FrontierThreatDefense() {
       </h2>
       <p className="mt-4 text-slate-mid max-w-2xl leading-relaxed">
         A new class of attacker runs as a fleet of autonomous AI agents and
-        moves at machine speed. I built an operating model — and a cited,
-        stage-by-stage worked example — for the program that answers it.
-        Delivered as two fully interactive artifacts.
+        moves at machine speed. I wrote the whole story as one section — the
+        problem, the strategy, the defences, a real intrusion walked stage by
+        stage, the pattern that connects it to a wave of other attacks, and the
+        plan to close the gap. Two cited, fully-interactive documents sit
+        underneath it.
       </p>
+
+      <div className="mt-8">
+        <Link
+          href="/frontier-threat-defense"
+          className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium rounded-lg bg-azure text-white hover:bg-azure-dark transition-colors"
+        >
+          Read the full story
+          <HiArrowRight className="w-4 h-4" />
+        </Link>
+      </div>
 
       <div className="mt-10 grid md:grid-cols-2 gap-5">
         {artifacts.map((a, index) => (
@@ -80,16 +92,6 @@ export default function FrontierThreatDefense() {
             </Link>
           </motion.div>
         ))}
-      </div>
-
-      <div className="mt-8">
-        <Link
-          href="/frontier-threat-defense"
-          className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium rounded-lg bg-azure text-white hover:bg-azure-dark transition-colors"
-        >
-          Explore Frontier Threat Defense
-          <HiArrowRight className="w-4 h-4" />
-        </Link>
       </div>
     </SectionWrapper>
   );

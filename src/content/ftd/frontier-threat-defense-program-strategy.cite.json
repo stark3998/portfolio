@@ -1,63 +1,63 @@
 {
 "mu_seccom": [
-"MU",
+"SEC",
 "Illustrative public-company SEC 10-K cyber-risk disclosure",
 "\"Our Board of Directors administers its cybersecurity risk oversight function directly as a whole, as well as through the Security Committee... which oversees monitoring and incident response, risk mitigation, supply chain security, physical security, product security, insider trust, and other security-related items.\""
 ],
 "mu_ai_attack": [
-"MU",
+"SEC",
 "Illustrative public-company SEC 10-K cyber-risk disclosure",
 "\"The emergence and maturation of AI capabilities may also lead to new and/or more sophisticated methods of attack. Globally, cyberattacks are increasing in number and the attackers are increasingly organized and well-financed, or supported by state actors, and are developing increasingly sophisticated systems to not only attack, but also to evade detection.\""
 ],
 "mu_nation": [
-"MU",
+"SEC",
 "Illustrative public-company SEC 10-K cyber-risk disclosure",
 "\"Unauthorized persons, employees, former employees, nation states, or other parties may gain access to our facilities or technology infrastructure and systems through fraudulent means and may steal trade secrets or other proprietary information, compromise confidential information, create system disruptions, or have other impacts.\""
 ],
 "mu_ip": [
-"MU",
+"SEC",
 "Illustrative public-company SEC 10-K cyber-risk disclosure",
 "\"Despite our system of controls over our intellectual property, it may be possible for our current or future competitors to obtain, copy, use, or disclose, illegally or otherwise, our product and process technology or other proprietary information.\""
 ],
 "mu_ai_ip": [
-"MU",
+"SEC",
 "Illustrative public-company SEC 10-K cyber-risk disclosure",
 "\"The use of AI in the development of our products and services could also cause loss of intellectual property, as well as subject us to risks related to intellectual property infringement or misappropriation.\""
 ],
 "mu_cac": [
-"MU",
-"the enterprise FY2023 SEC 10-K (illustrative), MD&A “Impact of China Cyberspace Administration Decision”, p.44",
-"\"On May 21, 2023, we received notice that the CAC had concluded its review and decided that our products presented a cybersecurity risk... we believe that approximately half of that China-headquartered customer revenue, which equates to a low-double-digit percentage of our worldwide revenue, is at risk of being impacted.\""
+"SEC",
+"the enterprise FY2023 SEC 10-K (illustrative), MD&A “Impact of a National Regulator Decision”, p.44",
+"\"On May 21, 2023, we received notice that the the regulator had concluded its review and decided that our products presented a cybersecurity risk... we believe that approximately half of that China-headquartered customer revenue, which equates to a low-double-digit percentage of our worldwide revenue, is at risk of being impacted.\""
 ],
 "mu_intl": [
-"MU",
+"SEC",
 "Illustrative public-company SEC 10-K cyber-risk disclosure",
 "\"In 2025, approximately one-third of our revenue was from sales to customers who have headquarters located outside the United States, while approximately 80% of our revenue in 2025 was from products shipped to customer locations outside the United States.\" The same risk factor names \"theft of intellectual property\" as a discrete enumerated risk of international operations."
 ],
 "mu_cxmt": [
-"MU",
+"SEC",
 "Illustrative public-company SEC 10-K cyber-risk disclosure",
-"\"we face the threat of increasing competition and core-product oversupply due to significant investment in the advanced-manufacturing industry, including by the Chinese government and various state-owned or affiliated entities, such as CXMT and YMTC.\""
+"\"we face the threat of increasing competition and core-product oversupply due to significant investment in the advanced-manufacturing industry, including by the Chinese government and various state-owned or affiliated entities, such as state-affiliated competitors.\""
 ],
 "mu_talent": [
-"MU",
+"SEC",
 "Illustrative public-company SEC 10-K cyber-risk disclosure",
 "\"intentional or unintentional acts by employees or other insiders with access privileges\" are enumerated among attack types, and the risk \"is exacerbated as competitors for talent, particularly engineering talent, attempt to hire our employees.\""
 ],
 "mu_prodsites": [
-"MU",
+"SEC",
 "Illustrative public-company SEC 10-K cyber-risk disclosure",
 "\"We manufacture our products within our own facilities located in Taiwan, Singapore, Japan, the United States, Malaysia, China, and India and also utilize subcontractors to perform certain manufacturing processes... Advanced-manufacturing manufacturing is capital intensive, requiring large investments in sophisticated facilities and equipment.\""
 ],
 "doj_umc": [
 "DOJ",
-"DOJ press release 20-1177, 28 October 2020 — Deputy Attorney General Jeffrey A. Rosen",
-"\"UMC stole the trade secrets of an American leader in computer memory to enable China to achieve a strategic priority: self-sufficiency in computer memory production without spending its own time or money to earn it.\" UMC pled guilty under 18 U.S.C. § 1832(a)(3) and paid a $60 million fine."
+"a US Department of Justice trade-secret press release",
+"\"a foundry supplier stole the trade secrets of a leading US manufacturer to enable China to achieve a strategic priority: self-sufficiency in domestic advanced-manufacturing production without spending its own time or money to earn it.\" a foundry supplier pled guilty under 18 U.S.C. § 1832(a)(3) and paid a $60 million fine."
 ],
 "doj_jinhua": [
 "DOJ",
-"United States v. Fujian Jinhua Integrated Circuit Co., verdict February 2024",
-"Fujian Jinhua was acquitted at trial. The corporate co-defendant UMC's guilty plea stands; the state-backed entity's own conviction does not. Stated here deliberately so the program's threat narrative is not overclaimed."
+"a US federal trade-secret prosecution verdict February 2024",
+"the state-backed entity was acquitted at trial. The corporate co-defendant a foundry supplier's guilty plea stands; the state-backed entity's own conviction does not. Stated here deliberately so the program's threat narrative is not overclaimed."
 ],
 "odni": [
 "GOV",
@@ -76,18 +76,18 @@
 ],
 "tsmc_cost": [
 "SEMI",
-"TSMC press release, 5 August 2018",
-"\"We estimate the impact to third quarter revenue to be about three percent, and impact to gross margin to be about one percentage point.\" The widely quoted $255M figure is press-derived, not TSMC's own number."
+"a major foundry press release, 5 August 2018",
+"\"We estimate the impact to third quarter revenue to be about three percent, and impact to gross margin to be about one percentage point.\" The widely quoted $255M figure is press-derived, not a major foundry's own number."
 ],
 "tsmc_cause": [
 "SEMI",
-"TSMC public statement, August 2018",
+"a major foundry public statement, August 2018",
 "\"This virus outbreak occurred due to mis-operation during the software installation process for a new tool, which caused a virus to spread once the tool was connected to the Company's computer network.\" The root cause was a process and supply-chain control gap, not an exotic attack."
 ],
 "semi_std": [
 "SEMI",
 "an OT equipment-security standard, E188 and E191",
-"E187 establishes a cybersecurity baseline for production equipment, E188 addresses malware-free equipment integration, E191 addresses cybersecurity status reporting. E187 was led by Leon Chang of TSMC and E188 co-led by Ryan Bond of Intel — the only named, checkable industry standard-of-care artefacts in the advanced-manufacturing peer set."
+"E187 establishes a cybersecurity baseline for production equipment, E188 addresses malware-free equipment integration, E191 addresses cybersecurity status reporting. E187 was led by an industry working-group lead and E188 co-led by an industry working-group co-lead — the only named, checkable industry standard-of-care artefacts in the advanced-manufacturing peer set."
 ],
 "semi_lag": [
 "SEMI",
@@ -106,8 +106,8 @@
 ],
 "peer_samsung": [
 "PEER",
-"Samsung, AI governance disclosures and Seoul AI Business Pledge commitments, February 2025",
-"Samsung operates an AI Governance Council, AI safety diagnostics, and an explicitly named AI Red Team — the closest named advanced-manufacturing peer precedent."
+"a major manufacturing peer, AI governance disclosures and Seoul AI Business Pledge commitments, February 2025",
+"a major manufacturing peer operates an AI Governance Council, AI safety diagnostics, and an explicitly named AI Red Team — the closest named advanced-manufacturing peer precedent."
 ],
 "peer_caio": [
 "PEER",
@@ -970,10 +970,10 @@
 "Adversarial testing obligations for general-purpose AI models under Article 55 are already in effect, and high-risk system obligations fall due from August 2026 — so adversarial testing of AI systems has a regulatory as well as a security driver."
 ],
 "_srcs": {
-"MU": [
+"SEC": [
 "the enterprise SEC filings",
 "SEC 10-K (illustrative) risk factors, Item 1C cybersecurity disclosure, MD&A and business sections — the company's own filed language.",
-"sec.gov / EDGAR CIK 723125"
+"sec.gov / EDGAR"
 ],
 "DOJ": [
 "U.S. Department of Justice and federal courts",

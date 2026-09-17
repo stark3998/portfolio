@@ -968,8 +968,8 @@ body.mdl-open{overflow:hidden}
 .ftd-doc .tr.n{background:var(--control-wash);color:var(--control);border:1px solid var(--control-rule)}
 .ftd-doc .tr.m{background:var(--amber-wash);color:var(--amber);border:1px solid var(--amber-rule)}
 .ftd-doc .tr.l{background:var(--held-wash);color:var(--held);border:1px solid var(--held-rule)}
-.ftd-doc .s-MU,.ftd-doc .ct.s-DOJ{color:#AB1D37;background:var(--breach-wash);border-color:var(--breach-rule)}
-.ftd-doc .s-MU:hover,.ftd-doc .ct.s-MU.on,.ftd-doc .ct.s-DOJ:hover,.ftd-doc .ct.s-DOJ.on{background:#AB1D37;color:#fff;border-color:#AB1D37}
+.ftd-doc .s-SEC,.ftd-doc .ct.s-DOJ{color:#AB1D37;background:var(--breach-wash);border-color:var(--breach-rule)}
+.ftd-doc .s-SEC:hover,.ftd-doc .ct.s-SEC.on,.ftd-doc .ct.s-DOJ:hover,.ftd-doc .ct.s-DOJ.on{background:#AB1D37;color:#fff;border-color:#AB1D37}
 .ftd-doc .s-GOV,.ftd-doc .ct.s-REG{color:#8A5A06;background:var(--amber-wash);border-color:var(--amber-rule)}
 .ftd-doc .s-GOV:hover,.ftd-doc .ct.s-GOV.on,.ftd-doc .ct.s-REG:hover,.ftd-doc .ct.s-REG.on{background:#8A5A06;color:#fff;border-color:#8A5A06}
 .ftd-doc .s-PEER,.ftd-doc .ct.s-SEMI{color:#0C6458;background:var(--control-wash);border-color:var(--control-rule)}

@@ -238,17 +238,69 @@ function extractCite(html) {
   return m ? m[1].trim() : "{}";
 }
 
-/* --------------------- citeData client-data neutralizing ------------------ */
-function neutralizeCite(json) {
-  let s = json;
-  // Neutralize verbatim SEC-filing source attributions.
-  s = s.replace(
-    /the enterprise FY2025 Form 10-K[^"]*/g,
-    "Illustrative public-company SEC 10-K cyber-risk disclosure"
-  );
-  s = s.replace(/the enterprise Form 10-K[^"]*/g, "Illustrative public-company SEC 10-K disclosure");
-  s = s.replace(/Form 10-K/g, "SEC 10-K (illustrative)");
+/* ------------------ client-identifying-data neutralizing ------------------ */
+// Ordered replacements. Multi-word phrases run before the generic single-token
+// rules so nothing is half-rewritten. Applied to the rendered body AND to the
+// citation data (source titles/quotes) so the popovers cannot surface the
+// client. Case-sensitive uppercase rules deliberately skip the lower-case
+// data-cite keys (e.g. "tsmc_cost"), leaving the marker->data binding intact.
+const CLIENT_SCRUB = [
+  // SEC-filing source attributions
+  [/the enterprise FY2025 Form 10-K[^"]*/g, "Illustrative public-company SEC 10-K cyber-risk disclosure"],
+  [/the enterprise Form 10-K[^"]*/g, "Illustrative public-company SEC 10-K disclosure"],
+  [/Form 10-K/g, "SEC 10-K (illustrative)"],
+  // EDGAR / CIK locator
+  [/EDGAR CIK 723125/g, "EDGAR"],
+  [/\b723125\b/g, "N-A"],
+  // Victim identity
+  [/an American leader in computer memory/g, "a leading US manufacturer"],
+  [/American leader in computer memory/g, "leading US manufacturer"],
+  [/self-sufficiency in computer memory production/g, "self-sufficiency in domestic advanced-manufacturing production"],
+  [/computer memory production/g, "advanced-manufacturing production"],
+  [/computer memory/g, "advanced manufacturing"],
+  // Named competitors
+  [/CXMT and YMTC/g, "state-affiliated competitors"],
+  [/\bCXMT\b/g, "a state-affiliated competitor"],
+  [/\bYMTC\b/g, "a state-affiliated competitor"],
+  // DOJ trade-secret matters
+  [/United States v\. Fujian Jinhua Integrated Circuit Co\.,?/g, "a US federal trade-secret prosecution"],
+  [/DOJ press release 20-1177, 28 October 2020 [\u2014-] Deputy Attorney General Jeffrey A\. Rosen/g, "a US Department of Justice trade-secret press release"],
+  [/Jeffrey A\. Rosen/g, "the Deputy Attorney General"],
+  [/Fujian Jinhua/g, "the state-backed entity"],
+  [/\bJinhua\b/g, "the state-backed entity"],
+  [/\bFujian\b/g, "the state-backed entity"],
+  [/\bUMC\b/g, "a foundry supplier"],
+  // Named peers / standards authors
+  [/Leon Chang of TSMC/g, "an industry working-group lead"],
+  [/Ryan Bond of Intel/g, "an industry working-group co-lead"],
+  [/\bTSMC\b/g, "a major foundry"],
+  [/\bIntel\b/g, "a major chipmaker"],
+  [/\bSamsung\b/g, "a major manufacturing peer"],
+  // Regulator
+  [/Impact of China Cyberspace Administration Decision/g, "Impact of a National Regulator Decision"],
+  [/China Cyberspace Administration(?: of China)?/g, "a national cybersecurity regulator"],
+  [/\bCAC decision\b/g, "regulatory decision"],
+  [/\bCAC\b/g, "the regulator"],
+  // Safety catch-all
+  [/\bMicron\b/g, "the enterprise"],
+];
+
+function neutralizeText(s) {
+  for (const [re, to] of CLIENT_SCRUB) s = s.replace(re, to);
   return s;
+}
+
+function neutralizeCite(json) {
+  // Remap the visible "MU" (client ticker) source code, then scrub free text.
+  return neutralizeText(json.replace(/"MU"/g, '"SEC"'));
+}
+
+// Scrub the visible source-code chip that renders the client ticker in the body.
+function neutralizeMarkers(body) {
+  return body
+    .replace(/\bs-MU\b/g, "s-SEC")
+    .replace(/Source: MU\b/g, "Source: SEC")
+    .replace(/>MU<\/button>/g, ">SEC</button>");
 }
 
 /* --------------------------------- run ----------------------------------- */
@@ -259,9 +311,9 @@ for (const art of artifacts) {
 
   const rawCss = /<style[^>]*>([\s\S]*?)<\/style>/i.exec(html)[1];
   const themedCss = themeColors(rawCss);
-  const scopedCss = scopeCss(themedCss) + "\n" + VAR_OVERRIDES;
+  const scopedCss = scopeCss(themedCss).replace(/\.s-MU\b/g, ".s-SEC") + "\n" + VAR_OVERRIDES;
 
-  const body = extractBody(html);
+  const body = neutralizeMarkers(neutralizeText(extractBody(html)));
   const scripts = extractScripts(html);
   const cite = neutralizeCite(extractCite(html));
 
